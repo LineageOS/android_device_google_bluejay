@@ -208,7 +208,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # GPS xml
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 	PRODUCT_COPY_FILES += \
 		device/google/bluejay/gps.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 else
