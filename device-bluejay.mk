@@ -138,9 +138,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
 
 # Bluetooth Hal Extension test tools
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES_DEBUG += \
     sar_test \
     hci_inject
+endif
 
 # Config of primary display frames to reach LHBM peak brightness
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
@@ -210,7 +212,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # GPS xml
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 	PRODUCT_COPY_FILES += \
 		device/google/bluejay/gps.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 else
