@@ -23,6 +23,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES := \
     HbmSVManagerOverlay
 
+# Kernel
+TARGET_PREBUILT_KERNEL := device/google/bluejay-kernel/Image.lz4
+
 # Parts
 PRODUCT_PACKAGES += \
     GoogleParts
