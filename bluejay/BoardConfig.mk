@@ -23,3 +23,5 @@ include device/google/gs101/BoardConfig-common.mk
 -include vendor/google_devices/bluejay/proprietary/BoardConfigVendor.mk
 
 SOONG_CONFIG_google3a_config_target_device := bluejay
+
+include device/google/bluejay/bluejay/BoardConfigLineage.mk
