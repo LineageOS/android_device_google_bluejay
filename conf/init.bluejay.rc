@@ -1,0 +1,19 @@
+# Bluejay specific init.rc
+import /vendor/etc/init/hw/init.gs101.rc
+import /vendor/etc/init/hw/init.blueport.rc
+
+on fs
+    # Start the twoshay touch service
+    start twoshay
+
+# Toggle glove_mode according to touch_sensitivity_mode
+on property:persist.vendor.touch_sensitivity_mode=0 && property:sys.boot_completed=1
+    write /sys/class/spi_master/spi11/spi11.0/glove_mode 00
+
+on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_completed=1
+    write /sys/class/spi_master/spi11/spi11.0/glove_mode 01
+
+on post-fs-data
+    # Fingerprint
+    chown system system /dev/goodix_fp
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g7.app
