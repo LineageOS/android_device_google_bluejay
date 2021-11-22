@@ -16,7 +16,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_bluejay.mk \
-    $(LOCAL_DIR)/factory_bluejay.mk
+    $(LOCAL_DIR)/factory_bluejay.mk \
+    $(LOCAL_DIR)/lineage_bluejay.mk
 
 
 COMMON_LUNCH_CHOICES := \
