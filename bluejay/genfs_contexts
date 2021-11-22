@@ -1,0 +1,2 @@
+# Haptics
+genfscon sysfs /devices/platform/10970000.hsi2c/i2c-4/i2c-cs40l26a      u:object_r:sysfs_vibrator:s0
