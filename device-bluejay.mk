@@ -62,6 +62,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/media_profiles_bluejay.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.camera.extended_launch_boost=1
+
 # Display Config
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
