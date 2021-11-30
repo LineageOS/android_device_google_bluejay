@@ -63,7 +63,8 @@ PRODUCT_COPY_FILES += \
 	device/google/bluejay/media_profiles_bluejay.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.extended_launch_boost=1
+    persist.vendor.camera.extended_launch_boost=1 \
+    persist.vendor.camera.raise_buf_allocation_priority=1
 
 # Display Config
 PRODUCT_COPY_FILES += \
