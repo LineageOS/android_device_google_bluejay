@@ -17,6 +17,7 @@
 */
 -->
 <device name="Android">
+    <item name="battery.capacity">4410</item>
     <!-- Number of cores each CPU cluster contains -->
     <array name="cpu.clusters.cores">
       <value>4</value> <!-- Cluster 0 has 4 cores (cpu0, cpu1, cpu2, cpu3) -->
