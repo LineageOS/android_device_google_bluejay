@@ -1,0 +1,150 @@
+# All blobs are extracted from Google factory images for each new ASB
+
+# product partition
+
+# AiAi
+product/priv-app/DeviceIntelligenceNetworkPrebuilt-astrea_20240311.DF2_RC00/DeviceIntelligenceNetworkPrebuilt-astrea_20240311.DF2_RC00.apk;PRESIGNED
+product/priv-app/DevicePersonalizationPrebuiltPixel2021-aiai_sdk35_20240311.DF2_p4/DevicePersonalizationPrebuiltPixel2021-aiai_sdk35_20240311.DF2_p4.apk;PRESIGNED
+
+# Audio
+product/etc/ambient/matcher_tah.leveldb
+product/etc/firmware/music_detector.descriptor
+product/etc/firmware/music_detector.sound_model
+product/etc/firmware/music_detector.sound_model_2
+product/etc/firmware/music_detector.sound_model_tflite
+
+# Camera extensions
+product/etc/permissions/androidx.camera.extensions.impl.xml
+product/priv-app/PixelCameraServices/PixelCameraServices.apk;PRESIGNED
+
+# Felica
+product/etc/felica/common.cfg
+product/etc/felica/mfm.cfg
+product/etc/felica/mfs.cfg
+
+# Hardware info
+product/etc/permissions/com.google.android.hardwareinfo.xml
+product/framework/libhwinfo.jar
+product/priv-app/HardwareInfo/HardwareInfo.apk;PRESIGNED
+
+# Hotword
+product/priv-app/HotwordEnrollmentOKGoogleFUSIONPro/HotwordEnrollmentOKGoogleFUSIONPro.apk;PRESIGNED
+product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIONPro.apk;PRESIGNED
+
+# IMS
+product/etc/sysconfig/allowlist_com.shannon.imsservice.xml
+
+# Permissions
+product/etc/permissions/privapp-permissions-google-p.xml:product/etc/permissions/privapp-permissions-google-p-lineage.xml
+product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml
+product/etc/sysconfig/google-hiddenapi-package-whitelist.xml
+product/etc/sysconfig/nexus.xml
+product/etc/sysconfig/pixel_experience_2017.xml
+product/etc/sysconfig/pixel_experience_2018.xml
+product/etc/sysconfig/pixel_experience_2019.xml
+product/etc/sysconfig/pixel_experience_2019_midyear.xml
+product/etc/sysconfig/pixel_experience_2020.xml
+product/etc/sysconfig/pixel_experience_2020_midyear.xml
+product/etc/sysconfig/pixel_experience_2021.xml
+product/etc/sysconfig/pixel_experience_2021_midyear.xml
+product/etc/sysconfig/pixel_experience_2022_midyear.xml
+
+# Radio
+product/etc/permissions/com.android.sdm.plugins.connmo.xml
+product/etc/permissions/com.android.sdm.plugins.dcmo.xml
+product/etc/permissions/com.android.sdm.plugins.diagmon.xml
+product/lib/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm/libdmengine.so
+product/lib/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm/libdmjavaplugin.so
+product/lib64/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmengine.so
+product/lib64/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmjavaplugin.so
+product/priv-app/CarrierSettings_signed_47.0.602606545/CarrierSettings_signed_47.0.602606545.apk;PRESIGNED
+product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
+product/priv-app/ConnMO/ConnMO.apk
+product/priv-app/DCMO/DCMO.apk
+product/priv-app/DMService/DMService.apk
+product/priv-app/DiagMon/DiagMon.apk
+product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
+
+# VZW
+product/app/VZWAPNLib/VZWAPNLib.apk;PRESIGNED
+product/etc/permissions/com.android.omadm.service.xml
+product/etc/permissions/com.google.omadm.trigger.xml
+product/etc/permissions/com.verizon.apn.xml
+product/etc/permissions/com.verizon.services.xml
+product/etc/permissions/features-verizon.xml
+product/etc/sysconfig/allowlist_com.android.omadm.service.xml
+product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk;PRESIGNED
+product/priv-app/OemDmTrigger/OemDmTrigger.apk
+product/priv-app/WfcActivation/WfcActivation.apk;PRESIGNED
+
+# system_ext partition
+
+# Camera extensions
+system_ext/etc/permissions/com.google.android.camera.experimental2022_system.xml
+system_ext/etc/permissions/com.google.android.camera.extensions.xml
+system_ext/etc/permissions/com.google.android.camerax.extensions.xml
+system_ext/framework/com.google.android.camera.experimental2022_system.jar
+system_ext/framework/com.google.android.camera.extensions.jar
+system_ext/framework/com.google.android.camerax.extensions.jar
+
+# Edge TPU
+system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
+system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
+system_ext/etc/public.libraries-google.txt
+system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
+system_ext/lib/libedgetpu_dba.google.so
+system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so
+system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
+system_ext/lib64/libedgetpu_dba.google.so
+
+# HBM
+system_ext/lib64/libhbmsvmanager_jni.so;SYMLINK=system_ext/priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so
+system_ext/priv-app/HbmSVManager/HbmSVManager.apk
+
+# Hotword
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
+# IMS
+system_ext/etc/permissions/com.shannon.imsservice.xml
+system_ext/etc/permissions/com.shannon.qualifiednetworksservice.xml
+system_ext/etc/permissions/com.shannon.rcsservice.xml
+system_ext/lib/libmediaadaptor.so
+system_ext/lib64/libmediaadaptor.so
+system_ext/priv-app/ShannonIms/ShannonIms.apk;PRESIGNED
+system_ext/priv-app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk;PRESIGNED
+system_ext/priv-app/ShannonRcs/ShannonRcs.apk;PRESIGNED
+
+# Permissions
+system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
+
+# Radio
+system_ext/etc/default-permissions/default-permissions-euiccpixel.xml
+system_ext/etc/permissions/com.android.omadm.radioconfig.xml
+system_ext/etc/permissions/com.google.euiccpixel.permissions.xml
+system_ext/etc/permissions/com.google.euiccpixel.xml
+system_ext/etc/permissions/google-ril.xml
+system_ext/framework/RadioConfigLib.jar
+system_ext/framework/google-ril.jar
+system_ext/priv-app/CarrierSetup/CarrierSetup.apk;PRESIGNED
+system_ext/priv-app/ConnectivityThermalPowerManager/ConnectivityThermalPowerManager.apk
+system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk
+system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in
+system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up
+system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up
+system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk;PRESIGNED
+system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk;PRESIGNED
+system_ext/priv-app/RilConfigService/RilConfigService.apk
+system_ext/priv-app/grilservice/grilservice.apk;PRESIGNED
+
+# RIL
+system_ext/app/OemRilHookService/OemRilHookService.apk
+system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
+system_ext/etc/permissions/oemrilhook.xml
+system_ext/framework/oemrilhook.jar
+system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
+
+# VZW
+system_ext/etc/permissions/vzw_mvs_permissions.xml
+system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED

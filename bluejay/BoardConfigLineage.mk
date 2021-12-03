@@ -5,3 +5,5 @@
 #
 
 include $(DEVICE_PATH)/BoardConfigLineage.mk
+
+include $(VENDOR_PATH)/BoardConfigVendor.mk

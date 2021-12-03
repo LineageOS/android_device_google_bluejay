@@ -1,0 +1,13 @@
+# DRM
+drm.service.enabled=true
+media.mediadrmservice.enable=true
+
+# Fingerprint
+ro.vendor.fingerprint.ta.name=g7.app
+
+# Radio
+persist.vendor.ril.ecc.use.xml=1
+persist.vendor.ril.support_nr_ds=0
+persist.vendor.ril.use_radio_hal=1.6
+ro.vendor.config.build_carrier=europen
+vendor.rild.libpath=libsitril.so
