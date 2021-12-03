@@ -5,3 +5,5 @@
 #
 
 include device/google/bluejay/BoardConfigLineage.mk
+
+include vendor/google/bluejay/BoardConfigVendor.mk
