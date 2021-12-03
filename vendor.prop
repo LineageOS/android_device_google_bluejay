@@ -1,0 +1,13 @@
+# DRM
+drm.service.enabled=true
+media.mediadrmservice.enable=true
+
+# Radio
+persist.vendor.ril.ecc.xml=1
+persist.vendor.ril.support_nr_ds=0
+persist.vendor.ril.use_radio_hal=1.6
+ro.vendor.config.build_carrier=europen
+vendor.rild.libpath=libsitril.so
+
+# SSR
+vendor.debug.ssrdump.type=sscoredump

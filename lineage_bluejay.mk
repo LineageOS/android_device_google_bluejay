@@ -26,3 +26,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="bluejay-user 13 TP1A.220624.021.A1 8893963 release-keys"
 
 BUILD_FINGERPRINT := google/bluejay/bluejay:13/TP1A.220624.021.A1/8893963:user/release-keys
+
+$(call inherit-product, vendor/google/bluejay/bluejay-vendor.mk)
