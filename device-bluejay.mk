@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-v
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/bluejay/device-vendor-bluejay.mk)
+$(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/WallpapersBluejay.mk)
 
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
