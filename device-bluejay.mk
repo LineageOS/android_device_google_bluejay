@@ -22,6 +22,7 @@ $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-v
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/bluejay/device-vendor-bluejay.mk)
+$(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/WallpapersBluejay.mk)
 
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
@@ -63,7 +64,8 @@ PRODUCT_COPY_FILES += \
 	device/google/bluejay/media_profiles_bluejay.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.extended_launch_boost=1
+    persist.vendor.camera.extended_launch_boost=1 \
+    persist.vendor.camera.raise_buf_allocation_priority=1
 
 # Display Config
 PRODUCT_COPY_FILES += \
