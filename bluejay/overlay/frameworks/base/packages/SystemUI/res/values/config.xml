@@ -53,14 +53,6 @@
         <item>0</item> <!-- 4: SUN -->
     </integer-array>
 
-    <!-- Haptic feedback intensity for ticks used for the udfps dwell time -->
-    <item name="config_udfpsTickIntensity" translatable="false" format="float"
-          type="dimen">.3</item>
-
-    <!-- Haptic feedback tick type - if true, uses VibrationEffect.Composition.PRIMITIVE_LOW_TICK
-         else uses VibrationEffect.Composition.PRIMITIVE_TICK -->
-    <bool name="config_udfpsUseLowTick">false</bool>
-
     <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
          Note that while rounded.xml includes the entire path (including the horizontal and vertical
          corner edges), this pulls out just the curve.
