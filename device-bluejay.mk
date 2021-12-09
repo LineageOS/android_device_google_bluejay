@@ -171,3 +171,6 @@ else
 	PRODUCT_COPY_FILES += \
 		device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
+
+# This device is shipped with 32 (Android S V2)
+PRODUCT_SHIPPING_API_LEVEL := 32
