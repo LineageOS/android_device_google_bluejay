@@ -5,7 +5,7 @@
             "Type":"UNKNOWN",
             "HotThreshold":[
                 "NAN",
-                "33.0",
+                "32.0",
                 "NAN",
                 "NAN",
                 "NAN",
@@ -133,6 +133,47 @@
             "Multiplier":0.001
         },
         {
+            "Name":"quiet_therm",
+            "Type":"UNKNOWN",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "TempPath":"/dev/thermal/tz-by-name/quiet_therm/adc_channel/channel_temp",
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
+            "Name":"VIRTUAL-QUIET-NEUTRAL",
+            "Type":"UNKNOWN",
+            "VirtualSensor":true,
+            "Formula":"WEIGHTED_AVG",
+            "Combination":[
+                "quiet_therm",
+                "neutral_therm"
+            ],
+            "Coefficient":[
+                "0.7",
+                "0.3"
+            ],
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
             "Name":"VIRTUAL-NEUTRAL-SKIN2",
             "Type":"UNKNOWN",
             "VirtualSensor":true,
@@ -142,8 +183,8 @@
                 "skin_therm2"
             ],
             "Coefficient":[
-                "0.62",
-                "0.38"
+                "0.7",
+                "0.3"
             ],
             "HotThreshold":[
                 "NAN",
@@ -196,9 +237,11 @@
             "Formula":"MAXIMUM",
             "Combination":[
                 "VIRTUAL-NEUTRAL-SKIN2",
-                "VIRTUAL-NEUTRAL"
+                "VIRTUAL-NEUTRAL",
+                "VIRTUAL-QUIET-NEUTRAL"
             ],
             "Coefficient":[
+                "1.0",
                 "1.0",
                 "1.0"
             ],
@@ -288,9 +331,11 @@
             "Formula":"MAXIMUM",
             "Combination":[
                 "VIRTUAL-NEUTRAL-SKIN2",
-                "VIRTUAL-NEUTRAL"
+                "VIRTUAL-NEUTRAL",
+                "VIRTUAL-QUIET-NEUTRAL"
             ],
             "Coefficient":[
+                "1.0",
                 "1.0",
                 "1.0"
             ],
@@ -337,9 +382,11 @@
             "Formula":"MAXIMUM",
             "Combination":[
                 "VIRTUAL-NEUTRAL-SKIN2",
-                "VIRTUAL-NEUTRAL"
+                "VIRTUAL-NEUTRAL",
+                "VIRTUAL-QUIET-NEUTRAL"
             ],
             "Coefficient":[
+                "1.0",
                 "1.0",
                 "1.0"
             ],
