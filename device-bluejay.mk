@@ -39,8 +39,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
-SOONG_CONFIG_lyric_tuning_product := bluejay
-SOONG_CONFIG_google3a_config_target_device := bluejay
+$(call soong_config_set,lyric,tuning_product,bluejay)
+$(call soong_config_set,google3a_config,target_device,bluejay)
 
 # Init files
 PRODUCT_COPY_FILES += \
