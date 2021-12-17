@@ -41,8 +41,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
-SOONG_CONFIG_lyric_tuning_product := bluejay
-SOONG_CONFIG_google3a_config_target_device := bluejay
+$(call soong_config_set,lyric,tuning_product,bluejay)
+$(call soong_config_set,google3a_config,target_device,bluejay)
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
+
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
