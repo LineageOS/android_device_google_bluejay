@@ -53,6 +53,12 @@
         <item>0</item> <!-- 4: SUN -->
     </integer-array>
 
+    <string name="proximity_sensor_type" translatable="false"></string>
+    <item name="proximity_sensor_threshold" translatable="false" format="float" type="dimen"></item>
+    <item name="proximity_sensor_threshold_latch" translatable="false" format="float" type="dimen"></item>
+    <string name="proximity_sensor_secondary_type" translatable="false"></string>
+    <item name="proximity_sensor_secondary_threshold" translatable="false" format="float" type="dimen"></item>
+
     <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
          Note that while rounded.xml includes the entire path (including the horizontal and vertical
          corner edges), this pulls out just the curve.
