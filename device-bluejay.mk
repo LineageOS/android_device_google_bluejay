@@ -202,3 +202,7 @@ endif
 
 # This device is shipped with 32 (Android S V2)
 PRODUCT_SHIPPING_API_LEVEL := 32
+
+# Vibrator HAL
+PRODUCT_VENDOR_PROPERTIES += \
+	ro.vendor.vibrator.hal.supported_primitives=243
