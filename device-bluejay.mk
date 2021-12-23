@@ -150,6 +150,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=2g
 
+# Enable camera 1080P 60FPS binning mode
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.1080P_60fps_binning=true
+
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
