@@ -34,6 +34,14 @@
         <ctl name="EP1 TX Mixer TDM_0_TX" value="1" />
     </path>
 
+    <path name="mfg-record usb-headset-mic">
+        <ctl name="Audio Capture Mic Source" value="USB_MIC"/>
+        <ctl name="USB Capture FORMAT v2" value="1" />
+        <ctl name="USB Config To AoC v2" value="1"/>
+        <ctl name="EP1 TX Mixer USB_TX" value="1"/>
+        <ctl name="MIC Record Soft Gain (dB)" value="0" />
+    </path>
+
     <path name="mic1-status">
         <ctl name="MIC0" value="1" />
     </path>
