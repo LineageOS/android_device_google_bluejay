@@ -141,7 +141,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # Power HAL ADPF
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.adpf.rate=16666666
 
 # Set zram size
