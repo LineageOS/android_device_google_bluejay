@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
 	bt_vendor.conf
 
 # Power HAL ADPF
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.adpf.rate=16666666
 
 # Set zram size
