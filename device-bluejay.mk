@@ -153,10 +153,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=2g
 
-# Set lmkd timetout value
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.lmk.kill_timeout_ms=50
-
 # Enable camera 1080P 60FPS binning mode
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.1080P_60fps_binning=true
