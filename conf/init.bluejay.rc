@@ -18,6 +18,9 @@ on post-fs-data
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g7.app
 
+    # Speaker amp permission
+    chmod 644 /mnt/vendor/persist/audio/speaker.cal
+
 # Ensure Camera sound is enforced audible for JP SKU
 on property:ro.boot.hardware.sku=GB17L
     setprop audio.camerasound.force true
