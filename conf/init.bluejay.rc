@@ -2,8 +2,8 @@
 import /vendor/etc/init/hw/init.gs101.rc
 import /vendor/etc/init/hw/init.blueport.rc
 
-on fs
-    # Start the twoshay touch service
+# Start the twoshay touch service
+on property:vendor.device.modules.ready=1
     start twoshay
 
 # Toggle glove_mode according to touch_sensitivity_mode
