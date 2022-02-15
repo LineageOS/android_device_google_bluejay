@@ -27,6 +27,7 @@ $(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/Wall
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
 
+include device/google/gs101/fingerprint/extension/fingerprint.extension.mk
 include device/google/bluejay-sepolicy/bluejay-sepolicy.mk
 include device/google/bluejay/audio/bluejay/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
@@ -41,8 +42,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
-SOONG_CONFIG_lyric_tuning_product := bluejay
-SOONG_CONFIG_google3a_config_target_device := bluejay
+$(call soong_config_set,lyric,tuning_product,bluejay)
+$(call soong_config_set,google3a_config,target_device,bluejay)
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -61,6 +62,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/thermal_info_config_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
+# Power HAL config
+PRODUCT_COPY_FILES += \
+	device/google/bluejay/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # Camera
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/media_profiles_bluejay.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
@@ -73,6 +78,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/display_colordata_dev_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_dev_cal0.pb \
 	device/google/bluejay/display_golden_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_cal0.pb
+
+# Media Performance Class 12
+PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -129,10 +137,13 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bluetooth Tx power caps for bluejay
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth_power_limits_bluejay_ROW.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_bluejay_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_bluejay_ROW.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_bluejay_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
+    $(LOCAL_PATH)/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_GB17L_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_GX7AS_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_GB62Z_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GB62Z_US.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_GX7AS_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GX7AS_US.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_G1AZG_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G1AZG_EU.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_GB62Z_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GB62Z_EU.csv
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -143,12 +154,20 @@ PRODUCT_PACKAGES += \
 	bt_vendor.conf
 
 # Power HAL ADPF
-PRODUCT_PRODUCT_PROPERTIES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.adpf.rate=16666666
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.zram.size=2g
+
+# Enable camera 1080P 60FPS binning mode
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.1080P_60fps_binning=true
+
+# Enable camera exif model/make reporting
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.exif_reveal_make_model=true
 
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
@@ -166,6 +185,10 @@ PRODUCT_PACKAGES += \
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
+
+# Set support one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
 
 # Voice packs for Text-To-Speech
 PRODUCT_COPY_FILES += \
@@ -194,3 +217,7 @@ endif
 
 # This device is shipped with 32 (Android S V2)
 PRODUCT_SHIPPING_API_LEVEL := 32
+
+# Vibrator HAL
+PRODUCT_VENDOR_PROPERTIES += \
+	ro.vendor.vibrator.hal.supported_primitives=243

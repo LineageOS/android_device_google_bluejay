@@ -2,8 +2,8 @@
 import /vendor/etc/init/hw/init.gs101.rc
 import /vendor/etc/init/hw/init.blueport.rc
 
-on fs
-    # Start the twoshay touch service
+# Start the twoshay touch service
+on property:vendor.device.modules.ready=1
     start twoshay
 
 # Toggle glove_mode according to touch_sensitivity_mode
@@ -18,6 +18,15 @@ on post-fs-data
     chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g7.app
 
+    # Speaker amp permission
+    chmod 644 /mnt/vendor/persist/audio/speaker.cal
+
 # Ensure Camera sound is enforced audible for JP SKU
 on property:ro.boot.hardware.sku=GB17L
     setprop audio.camerasound.force true
+
+# charger driver exposes now finer grain control, map demo mode to those properties
+# NOTE: demo mode can only be exit wiping data (which reset the persist properties)
+on property:sys.retaildemo.enabled=1
+    setprop persist.vendor.charge.stop.level 35
+    setprop persist.vendor.charge.start.level 30
