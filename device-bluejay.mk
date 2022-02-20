@@ -173,6 +173,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
 
+# Fingerprint als feed forward
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.udfps.als_feed_forward_supported=true
+
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
