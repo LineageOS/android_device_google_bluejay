@@ -1,3 +1,0 @@
-# Haptics
-/dev/snd/pcmC0D24p                                                 u:object_r:vibrator_snd_device:s0
-/dev/snd/pcmC1D24p                                                 u:object_r:vibrator_snd_device:s0
