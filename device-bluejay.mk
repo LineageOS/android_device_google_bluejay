@@ -180,7 +180,10 @@ PRODUCT_PACKAGES += \
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
-    SettingsOverlayGB17L
+    SettingsOverlayGB17L \
+    SettingsOverlayG1AZG \
+    SettingsOverlayGB62Z \
+    SettingsOverlayGX7AS
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
