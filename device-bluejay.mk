@@ -182,7 +182,10 @@ PRODUCT_PACKAGES += \
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
-    SettingsOverlayGB17L
+    SettingsOverlayGB17L \
+    SettingsOverlayG1AZG \
+    SettingsOverlayGB62Z \
+    SettingsOverlayGX7AS
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -219,3 +222,6 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Vibrator HAL
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.supported_primitives=243
+
+# Use GmsCorePrebuilt y2021w39
+USER_GMS_CORE_PREBUILT_Y2021W39_FOR_PIXEL_DEVICE := true
