@@ -228,3 +228,7 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 # Vibrator HAL
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.supported_primitives=243
+
+# Device features
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
