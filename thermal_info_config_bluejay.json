@@ -151,6 +151,7 @@
         {
             "Name":"VIRTUAL-QUIET-NEUTRAL",
             "Type":"UNKNOWN",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
@@ -176,6 +177,7 @@
         {
             "Name":"VIRTUAL-NEUTRAL-SKIN2",
             "Type":"UNKNOWN",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
@@ -201,6 +203,7 @@
         {
             "Name":"VIRTUAL-NEUTRAL",
             "Type":"UNKNOWN",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
@@ -326,6 +329,7 @@
         {
             "Name":"VIRTUAL-SKIN-CHARGE",
             "Type":"UNKNOWN",
+            "Hidden":true,
             "VirtualSensor":true,
             "TriggerSensor":"neutral_therm",
             "Formula":"MAXIMUM",
@@ -359,7 +363,6 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001,
-            "Monitor":true,
             "PollingDelay":300000,
             "PassiveDelay":7000,
             "BindedCdevInfo": [
@@ -417,6 +420,7 @@
         {
             "Name":"USB2-MINUS-CHG",
             "Type":"UNKNOWN",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"WEIGHTED_AVG",
             "Combination":[
@@ -442,6 +446,7 @@
         {
             "Name":"VIRTUAL-USB-THROTTLING",
             "Type":"USB_PORT",
+            "Hidden":true,
             "VirtualSensor":true,
             "Formula":"COUNT_THRESHOLD",
             "TriggerSensor":"usb_pwr_therm2",
@@ -648,7 +653,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"batoilo",
@@ -829,7 +834,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"ocp_cpu2",
@@ -854,7 +859,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"ocp_tpu",
@@ -879,7 +884,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"ocp_gpu",
@@ -904,7 +909,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"soft_ocp_cpu2",
@@ -929,7 +934,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"soft_ocp_cpu1",
@@ -954,7 +959,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"soft_ocp_tpu",
@@ -979,7 +984,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"soft_ocp_gpu",
@@ -1004,7 +1009,7 @@
             ],
             "VrThreshold":"NAN",
             "Multiplier":1,
-            "Monitor":true
+            "Hidden":true
         },
         {
             "Name":"TPU",
