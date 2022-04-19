@@ -175,7 +175,8 @@ PRODUCT_PRODUCT_PROPERTIES +=\
 
 # Fingerprint als feed forward
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.udfps.als_feed_forward_supported=true
+    persist.vendor.udfps.als_feed_forward_supported=true \
+    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
