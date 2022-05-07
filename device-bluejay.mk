@@ -97,7 +97,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc@1.2-service.st
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
         device/google/bluejay/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
 DEVICE_MANIFEST_FILE += \
-	device/google/bluejay/nfc/manifest_nfc.xml \
 	device/google/bluejay/nfc/manifest_se_bluejay.xml
 
 # PowerStats HAL
@@ -134,6 +133,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 # Bluetooth SAR test tool
 PRODUCT_PACKAGES_DEBUG += \
     sar_test
+
+# Config of primary display frames to reach LHBM peak brightness
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
 
 # Bluetooth Tx power caps for bluejay
 PRODUCT_COPY_FILES += \
