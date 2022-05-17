@@ -19,6 +19,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# HBM
+PRODUCT_PACKAGES := \
+    HbmSVManagerOverlay
+
 # Parts
 PRODUCT_PACKAGES += \
     GoogleParts
