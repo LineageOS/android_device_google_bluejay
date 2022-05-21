@@ -130,9 +130,10 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 # Display LBE
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 
-# Bluetooth SAR test tool
+# Bluetooth Hal Extension test tools
 PRODUCT_PACKAGES_DEBUG += \
-    sar_test
+    sar_test \
+    hci_inject
 
 # Config of primary display frames to reach LHBM peak brightness
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
