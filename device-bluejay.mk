@@ -97,7 +97,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc@1.2-service.st
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -109,7 +109,6 @@ PRODUCT_COPY_FILES += \
         device/google/bluejay/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
 DEVICE_MANIFEST_FILE += \
-	device/google/bluejay/nfc/manifest_nfc.xml \
 	device/google/bluejay/nfc/manifest_se_bluejay.xml
 
 # PowerStats HAL
@@ -119,7 +118,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=3
+    ro.vendor.build.svn=5
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
