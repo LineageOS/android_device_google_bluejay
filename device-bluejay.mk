@@ -177,6 +177,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
+# Fingerprint MAX auth latency
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.gf.debug.timer.threshold=1,400,400,400,600,600,600
+
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
