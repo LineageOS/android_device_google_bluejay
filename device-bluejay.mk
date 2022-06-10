@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-TARGET_KERNEL_DIR ?= device/google/bluejay-kernel
-TARGET_BOARD_KERNEL_HEADERS := device/google/bluejay-kernel/kernel-headers
-
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/prebuilts/device-vendor-bluejay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
