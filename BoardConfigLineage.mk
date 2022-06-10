@@ -6,4 +6,8 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/google/bluejay
+
+# Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
