@@ -169,6 +169,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.camera.exif_reveal_make_model=true
 
+# Disable rear light sensor probing explicitly
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.camera.rls_supported=false
+
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
