@@ -31,5 +31,32 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/googl
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(foreach m,$(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
+TARGET_KERNEL_EXT_MODULE_ROOT := kernel/google/bluejay/google-modules
+TARGET_KERNEL_EXT_MODULES := \
+    amplifiers/audiometrics \
+    amplifiers/cs35l41 \
+    amplifiers/cs40l25 \
+    amplifiers/cs40l26 \
+    aoc \
+    aoc/alsa \
+    aoc/usb \
+    bluetooth/broadcom \
+    bms \
+    display/samsung \
+    edgetpu/drivers/edgetpu \
+    gpu/mali_kbase \
+    gpu/mali_pixel \
+    lwis \
+    nfc \
+    power/reset \
+    sensors/hall_sensor \
+    touch/common \
+    touch/fts/fst2 \
+    touch/fts/ftm5 \
+    touch/sec \
+    uwb/kernel \
+    wlan/bcmdhd4389 \
+    ../devices/google/bluejay/display
+
 # Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
