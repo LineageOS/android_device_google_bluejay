@@ -1,2 +1,3 @@
 dumpstate app_zygote process b/238263942
+hal_power_default hal_power_default capability b/240632681
 incidentd debugfs_wakeup_sources file b/238263518
