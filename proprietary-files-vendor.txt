@@ -10,6 +10,7 @@ vendor/bin/hw/android.hardware.bluetooth@1.1-service.bcmbtlinux
 vendor/bin/hw/android.hardware.confirmationui@1.0-service.trusty.vendor
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging
+vendor/bin/hw/android.hardware.gnss@2.1-service-brcm
 vendor/bin/hw/android.hardware.identity@1.0-service.citadel
 vendor/bin/hw/android.hardware.input.classifier@1.0-service
 vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl
@@ -19,9 +20,12 @@ vendor/bin/hw/android.hardware.weaver@1.0-service.citadel
 vendor/bin/hw/citadel_updater
 vendor/bin/hw/citadeld
 vendor/bin/hw/google.hardware.media.c2@1.0-service
+vendor/bin/hw/gpsd
 vendor/bin/hw/init_citadel
+vendor/bin/hw/lhd
 vendor/bin/hw/rild_exynos
 vendor/bin/hw/samsung.hardware.media.c2@1.0-service
+vendor/bin/hw/scd
 vendor/bin/hw/vendor.google.audiometricext@1.0-service-vendor
 vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service
 vendor/bin/hw/vendor.google.google_battery@1.1-service-vendor
@@ -227,6 +231,7 @@ vendor/etc/vintf/manifest/manifest_radioext.xml
 vendor/etc/vintf/manifest/manifest_wifi_ext.xml
 vendor/etc/vintf/manifest/vendor.google.edgetpu_vendor_service@1.0-service.xml
 vendor/etc/vintf/manifest/vendor.samsung_slsi.hardware.tetheroffload@1.1-service.xml
+vendor/firmware/SensorHub.patch
 vendor/firmware/aoc.bin
 vendor/firmware/bcmdhd.cal
 vendor/firmware/bcmdhd.cal_ES19
@@ -970,10 +975,13 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/fp_utils.so
 vendor/lib64/google_wifi_firmware_config_info_cc_proto.so
 vendor/lib64/google_wifi_firmware_config_version_c_wrapper.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-google.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl.so
 vendor/lib64/hw/audio.platform.aoc.so
 vendor/lib64/hw/audio.primary.gs101.so
+vendor/lib64/hw/flp.default.so
+vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/sound_trigger.primary.gs101.so
 vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@2.0-impl.so
 vendor/lib64/hw/vulkan.gs101.so
