@@ -877,6 +877,8 @@ vendor/lib/audio_tunnel_aoc.so
 vendor/lib/audio_usb_aoc.so
 vendor/lib/audio_waves_aoc.so
 vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl.so
+vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl.so
 vendor/lib/hw/audio.platform.aoc.so
 vendor/lib/hw/audio.primary.gs101.so
 vendor/lib/hw/sound_trigger.primary.gs101.so
@@ -896,6 +898,7 @@ vendor/lib/libExynosC2Vp8Dec.so
 vendor/lib/libExynosC2Vp8Enc.so
 vendor/lib/libExynosC2Vp9Dec.so
 vendor/lib/libExynosC2Vp9Enc.so
+vendor/lib/libGralloc4Wrapper.so
 vendor/lib/libOpenCL-pixel.so
 -vendor/lib/libOpenCL.so
 vendor/lib/lib_aion_buffer.so
@@ -935,6 +938,7 @@ vendor/lib/libsitril.so
 vendor/lib/libstreset21.so
 vendor/lib/libsueznanoappclients.so
 vendor/lib/libusf.so
+vendor/lib/libvendorgraphicbuffer.so
 vendor/lib/sensors.usf.so
 vendor/lib/soundfx/liboffloadeffect.so
 vendor/lib/vendor-pixelatoms-cpp.so
@@ -966,6 +970,8 @@ vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/fp_utils.so
 vendor/lib64/google_wifi_firmware_config_info_cc_proto.so
 vendor/lib64/google_wifi_firmware_config_version_c_wrapper.so
+vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl.so
+vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl.so
 vendor/lib64/hw/audio.platform.aoc.so
 vendor/lib64/hw/audio.primary.gs101.so
 vendor/lib64/hw/sound_trigger.primary.gs101.so
@@ -985,6 +991,7 @@ vendor/lib64/libExynosC2Vp8Dec.so
 vendor/lib64/libExynosC2Vp8Enc.so
 vendor/lib64/libExynosC2Vp9Dec.so
 vendor/lib64/libExynosC2Vp9Enc.so
+vendor/lib64/libGralloc4Wrapper.so
 vendor/lib64/libOpenCL-pixel.so
 -vendor/lib64/libOpenCL.so
 vendor/lib64/lib_aion_buffer.so
@@ -1037,6 +1044,7 @@ vendor/lib64/libsueznanoappclients.so
 vendor/lib64/libtouchflow.so
 vendor/lib64/libusf.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/libvendorgraphicbuffer.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/sensors.usf.so
 vendor/lib64/soundfx/liboffloadeffect.so
