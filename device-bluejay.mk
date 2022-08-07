@@ -28,7 +28,7 @@ GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
 
 include device/google/gs101/fingerprint/extension/fingerprint.extension.mk
-include device/google/bluejay-sepolicy/bluejay-sepolicy.mk
+include device/google/bluejay/sepolicy/bluejay-sepolicy.mk
 include device/google/bluejay/audio/bluejay/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
