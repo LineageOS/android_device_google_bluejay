@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd098dc0_68adb6cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30863
+      },
+      "writtenOn": "2022-08-07T22:13:55Z",
+      "side": 1,
+      "message": "I wasn\u0027t able to get a bluejay build of LineageOS to work, but FWIW, GNSS *did* work fine with my LOS GSI build on my Pixel 6a.",
+      "revId": "f86bf57b1d8378c4f73591cdae601930b29cfa9f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
