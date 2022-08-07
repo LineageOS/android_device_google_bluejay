@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9aab5c9c_ed4360fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30863
+      },
+      "writtenOn": "2022-08-07T22:15:19Z",
+      "side": 1,
+      "message": "I wasn\u0027t able to get a bluejay build of LineageOS to work, but FWIW, camera stuff *did* seem to work fine with my LOS GSI build on my Pixel 6a.",
+      "revId": "77ce81365d0b3bff24422e299c1fd484e9b58619",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
