@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b6c14cc_365b59ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 30863
+      },
+      "writtenOn": "2022-08-07T21:59:24Z",
+      "side": 1,
+      "message": "Not sure I\u0027m setting up bluejay in \u0027repo\u0027 correctly, but this looks right to me.",
+      "revId": "00179ecdd8edeb4fb7d12a7c7c2c478c63939fdb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
