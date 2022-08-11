@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82320b83_4bc2a98d",
+        "filename": "device-lineage.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 18796
+      },
+      "writtenOn": "2022-08-11T06:40:21Z",
+      "side": 1,
+      "message": ":\u003d ?",
+      "revId": "4dc015c368bbc4a1651d9e14af3557048112d5e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
