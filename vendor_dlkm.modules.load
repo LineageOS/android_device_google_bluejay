@@ -18,8 +18,6 @@ kernel/drivers/hwtracing/coresight/coresight-etm4x.ko
 kernel/net/core/pktgen.ko
 extra/bcmdhd4389.ko
 extra/cl_dsp.ko
-extra/fst2.ko
-extra/ftm5.ko
 extra/goog_touch_interface.ko
 extra/google_dock.ko
 extra/haptics-cs40l2x.ko
@@ -30,6 +28,5 @@ extra/panel/panel-boe-nt37290.ko
 extra/panel/panel-samsung-s6e3fc3-p10.ko
 extra/panel/panel-samsung-s6e3hc3-c10.ko
 extra/panel/panel-samsung-s6e3hc4.ko
-extra/sec_touch.ko
 extra/snd-soc-cs40l26.ko
 extra/snd_soc_cs40l2x.ko
