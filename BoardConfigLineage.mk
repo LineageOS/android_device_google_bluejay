@@ -14,11 +14,14 @@ TARGET_KERNEL_DTB := \
     google/devices/bluejay/google-base/gs101-b0.dtb
 
 # Kernel modules
+BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/google/tangorpro/{vendor_boot,recovery}.modules.load))
+BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD := $(foreach m,$(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOARD_VENDOR_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/google/bluejay/vendor_dlkm.modules.load))
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(foreach m,$(BOARD_VENDOR_KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat device/google/bluejay/vendor_boot.modules.load))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(foreach m,$(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD_RAW),$(notdir $(m)))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
+RECOVERY_KERNEL_MODULES := $(BOARD_RECOVERY_RAMDISK_KERNEL_MODULES_LOAD)
 
 TARGET_KERNEL_EXT_MODULES := \
     amplifiers/audiometrics \
