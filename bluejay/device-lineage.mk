@@ -7,3 +7,7 @@
 $(call inherit-product, $(DEVICE_PATH)/device-lineage.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/$(DEVICE_CODENAME)/overlay-lineage
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.bluejay.touch.rc
