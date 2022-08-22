@@ -125,7 +125,7 @@
       "Path": "/proc/vendor_sched/util_threshold",
       "Values": [
         "1280",
-        "1100"
+        "1100 1078 1024"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -893,7 +893,7 @@
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "CPUUtilThreshold",
       "Duration": 0,
-      "Value": "1100"
+      "Value": "1100 1078 1024"
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
