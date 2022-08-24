@@ -120,7 +120,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=16
+    ro.vendor.build.svn=17
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -232,3 +232,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_b=6.4 \
     ro.com.google.ime.height_ratio=1.05
+
+# Enable adpf cpu hint session for SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	debug.sf.enable_adpf_cpu_hint=true
