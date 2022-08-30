@@ -1,0 +1,2 @@
+# Haptics
+get_prop(vendor_init, adaptive_haptics_prop)
