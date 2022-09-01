@@ -161,7 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=2g
+    vendor.zram.size=3g
 
 # Enable camera 1080P 60FPS binning mode
 PRODUCT_VENDOR_PROPERTIES += \
