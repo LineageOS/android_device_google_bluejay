@@ -242,6 +242,9 @@ system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
 system_ext/lib64/com.google.edgetpu_app_service-V1-ndk_platform.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V1-ndk_platform.so
 
+# Flipendo
+system_ext/app/Flipendo/Flipendo.apk
+
 # HBM
 system_ext/lib64/libhbmsvmanager_jni.so
 system_ext/priv-app/HbmSVManager/HbmSVManager.apk
