@@ -19,6 +19,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay
 
+# Flipendo
+BOARD_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/flipendo
+
 # HBM
 PRODUCT_PACKAGES := \
     HbmSVManagerOverlay
