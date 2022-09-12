@@ -209,6 +209,9 @@ product/priv-app/DiagMon/DiagMon.apk
 product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 product/priv-app/TetheringEntitlement/TetheringEntitlement.apk
 
+# Turbo
+product/priv-app/TurboPrebuilt/TurboPrebuilt.apk;PRESIGNED
+
 # US Cellular
 product/etc/permissions/com.android.sdm.plugins.usccdm.xml
 product/priv-app/USCCDM/USCCDM.apk
