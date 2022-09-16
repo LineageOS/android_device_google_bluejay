@@ -222,7 +222,9 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Vibrator HAL
 PRODUCT_VENDOR_PROPERTIES += \
-	ro.vendor.vibrator.hal.supported_primitives=243
+	ro.vendor.vibrator.hal.supported_primitives=243 \
+	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
+	ro.vendor.vibrator.hal.redc.comp.enabled=0
 
 # Device features
 PRODUCT_COPY_FILES += \
