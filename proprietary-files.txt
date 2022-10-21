@@ -302,7 +302,7 @@ system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
 system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-system_ext/priv-app/OemRilService/OemRilService.apk
+system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
 
 # VZW
 system_ext/etc/permissions/com.verizon.llkagent.xml
