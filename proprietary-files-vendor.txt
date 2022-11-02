@@ -887,6 +887,7 @@ vendor/lib/audio_waves_aoc.so
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/hw/audio.platform.aoc.so
 vendor/lib/hw/audio.primary.gs101.so
+vendor/lib/hw/hwcomposer.gs101.so
 vendor/lib/hw/sound_trigger.primary.gs101.so
 vendor/lib/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so
 vendor/lib/hw/vulkan.mali.so
@@ -904,9 +905,11 @@ vendor/lib/libExynosC2Vp8Dec.so
 vendor/lib/libExynosC2Vp8Enc.so
 vendor/lib/libExynosC2Vp9Dec.so
 vendor/lib/libExynosC2Vp9Enc.so
+vendor/lib/libExynosHWCService.so
 vendor/lib/libOpenCL-pixel.so
 -vendor/lib/libOpenCL.so
 vendor/lib/lib_aion_buffer.so
+vendor/lib/libacryl_hdr_plugin.so
 vendor/lib/libadaptedinfo.so
 vendor/lib/libamcsextfile.so
 vendor/lib/libaoc.so
@@ -915,8 +918,10 @@ vendor/lib/libaoctuningdecoder.so
 vendor/lib/libbo_av1.so
 vendor/lib/libc2filterplugin.so
 vendor/lib/libdisplaycolor.so
+vendor/lib/libdrmresource.so
 vendor/lib/libedgetpu_client.google.so
 vendor/lib/libedgetpu_util.so
+vendor/lib/libexynosdisplay.so
 vendor/lib/libfvsam_prm_parser.so
 vendor/lib/libgc2_av1_dec.so
 vendor/lib/libgc2_base.so
@@ -977,6 +982,7 @@ vendor/lib64/google_wifi_firmware_config_info_cc_proto.so
 vendor/lib64/google_wifi_firmware_config_version_c_wrapper.so
 vendor/lib64/hw/audio.platform.aoc.so
 vendor/lib64/hw/audio.primary.gs101.so
+vendor/lib64/hw/hwcomposer.gs101.so
 vendor/lib64/hw/sound_trigger.primary.gs101.so
 vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@3.0-impl.so
 vendor/lib64/hw/vulkan.mali.so
@@ -994,10 +1000,12 @@ vendor/lib64/libExynosC2Vp8Dec.so
 vendor/lib64/libExynosC2Vp8Enc.so
 vendor/lib64/libExynosC2Vp9Dec.so
 vendor/lib64/libExynosC2Vp9Enc.so
+vendor/lib64/libExynosHWCService.so
 vendor/lib64/libOpenCL-pixel.so
 -vendor/lib64/libOpenCL.so
 vendor/lib64/lib_aion_buffer.so
 vendor/lib64/lib_reader.so
+vendor/lib64/libacryl_hdr_plugin.so
 vendor/lib64/libadaptedinfo.so
 vendor/lib64/libamcsextfile.so
 vendor/lib64/libaoc.so
@@ -1008,9 +1016,11 @@ vendor/lib64/libc2filterplugin.so
 vendor/lib64/libdarwinn_hal.so
 vendor/lib64/libdeeptouch.so
 vendor/lib64/libdisplaycolor.so
+vendor/lib64/libdrmresource.so
 vendor/lib64/libedgetpu_client.google.so
 vendor/lib64/libedgetpu_tflite_compiler.so
 vendor/lib64/libedgetpu_util.so
+vendor/lib64/libexynosdisplay.so
 vendor/lib64/libfvsam_prm_parser.so
 vendor/lib64/libgc2_av1_dec.so
 vendor/lib64/libgc2_base.so
