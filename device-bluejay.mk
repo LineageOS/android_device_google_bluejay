@@ -238,3 +238,8 @@ PRODUCT_PRODUCT_PROPERTIES ?= \
 # Enable adpf cpu hint session for SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	debug.sf.enable_adpf_cpu_hint=true
+
+# Biometrics virtual HAL for e2e testing
+PRODUCT_PACKAGES_DEBUG += \
+    android.hardware.biometrics.fingerprint-service.example
+
