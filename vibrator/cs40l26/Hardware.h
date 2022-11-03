@@ -92,6 +92,22 @@ class HwApi : public Vibrator::HwApi, private HwApiBase {
     bool setF0CompEnable(bool value) override { return set(value, &mF0CompEnable); }
     bool setRedcCompEnable(bool value) override { return set(value, &mRedcCompEnable); }
     bool setMinOnOffInterval(uint32_t value) override { return set(value, &mMinOnOffInterval); }
+    uint32_t getContextScale() override {
+        return utils::getProperty("persist.vendor.vibrator.hal.context.scale", 100);
+    }
+    bool getContextEnable() override {
+        return utils::getProperty("persist.vendor.vibrator.hal.context.enable", false);
+    }
+    uint32_t getContextSettlingTime() override {
+        return utils::getProperty("persist.vendor.vibrator.hal.context.settlingtime", 3000);
+    }
+    uint32_t getContextCooldownTime() override {
+        return utils::getProperty("persist.vendor.vibrator.hal.context.cooldowntime", 1000);
+    }
+    bool getContextFadeEnable() override {
+        return utils::getProperty("persist.vendor.vibrator.hal.context.fade", false);
+    }
+
     // TODO(b/234338136): Need to add the force feedback HW API test cases
     bool setFFGain(int fd, uint16_t value) override {
         struct input_event gain = {

@@ -284,6 +284,11 @@ class VibratorTest : public Test {
         EXPECT_CALL(*mMockApi, setFFEffect(_, _, _)).Times(times);
         EXPECT_CALL(*mMockApi, setFFPlay(_, _, _)).Times(times);
         EXPECT_CALL(*mMockApi, setMinOnOffInterval(_)).Times(times);
+        EXPECT_CALL(*mMockApi, getContextScale()).Times(times);
+        EXPECT_CALL(*mMockApi, getContextEnable()).Times(times);
+        EXPECT_CALL(*mMockApi, getContextSettlingTime()).Times(times);
+        EXPECT_CALL(*mMockApi, getContextCooldownTime()).Times(times);
+        EXPECT_CALL(*mMockApi, getContextFadeEnable()).Times(times);
         EXPECT_CALL(*mMockApi, getHapticAlsaDevice(_, _)).Times(times);
         EXPECT_CALL(*mMockApi, setHapticPcmAmp(_, _, _, _)).Times(times);
 
@@ -363,6 +368,11 @@ TEST_F(VibratorTest, Constructor) {
             .WillOnce(DoAll(SetArgPointee<0>(supportedPrimitivesBits), Return(true)));
 
     EXPECT_CALL(*mMockApi, setMinOnOffInterval(MIN_ON_OFF_INTERVAL_US)).WillOnce(Return(true));
+    EXPECT_CALL(*mMockApi, getContextScale()).WillOnce(Return(0));
+    EXPECT_CALL(*mMockApi, getContextEnable()).WillOnce(Return(false));
+    EXPECT_CALL(*mMockApi, getContextSettlingTime()).WillOnce(Return(0));
+    EXPECT_CALL(*mMockApi, getContextCooldownTime()).WillOnce(Return(0));
+    EXPECT_CALL(*mMockApi, getContextFadeEnable()).WillOnce(Return(false));
     createVibrator(std::move(mockapi), std::move(mockcal), false);
 }
 

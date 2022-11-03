@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2021 The Android Open Source Project
+// Copyright (C) 2022 The Android Open Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package {
 }
 
 cc_defaults {
-    name: "android.hardware.vibrator-defaults.cs40l26",
+    name: "android.hardware.vibrator-defaults.cs40l26-private-bluejay",
     cflags: [
         "-DATRACE_TAG=(ATRACE_TAG_VIBRATOR | ATRACE_TAG_HAL)",
         "-DLOG_TAG=\"android.hardware.vibrator-cs40l26\"",
@@ -29,10 +29,10 @@ cc_defaults {
 }
 
 cc_defaults {
-    name: "VibratorHalCs40l26BinaryDefaults",
+    name: "VibratorHalCs40l26BinaryDefaultsPrivateBluejay",
     defaults: [
-        "PixelVibratorBinaryDefaults",
-        "android.hardware.vibrator-defaults.cs40l26",
+        "PixelVibratorBinaryDefaultsPrivateBluejay",
+        "android.hardware.vibrator-defaults.cs40l26-private-bluejay",
     ],
     include_dirs: [
         "external/tinyalsa/include",
@@ -44,43 +44,64 @@ cc_defaults {
 }
 
 cc_defaults {
-    name: "VibratorHalCs40l26TestDefaults",
+    name: "VibratorHalCs40l26TestDefaultsPrivateBluejay",
     defaults: [
-        "PixelVibratorTestDefaults",
-        "android.hardware.vibrator-defaults.cs40l26",
+        "PixelVibratorTestDefaultsPrivateBluejay",
+        "android.hardware.vibrator-defaults.cs40l26-private-bluejay",
     ],
     static_libs: [
-        "android.hardware.vibrator-impl.cs40l26",
         "libtinyalsa",
     ],
+    shared_libs: ["android.hardware.vibrator-impl.cs40l26-private-bluejay"],
 }
 
-cc_library {
-    name: "android.hardware.vibrator-impl.cs40l26",
-    defaults: ["VibratorHalCs40l26BinaryDefaults"],
-    srcs: ["Vibrator.cpp"],
-    export_include_dirs: ["."],
+cc_library_shared {
+    name: "libvibecapo_proto_bluejay",
+    vendor_available: true,
+    owner: "google",
+    srcs: [
+        "proto/capo.proto",
+    ],
+    shared_libs: [
+        "libprotobuf-cpp-full",
+    ],
+    export_include_dirs: [
+        "inc",
+    ],
+    proto: {
+        type: "lite",
+        export_proto_headers: true,
+    },
+}
+
+cc_library_shared {
+    name: "android.hardware.vibrator-impl.cs40l26-private-bluejay",
+    defaults: ["VibratorHalCs40l26BinaryDefaultsPrivateBluejay"],
+    srcs: [
+        "Vibrator.cpp",
+	"CapoDetector.cpp",
+    ],
+    static_libs: [
+        "chre_client",
+    ],
+    shared_libs: [
+        "libvibecapo_proto_bluejay",
+	"libprotobuf-cpp-full",
+    ],
+    export_include_dirs: [
+        ".",
+        "inc",
+    ],
     vendor_available: true,
     visibility: [":__subpackages__"],
 }
 
 cc_binary {
-    name: "android.hardware.vibrator-service.cs40l26",
-    defaults: ["VibratorHalCs40l26BinaryDefaults"],
-    init_rc: ["android.hardware.vibrator-service.cs40l26.rc"],
-    vintf_fragments: ["android.hardware.vibrator-service.cs40l26.xml"],
+    name: "android.hardware.vibrator-service.cs40l26-private-bluejay",
+    defaults: ["VibratorHalCs40l26BinaryDefaultsPrivateBluejay"],
+    init_rc: ["android.hardware.vibrator-service.cs40l26-private-bluejay.rc"],
+    vintf_fragments: ["android.hardware.vibrator-service.cs40l26-private-bluejay.xml"],
     srcs: ["service.cpp"],
-    shared_libs: ["android.hardware.vibrator-impl.cs40l26"],
-    proprietary: true,
-}
-
-cc_binary {
-    name: "android.hardware.vibrator-service.cs40l26-dual",
-    defaults: ["VibratorHalCs40l26BinaryDefaults"],
-    init_rc: ["android.hardware.vibrator-service.cs40l26-dual.rc"],
-    vintf_fragments: ["android.hardware.vibrator-service.cs40l26-dual.xml"],
-    srcs: ["service.cpp"],
-    shared_libs: ["android.hardware.vibrator-impl.cs40l26"],
-    cflags: ["-DVIBRATOR_NAME=\"dual\""],
+    shared_libs: ["android.hardware.vibrator-impl.cs40l26-private-bluejay"],
     proprietary: true,
 }
