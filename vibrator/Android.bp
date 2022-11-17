@@ -18,10 +18,10 @@ package {
 }
 
 cc_defaults {
-    name: "PixelVibratorDefaults",
+    name: "PixelVibratorDefaultsPrivateBluejay",
     relative_install_path: "hw",
     static_libs: [
-        "PixelVibratorCommon",
+        "PixelVibratorCommonPrivateBluejay",
     ],
     shared_libs: [
         "libbase",
@@ -34,16 +34,16 @@ cc_defaults {
 }
 
 cc_defaults {
-    name: "PixelVibratorBinaryDefaults",
-    defaults: ["PixelVibratorDefaults"],
+    name: "PixelVibratorBinaryDefaultsPrivateBluejay",
+    defaults: ["PixelVibratorDefaultsPrivateBluejay"],
     shared_libs: [
         "android.hardware.vibrator-V2-ndk",
     ],
 }
 
 cc_defaults {
-    name: "PixelVibratorTestDefaults",
-    defaults: ["PixelVibratorDefaults"],
+    name: "PixelVibratorTestDefaultsPrivateBluejay",
+    defaults: ["PixelVibratorDefaultsPrivateBluejay"],
     static_libs: [
         "android.hardware.vibrator-V2-ndk",
     ],

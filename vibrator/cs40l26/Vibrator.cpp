@@ -28,10 +28,21 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <ctime>
+#include <chrono>
+
+#include "CapoDetector.h"
 
 #ifndef ARRAY_SIZE
 #define ARRAY_SIZE(x) (sizeof((x)) / sizeof((x)[0]))
 #endif
+
+#ifdef LOG_TAG
+#undef LOG_TAG
+#define LOG_TAG "Vibrator"
+#endif
+
+using CapoDetector = android::chre::CapoDetector;
 
 namespace aidl {
 namespace android {
@@ -89,15 +100,34 @@ static constexpr float PWLE_FREQUENCY_MAX_HZ = 1000.00;
 static constexpr float PWLE_BW_MAP_SIZE =
         1 + ((PWLE_FREQUENCY_MAX_HZ - PWLE_FREQUENCY_MIN_HZ) / PWLE_FREQUENCY_RESOLUTION_HZ);
 
-static uint16_t amplitudeToScale(float amplitude, float maximum) {
-    float ratio = 100; /* Unit: % */
-    if (maximum != 0)
-        ratio = amplitude / maximum * 100;
+#ifndef DISABLE_ADAPTIVE_HAPTICS_FEATURE
+static constexpr bool mAdaptiveHapticsEnable = true;
+#else
+static constexpr bool mAdaptiveHapticsEnable = false;
+#endif /* DISABLE_ADAPTIVE_HAPTICS_FEATURE */
 
-    if (maximum == 0 || ratio > 100)
-        ratio = 100;
+static sp<CapoDetector> vibeContextListener;
+uint8_t mCapoDeviceState = 0;
+uint32_t mLastFaceUpEvent = 0;
+uint32_t mLastEffectPlayedTime = 0;
+float mLastPlayedScale = 0;
 
-    return std::round(ratio);
+static uint32_t getCurrentTimeInMs(void) {
+    return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+}
+
+static void capoEventCallback(uint8_t eventId) {
+    ALOGD("Vibrator %s, From: 0x%x To: 0x%x", __func__, mCapoDeviceState, (uint32_t)eventId);
+    // Record the last moment we were in FACE_UP state
+    if (mCapoDeviceState == capo::PositionType::ON_TABLE_FACE_UP ||
+        eventId == capo::PositionType::ON_TABLE_FACE_UP) {
+        mLastFaceUpEvent = getCurrentTimeInMs();
+    }
+    mCapoDeviceState = eventId;
+}
+
+static uint8_t getDeviceState(void) {
+    return mCapoDeviceState;
 }
 
 enum WaveformBankID : uint8_t {
@@ -366,6 +396,18 @@ Vibrator::Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal)
     }
 
     mHwApi->setMinOnOffInterval(MIN_ON_OFF_INTERVAL_US);
+
+    if (mAdaptiveHapticsEnable) {
+        vibeContextListener = CapoDetector::start();
+        if (vibeContextListener == nullptr) {
+            ALOGE("%s, CapoDetector failed to start", __func__);
+        } else {
+            ALOGD("%s, CapoDetector started successfully! NanoAppID: 0x%x", __func__,
+                  (uint32_t)vibeContextListener->getNanoppAppId());
+            vibeContextListener->setCallback(capoEventCallback);
+            ALOGD("%s, CapoDetector Set Callback function from vibe", __func__);
+        }
+    }
 }
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t *_aidl_return) {
@@ -666,8 +708,70 @@ ndk::ScopedAStatus Vibrator::on(uint32_t timeoutMs, uint32_t effectIndex, dspmem
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::setEffectAmplitude(float amplitude, float maximum) {
-    uint16_t scale = amplitudeToScale(amplitude, maximum);
+uint16_t Vibrator::amplitudeToScale(float amplitude, float maximum, bool scalable) {
+    float ratio = 100; /* Unit: % */
+
+    if (maximum != 0)
+        ratio = amplitude / maximum * 100;
+
+    if (maximum == 0 || ratio > 100)
+        ratio = 100;
+
+    if (scalable && mContextEnable & mAdaptiveHapticsEnable) {
+        uint32_t now = getCurrentTimeInMs();
+        uint32_t last_played = mLastEffectPlayedTime;
+        float context_scale = 1.0;
+        bool device_face_up = getDeviceState() == capo::PositionType::ON_TABLE_FACE_UP;
+        float pre_scaled_ratio = ratio;
+        mLastEffectPlayedTime = now;
+
+        ALOGD("Vibrator Now: %u, Last: %u, ScaleTime: %u, Since? %d", now, mLastFaceUpEvent, mScaleTime, (now < mLastFaceUpEvent + mScaleTime));
+        /* If the device is face-up or within the fade scaling range, find new scaling factor */
+        if (device_face_up || now < mLastFaceUpEvent + mScaleTime) {
+            /* Device is face-up, so we will scale it down. Start with highest scaling factor */
+            context_scale = mScalingFactor <= 100 ? static_cast<float>(mScalingFactor)/100 : 1.0;
+            if (mFadeEnable && mScaleTime > 0 && (context_scale < 1.0) && (now < mLastFaceUpEvent + mScaleTime) && !device_face_up) {
+                float fade_scale = static_cast<float>(now - mLastFaceUpEvent)/static_cast<float>(mScaleTime);
+                context_scale += ((1.0 - context_scale)*fade_scale);
+                ALOGD("Vibrator fade scale applied: %f", fade_scale);
+            }
+            ratio *= context_scale;
+            ALOGD("Vibrator adjusting for face-up: pre: %f, post: %f",
+                  std::round(pre_scaled_ratio), std::round(ratio));
+        }
+
+        /* If we haven't played an effect within the cooldown time, save the scaling factor */
+        if ((now - last_played) > mScaleCooldown) {
+            ALOGD("Vibrator updating lastplayed scale, old: %f, new: %f", mLastPlayedScale, context_scale);
+            mLastPlayedScale = context_scale;
+        }
+        else {
+            /* Override the scale to match previously played scale */
+            ratio = mLastPlayedScale * pre_scaled_ratio;
+            ALOGD("Vibrator repeating last scale: %f, new ratio: %f, duration since last: %u", mLastPlayedScale, ratio, (now - last_played));
+        }
+    }
+
+    return std::round(ratio);
+}
+
+void Vibrator::updateContext() {
+    mContextEnable = mHwApi->getContextEnable();
+    mFadeEnable = mHwApi->getContextFadeEnable();
+    mScalingFactor = mHwApi->getContextScale();
+    mScaleTime = mHwApi->getContextSettlingTime();
+    mScaleCooldown = mHwApi->getContextCooldownTime();
+}
+
+ndk::ScopedAStatus Vibrator::setEffectAmplitude(float amplitude, float maximum, bool scalable) {
+    uint16_t scale;
+
+    if (mAdaptiveHapticsEnable && scalable) {
+        updateContext();
+    }
+
+    scale = amplitudeToScale(amplitude, maximum, scalable);
+
     if (!mHwApi->setFFGain(mInputFd, scale)) {
         ALOGE("Failed to set the gain to %u (%d): %s", scale, errno, strerror(errno));
         return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_STATE);
@@ -680,7 +784,7 @@ ndk::ScopedAStatus Vibrator::setGlobalAmplitude(bool set) {
     if (!set) {
         mLongEffectScale = 1.0;  // Reset the scale for the later new effect.
     }
-    return setEffectAmplitude(amplitude, VOLTAGE_SCALE_MAX);
+    return setEffectAmplitude(amplitude, VOLTAGE_SCALE_MAX, true);
 }
 
 ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect> * /*_aidl_return*/) {
@@ -1054,6 +1158,16 @@ binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
 
     mHwCal->debug(fd);
 
+    dprintf(fd, "Capo Info\n");
+    if (vibeContextListener) {
+        dprintf(fd, "Capo ID: 0x%x\n", (uint32_t)(vibeContextListener->getNanoppAppId()));
+        dprintf(fd, "Capo State: %d DetectedState: %d\n", vibeContextListener->getCarriedPosition(),
+                getDeviceState());
+    } else {
+        dprintf(fd, "Capo ID: 0x%x\n", (uint32_t)(0xdeadbeef));
+        dprintf(fd, "Capo State: %d DetectedState: %d\n", (uint32_t)0x454545, getDeviceState());
+    }
+
     fsync(fd);
     return STATUS_OK;
 }
@@ -1265,7 +1379,7 @@ exit:
 ndk::ScopedAStatus Vibrator::performEffect(uint32_t effectIndex, uint32_t volLevel,
                                            dspmem_chunk *ch,
                                            const std::shared_ptr<IVibratorCallback> &callback) {
-    setEffectAmplitude(volLevel, VOLTAGE_SCALE_MAX);
+    setEffectAmplitude(volLevel, VOLTAGE_SCALE_MAX, false);
 
     return on(MAX_TIME_MS, effectIndex, ch, callback);
 }

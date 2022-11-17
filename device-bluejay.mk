@@ -33,7 +33,7 @@ include device/google/bluejay/audio/bluejay/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
+include device/google/bluejay/vibrator/cs40l26/device.mk
 include device/google/gs101/bluetooth/bluetooth.mk
 
 ifeq ($(filter factory_bluejay, $(TARGET_PRODUCT)),)
@@ -226,7 +226,12 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.supported_primitives=243 \
 	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
-	ro.vendor.vibrator.hal.redc.comp.enabled=0
+	ro.vendor.vibrator.hal.redc.comp.enabled=0 \
+	persist.vendor.vibrator.hal.context.enable=false \
+	persist.vendor.vibrator.hal.context.scale=40 \
+	persist.vendor.vibrator.hal.context.fade=true \
+	persist.vendor.vibrator.hal.context.cooldowntime=1600 \
+	persist.vendor.vibrator.hal.context.settlingtime=5000
 
 # Device features
 PRODUCT_COPY_FILES += \

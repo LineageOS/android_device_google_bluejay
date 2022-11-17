@@ -18,8 +18,8 @@ package {
 }
 
 cc_test {
-    name: "VibratorHalCs40l26TestSuite",
-    defaults: ["VibratorHalCs40l26TestDefaults"],
+    name: "VibratorHalCs40l26TestSuitePrivateBluejay",
+    defaults: ["VibratorHalCs40l26TestDefaultsPrivateBluejay"],
     srcs: [
         "test-hwcal.cpp",
 	"test-hwapi.cpp",

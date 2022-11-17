@@ -18,7 +18,7 @@ package {
 }
 
 cc_library {
-    name: "PixelVibratorCommon",
+    name: "PixelVibratorCommonPrivateBluejay",
     srcs: [
         "HardwareBase.cpp",
     ],

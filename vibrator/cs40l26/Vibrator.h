@@ -23,6 +23,8 @@
 #include <array>
 #include <fstream>
 #include <future>
+#include <ctime>
+#include <chrono>
 
 namespace aidl {
 namespace android {
@@ -61,6 +63,21 @@ class Vibrator : public BnVibrator {
         virtual bool setRedcCompEnable(bool value) = 0;
         // Stores the minumun delay time between playback and stop effects.
         virtual bool setMinOnOffInterval(uint32_t value) = 0;
+        // Gets the scaling factor for contextual haptic events.
+        virtual uint32_t getContextScale() = 0;
+        // Gets the enable status for contextual haptic events.
+        virtual bool getContextEnable() = 0;
+        // Gets the settling time for contextual haptic events.
+        // This will allow the device to stay face up for the duration given,
+        // even if InMotion events were detected.
+        virtual uint32_t getContextSettlingTime() = 0;
+        // Gets the cooldown time for contextual haptic events.
+        // This is used to avoid changing the scale of close playback events.
+        virtual uint32_t getContextCooldownTime() = 0;
+        // Checks the enable status for contextual haptics fade feature.  When enabled
+        // this feature will cause the scaling factor to fade back up to max over
+        // the setting time set, instead of instantaneously changing it back to max.
+        virtual bool getContextFadeEnable() = 0;
         // Indicates the number of 0.125-dB steps of attenuation to apply to
         // waveforms triggered in response to vibration calls from the
         // Android vibrator HAL.
@@ -158,7 +175,7 @@ class Vibrator : public BnVibrator {
     ndk::ScopedAStatus on(uint32_t timeoutMs, uint32_t effectIndex, struct dspmem_chunk *ch,
                           const std::shared_ptr<IVibratorCallback> &callback);
     // set 'amplitude' based on an arbitrary scale determined by 'maximum'
-    ndk::ScopedAStatus setEffectAmplitude(float amplitude, float maximum);
+    ndk::ScopedAStatus setEffectAmplitude(float amplitude, float maximum, bool scalable);
     ndk::ScopedAStatus setGlobalAmplitude(bool set);
     // 'simple' effects are those precompiled and loaded into the controller
     ndk::ScopedAStatus getSimpleDetails(Effect effect, EffectStrength strength,
@@ -181,6 +198,8 @@ class Vibrator : public BnVibrator {
     bool findHapticAlsaDevice(int *card, int *device);
     bool hasHapticAlsaDevice();
     bool enableHapticPcmAmp(struct pcm **haptic_pcm, bool enable, int card, int device);
+    uint16_t amplitudeToScale(float amplitude, float maximum, bool scalable);
+    void updateContext();
 
     std::unique_ptr<HwApi> mHwApi;
     std::unique_ptr<HwCal> mHwCal;
@@ -200,6 +219,11 @@ class Vibrator : public BnVibrator {
     bool mIsUnderExternalControl;
     float mLongEffectScale = 1.0;
     bool mIsChirpEnabled;
+    uint32_t mScaleTime;
+    bool mFadeEnable;
+    uint32_t mScalingFactor;
+    uint32_t mScaleCooldown;
+    bool mContextEnable;
     uint32_t mSupportedPrimitivesBits = 0x0;
     std::vector<CompositePrimitive> mSupportedPrimitives;
     bool mConfigHapticAlsaDeviceDone{false};
