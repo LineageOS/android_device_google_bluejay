@@ -42,8 +42,8 @@ product/etc/sysconfig/pixel_experience_2019.xml
 product/etc/sysconfig/pixel_experience_2019_midyear.xml
 product/etc/sysconfig/pixel_experience_2020.xml
 product/etc/sysconfig/pixel_experience_2020_midyear.xml
-product/etc/sysconfig/pixel_experience_2021_midyear.xml
 product/etc/sysconfig/pixel_experience_2021.xml
+product/etc/sysconfig/pixel_experience_2021_midyear.xml
 
 # Radio
 product/etc/CarrierSettings/a1_at.pb
@@ -82,6 +82,7 @@ product/etc/CarrierSettings/dishatt_us.pb
 product/etc/CarrierSettings/docomo_jp.pb
 product/etc/CarrierSettings/docomomvno_jp.pb
 product/etc/CarrierSettings/ee_gb.pb
+product/etc/CarrierSettings/eir_ie.pb
 product/etc/CarrierSettings/eplus_de.pb
 product/etc/CarrierSettings/esn_gb.pb
 product/etc/CarrierSettings/fet_tw.pb
@@ -94,10 +95,12 @@ product/etc/CarrierSettings/fizz_ca.pb
 product/etc/CarrierSettings/free_fr.pb
 product/etc/CarrierSettings/freedommobile_ca.pb
 product/etc/CarrierSettings/gamma_gb.pb
+product/etc/CarrierSettings/giga_sg.pb
 product/etc/CarrierSettings/h3_at.pb
 product/etc/CarrierSettings/h3_gb.pb
 product/etc/CarrierSettings/h3_ie.pb
 product/etc/CarrierSettings/h3_se.pb
+product/etc/CarrierSettings/h3g27202_ie.pb
 product/etc/CarrierSettings/halebop_se.pb
 product/etc/CarrierSettings/homobile_it.pb
 product/etc/CarrierSettings/ice_no.pb
@@ -136,6 +139,7 @@ product/etc/CarrierSettings/rogers5g_ca.pb
 product/etc/CarrierSettings/rogers_ca.pb
 product/etc/CarrierSettings/sfr_fr.pb
 product/etc/CarrierSettings/shaw_ca.pb
+product/etc/CarrierSettings/simba_sg.pb
 product/etc/CarrierSettings/simple_us.pb
 product/etc/CarrierSettings/singtel_sg.pb
 product/etc/CarrierSettings/smarty_gb.pb
@@ -177,8 +181,10 @@ product/etc/CarrierSettings/tmomvno_nl.pb
 product/etc/CarrierSettings/tmomvno_us.pb
 product/etc/CarrierSettings/tracfonetmo_us.pb
 product/etc/CarrierSettings/tracfoneverizon_us.pb
+product/etc/CarrierSettings/truemove_th.pb
 product/etc/CarrierSettings/tstar_tw.pb
 product/etc/CarrierSettings/twm_tw.pb
+product/etc/CarrierSettings/unifi_my.pb
 product/etc/CarrierSettings/uqmobile_jp.pb
 product/etc/CarrierSettings/uscc_us.pb
 product/etc/CarrierSettings/verizon_us.pb
@@ -285,9 +291,10 @@ system_ext/framework/RadioConfigLib.jar
 system_ext/framework/google-ril.jar
 system_ext/priv-app/CarrierSetup/CarrierSetup.apk;PRESIGNED
 system_ext/priv-app/ConnectivityThermalPowerManager/ConnectivityThermalPowerManager.apk
+system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk
 system_ext/priv-app/EuiccSupportPixel/DKA_RC5_DVT.in
-system_ext/priv-app/EuiccSupportPixel/DKA_RC6_DVT.up
-system_ext/priv-app/EuiccSupportPixel/DKA_RC6_EVT.up
+system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up
+system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up
 system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk;PRESIGNED
 system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk;PRESIGNED
 system_ext/priv-app/RilConfigService/RilConfigService.apk

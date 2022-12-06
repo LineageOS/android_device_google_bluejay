@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.4.vendor:64 \
     android.hardware.wifi@1.5.vendor:64 \
     android.hardware.wifi@1.6.vendor:64 \
-    com.google.hardware.pixel.display-V4-ndk.vendor
+    com.google.hardware.pixel.display-V4-ndk.vendor \
+    com.google.hardware.pixel.display-V5-ndk.vendor
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop
