@@ -39,6 +39,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,bluejay)
 $(call soong_config_set,lyric,tuning_product,bluejay)
 $(call soong_config_set,google3a_config,target_device,bluejay)
 
@@ -57,7 +59,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal Config
 PRODUCT_COPY_FILES += \
-	device/google/bluejay/thermal_info_config_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+	device/google/bluejay/thermal_info_config_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+	device/google/bluejay/thermal_info_config_charge_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
@@ -95,7 +98,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc@1.2-service.st
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -107,7 +110,6 @@ PRODUCT_COPY_FILES += \
         device/google/bluejay/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
 DEVICE_MANIFEST_FILE += \
-	device/google/bluejay/nfc/manifest_nfc.xml \
 	device/google/bluejay/nfc/manifest_se_bluejay.xml
 
 # PowerStats HAL
@@ -117,7 +119,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=18
+    ro.vendor.build.svn=19
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -149,7 +151,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.a2dp_aac.vbr_supported=true
+    persist.bluetooth.a2dp_aac.vbr_supported=true \
+    persist.bluetooth.firmware.selection=BCM.hcd
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
@@ -157,7 +160,7 @@ PRODUCT_PACKAGES += \
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=2g
+    vendor.zram.size=3g
 
 # Enable camera 1080P 60FPS binning mode
 PRODUCT_VENDOR_PROPERTIES += \
@@ -218,7 +221,9 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Vibrator HAL
 PRODUCT_VENDOR_PROPERTIES += \
-	ro.vendor.vibrator.hal.supported_primitives=243
+	ro.vendor.vibrator.hal.supported_primitives=243 \
+	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
+	ro.vendor.vibrator.hal.redc.comp.enabled=0
 
 # Device features
 PRODUCT_COPY_FILES += \
@@ -228,3 +233,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_b=6.4 \
     ro.com.google.ime.height_ratio=1.05
+
+# Enable adpf cpu hint session for SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	debug.sf.enable_adpf_cpu_hint=true
