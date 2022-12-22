@@ -37,6 +37,9 @@ include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
+# wireless_charger HAL service due to healthd and batteryinfo dependency
+include device/google/gs-common/wireless_charger/wireless_charger.mk
+
 ifeq ($(filter factory_bluejay, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
 else
@@ -235,10 +238,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 PRODUCT_PRODUCT_PROPERTIES ?= \
     ro.com.google.ime.height_ratio=1.05
-
-# Enable adpf cpu hint session for SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	debug.sf.enable_adpf_cpu_hint=true
 
 # Biometrics virtual HAL for e2e testing
 PRODUCT_PACKAGES_DEBUG += \
