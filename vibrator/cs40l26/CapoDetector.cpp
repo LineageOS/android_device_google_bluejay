@@ -30,10 +30,6 @@ namespace chre {
 
 namespace {  // anonymous namespace for file-local definitions
 
-static capo::ConfigureDetector_ConfigData config_data = capo::ConfigureDetector_ConfigData();
-static capo::ConfigureDetector msg = capo::ConfigureDetector();
-
-
 /**
  * Called when onConnected() to send NanoappList request.
  */
@@ -166,19 +162,22 @@ void CapoDetector::enable() {
     // Create CHRE message with serialized message
     flatbuffers::FlatBufferBuilder builder, config_builder, force_builder;
 
-    config_data.set_still_time_threshold_nanosecond(mCapoDetectorMDParameters.still_time_threshold_ns);
-    config_data.set_window_width_nanosecond(mCapoDetectorMDParameters.window_width_ns);
-    config_data.set_motion_confidence_threshold(mCapoDetectorMDParameters.motion_confidence_threshold);
-    config_data.set_still_confidence_threshold(mCapoDetectorMDParameters.still_confidence_threshold);
-    config_data.set_var_threshold(mCapoDetectorMDParameters.var_threshold);
-    config_data.set_var_threshold_delta(mCapoDetectorMDParameters.var_threshold_delta);
+    auto config_data = std::make_unique<capo::ConfigureDetector_ConfigData>();
+    auto msg = std::make_unique<capo::ConfigureDetector>();
 
-    msg.set_allocated_config_data(&config_data);
+    config_data->set_still_time_threshold_nanosecond(mCapoDetectorMDParameters.still_time_threshold_ns);
+    config_data->set_window_width_nanosecond(mCapoDetectorMDParameters.window_width_ns);
+    config_data->set_motion_confidence_threshold(mCapoDetectorMDParameters.motion_confidence_threshold);
+    config_data->set_still_confidence_threshold(mCapoDetectorMDParameters.still_confidence_threshold);
+    config_data->set_var_threshold(mCapoDetectorMDParameters.var_threshold);
+    config_data->set_var_threshold_delta(mCapoDetectorMDParameters.var_threshold_delta);
 
-    auto pb_size = msg.ByteSizeLong();
+    msg->set_allocated_config_data(config_data.release());
+
+    auto pb_size = msg->ByteSizeLong();
     auto pb_data = std::make_unique<uint8_t[]>(pb_size);
 
-    if (!msg.SerializeToArray(pb_data.get(), pb_size)) {
+    if (!msg->SerializeToArray(pb_data.get(), pb_size)) {
         ALOGE("Failed to serialize message.");
     }
 
