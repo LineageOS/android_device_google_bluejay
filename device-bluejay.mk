@@ -37,9 +37,6 @@ include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
-# wireless_charger HAL service due to healthd and batteryinfo dependency
-include device/google/gs-common/wireless_charger/wireless_charger.mk
-
 ifeq ($(filter factory_bluejay, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
 else
