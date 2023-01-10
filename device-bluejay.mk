@@ -33,7 +33,7 @@ include device/google/bluejay/audio/bluejay/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
+include device/google/bluejay/vibrator/cs40l26/device.mk
 include device/google/gs101/bluetooth/bluetooth.mk
 
 ifeq ($(filter factory_bluejay, $(TARGET_PRODUCT)),)
@@ -42,6 +42,8 @@ else
 include device/google/gs101/fingerprint/udfps_factory.mk
 endif
 
+# go/lyric-soong-variables
+$(call soong_config_set,lyric,camera_hardware,bluejay)
 $(call soong_config_set,lyric,tuning_product,bluejay)
 $(call soong_config_set,google3a_config,target_device,bluejay)
 
@@ -60,7 +62,8 @@ PRODUCT_COPY_FILES += \
 
 # Thermal Config
 PRODUCT_COPY_FILES += \
-	device/google/bluejay/thermal_info_config_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+	device/google/bluejay/thermal_info_config_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+	device/google/bluejay/thermal_info_config_charge_bluejay.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json
 
 # Power HAL config
 PRODUCT_COPY_FILES += \
@@ -119,7 +122,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=15
+    ro.vendor.build.svn=24
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -160,7 +163,7 @@ PRODUCT_PACKAGES += \
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=2g
+    vendor.zram.size=3g
 
 # Enable camera 1080P 60FPS binning mode
 PRODUCT_VENDOR_PROPERTIES += \
@@ -221,7 +224,14 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Vibrator HAL
 PRODUCT_VENDOR_PROPERTIES += \
-	ro.vendor.vibrator.hal.supported_primitives=243
+	ro.vendor.vibrator.hal.supported_primitives=243 \
+	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
+	ro.vendor.vibrator.hal.redc.comp.enabled=0 \
+	persist.vendor.vibrator.hal.context.enable=false \
+	persist.vendor.vibrator.hal.context.scale=40 \
+	persist.vendor.vibrator.hal.context.fade=true \
+	persist.vendor.vibrator.hal.context.cooldowntime=1600 \
+	persist.vendor.vibrator.hal.context.settlingtime=5000
 
 # Device features
 PRODUCT_COPY_FILES += \
@@ -231,3 +241,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_b=6.4 \
     ro.com.google.ime.height_ratio=1.05
+
+# Enable adpf cpu hint session for SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	debug.sf.enable_adpf_cpu_hint=true
