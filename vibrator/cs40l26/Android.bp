@@ -81,9 +81,6 @@ cc_library_shared {
         "Vibrator.cpp",
 	"CapoDetector.cpp",
     ],
-    cflags: [
-        "-DDISABLE_ADAPTIVE_HAPTICS_FEATURE",
-    ],
     static_libs: [
         "chre_client",
     ],
