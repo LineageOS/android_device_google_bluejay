@@ -132,8 +132,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 
-# Display LBE
+# Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
 
 # Bluetooth Hal Extension test tools
 PRODUCT_PACKAGES_DEBUG += \
