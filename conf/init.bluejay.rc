@@ -15,7 +15,6 @@ on property:persist.vendor.touch_sensitivity_mode=1 && property:sys.boot_complet
 
 on post-fs-data
     # Fingerprint
-    chown system system /dev/goodix_fp
     exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/g7.app
 
     # Speaker amp permission
