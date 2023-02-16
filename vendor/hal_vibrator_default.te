@@ -1,3 +1,0 @@
-# Allow Vibrator HAL to communicate with daemon via socket
-allow hal_vibrator_default chre:unix_stream_socket connectto;
-allow hal_vibrator_default chre_socket:sock_file write;
