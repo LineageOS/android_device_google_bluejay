@@ -38,10 +38,3 @@ on property:sys.boot_completed=1
 on override-sf-uclamp
     write /proc/vendor_sched/rt_uclamp_min 0
     write /proc/vendor_sched/sf_uclamp_min 0
-
-# Route vibrator.adaptive_haptics.enabled to persist
-on property:vibrator.adaptive_haptics.enabled=0
-    setprop persist.vendor.vibrator.hal.context.enable false
-
-on property:vibrator.adaptive_haptics.enabled=1
-    setprop persist.vendor.vibrator.hal.context.enable true
