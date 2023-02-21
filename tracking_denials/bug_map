@@ -1,3 +1,4 @@
+cbd vendor_modem_prop property_service b/270080469
 derive_sdk mediaprovider_app dir b/264600240
 dump_pixel_metrics sysfs file b/268147280
 dump_stm sysfs_spi dir b/268147400
