@@ -2,6 +2,7 @@ cbd vendor_modem_prop property_service b/270080469
 derive_sdk mediaprovider_app dir b/264600240
 dump_pixel_metrics sysfs file b/268147280
 dump_ramdump radio_vendor_data_file file b/270247129
+dump_ramdump vendor_camera_data_file file b/270633115
 dump_stm sysfs_spi dir b/268147400
 dump_storage radio_vendor_data_file file b/269218359
 dump_storage vendor_slog_file file b/269218359
