@@ -6,6 +6,7 @@ dump_ramdump vendor_camera_data_file file b/270633115
 dump_stm sysfs_spi dir b/268147400
 dump_storage radio_vendor_data_file file b/269218359
 dump_storage vendor_slog_file file b/269218359
+dump_trusty modem_efs_file file b/277529247
 dumpstate app_zygote process b/238263942
 hal_dumpstate_default dump_ramdump process b/270247072
 hal_power_default hal_power_default capability b/240632681
