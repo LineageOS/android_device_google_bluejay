@@ -247,9 +247,5 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES ?= \
     ro.com.google.ime.height_ratio=1.05
 
-# Setup Wizard device-specific settings
-PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.feature.enable_quick_start_flow_for_debug=true \
-
 # UFS: the script is used to select the corresponding firmware to run FFU.
 PRODUCT_PACKAGES += ufs_firmware_update.sh
