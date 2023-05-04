@@ -1189,5 +1189,25 @@
             "PowerSampleDelay":7000,
             "PowerSampleCount":1
         }
-    ]
+    ],
+    "Stats": {
+        "Sensors": {
+            "RecordWithDefaultThreshold": ["VIRTUAL-SKIN"],
+            "RecordWithThreshold": [
+                {
+                    "Name": "VIRTUAL-SKIN",
+                    "Thresholds": [31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51]
+                },
+                {
+                    "Name": "VIRTUAL-USB-THROTTLING",
+                    "Thresholds": [2.0]
+                }
+            ]
+        },
+        "CoolingDevices": {
+            "RecordVotePerSensor": {
+                "DefaultThresholdEnableAll": true
+            }
+        }
+    }
 }
