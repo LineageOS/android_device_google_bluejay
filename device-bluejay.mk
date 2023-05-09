@@ -80,8 +80,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.extended_launch_boost=1 \
     persist.vendor.camera.raise_buf_allocation_priority=1 \
-    persist.vendor.camera.fixed_fps_range_boost=1 \
-    vendor.camera.multicam.enable_p23_multicam=true
+    persist.vendor.camera.fixed_fps_range_boost=1
 
 # Display Config
 PRODUCT_COPY_FILES += \
