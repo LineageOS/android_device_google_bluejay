@@ -1,3 +1,4 @@
-include platform/system/sepolicy:/OWNERS
+include device/google/gs-common:/sepolicy/OWNERS
 
-rurumihong@google.com
+adamshih@google.com
+
