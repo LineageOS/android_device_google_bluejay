@@ -1,0 +1,1 @@
+allow grilservice_app hal_bluetooth_coexistence_service:service_manager find;
