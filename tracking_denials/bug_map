@@ -1,7 +1,4 @@
-cbd vendor_modem_prop property_service b/270080469
-derive_sdk mediaprovider_app dir b/264600240
 hal_power_default hal_power_default capability b/240632681
-hal_vibrator_default sysfs file b/264483668
 incidentd debugfs_wakeup_sources file b/238263518
 incidentd incidentd anon_inode b/268147248
 webview_zygote logdr_socket sock_file b/264600023
