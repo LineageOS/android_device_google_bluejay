@@ -1172,8 +1172,7 @@ VENDOR_SKIP_FILES=(
     "lib/android.hardware.secure_element@1.2.so"
     "lib/android.hardware.thermal@1.0.so"
     "lib/android.hardware.thermal@2.0.so"
-    "lib/com.google.hardware.pixel.display-V4-ndk.so"
-    "lib/com.google.hardware.pixel.display-V5-ndk.so"
+    "lib/com.google.hardware.pixel.display-V6-ndk.so"
     "lib64/android.hardware.authsecret@1.0.so"
     "lib64/android.hardware.biometrics.common-V2-ndk.so"
     "lib64/android.hardware.biometrics.fingerprint-V2-ndk.so"
@@ -1202,7 +1201,7 @@ VENDOR_SKIP_FILES=(
     "lib64/android.hardware.tetheroffload.control@1.1.so"
     "lib64/android.hardware.weaver@1.0.so"
     "lib64/com.google.hardware.pixel.display-V4-ndk.so"
-    "lib64/com.google.hardware.pixel.display-V5-ndk.so"
+    "lib64/com.google.hardware.pixel.display-V6-ndk.so"
 
     # Completely skip files that are not required
 
