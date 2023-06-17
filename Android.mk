@@ -44,7 +44,7 @@ $(DM_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /product/lib64/$(notdir $@) $@
 
 HBM_LIBS := libhbmsvmanager_jni.so
-HBM_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT)/priv-app/HbmSVManager/lib/arm64/,$(notdir $(IMS_LIBS)))
+HBM_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT)/priv-app/HbmSVManager/lib/arm64/,$(notdir $(HBM_LIBS)))
 $(HBM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "HBM lib link: $@"
 	@mkdir -p $(dir $@)
