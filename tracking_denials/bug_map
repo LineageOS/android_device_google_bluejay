@@ -1,6 +1,2 @@
 incidentd debugfs_wakeup_sources file b/238263518
 incidentd incidentd anon_inode b/268147248
-webview_zygote logdr_socket sock_file b/264600023
-webview_zygote resourcecache_data_file dir b/264600023
-webview_zygote tombstoned_crash_socket sock_file b/264600023
-webview_zygote zygote_exec file b/264600023
