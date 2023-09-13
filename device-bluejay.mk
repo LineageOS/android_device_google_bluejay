@@ -198,11 +198,6 @@ PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
 
-
-# Android DeviceAsWebcam specific overlay
-PRODUCT_PACKAGES += \
-    DeviceAsWebcamBluejay
-
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayGB17L \
