@@ -127,7 +127,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=46
+    ro.vendor.build.svn=49
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -197,11 +197,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
     AvoidAppsInCutoutOverlay
-
-
-# Android DeviceAsWebcam specific overlay
-PRODUCT_PACKAGES += \
-    DeviceAsWebcamBluejay
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
