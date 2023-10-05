@@ -34,7 +34,8 @@ include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/fingerprint/udfps_common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include hardware/google/pixel/vibrator/cs40l26/device.mk
-include device/google/gs101/bluetooth/bluetooth.mk
+include device/google/gs-common/bcmbt/bluetooth.mk
+include device/google/gs-common/touch/stm/stm11.mk
 
 ifeq ($(filter factory_bluejay, $(TARGET_PRODUCT)),)
 include device/google/gs101/fingerprint/udfps_shipping.mk
@@ -122,17 +123,19 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=37
+    ro.vendor.build.svn=46
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=2
+    ro.gms.dck.eligible_wcc=2 \
+    ro.gms.dck.se_capability=1
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 
-# Display LBE
+# Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
 
 # Bluetooth Hal Extension test tools
 PRODUCT_PACKAGES_DEBUG += \
@@ -156,10 +159,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
     persist.bluetooth.firmware.selection=BCM.hcd
-
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-	bt_vendor.conf
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
@@ -223,10 +222,16 @@ endif
 PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Vibrator HAL
+ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.supported_primitives=243 \
 	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
-	ro.vendor.vibrator.hal.redc.comp.enabled=0
+	ro.vendor.vibrator.hal.redc.comp.enabled=0 \
+	persist.vendor.vibrator.hal.context.enable=false \
+	persist.vendor.vibrator.hal.context.scale=40 \
+	persist.vendor.vibrator.hal.context.fade=true \
+	persist.vendor.vibrator.hal.context.cooldowntime=1600 \
+	persist.vendor.vibrator.hal.context.settlingtime=5000
 
 # Device features
 PRODUCT_COPY_FILES += \
@@ -235,8 +240,9 @@ PRODUCT_COPY_FILES += \
 # Keyboard bottom padding in dp for portrait mode and height ratio
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_b=6.4 \
+
+PRODUCT_PRODUCT_PROPERTIES ?= \
     ro.com.google.ime.height_ratio=1.05
 
-# Enable adpf cpu hint session for SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	debug.sf.enable_adpf_cpu_hint=true
+# UFS: the script is used to select the corresponding firmware to run FFU.
+PRODUCT_PACKAGES += ufs_firmware_update.sh
