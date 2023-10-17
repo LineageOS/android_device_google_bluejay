@@ -123,7 +123,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=46
+    ro.vendor.build.svn=49
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -246,3 +246,7 @@ PRODUCT_PRODUCT_PROPERTIES ?= \
 
 # UFS: the script is used to select the corresponding firmware to run FFU.
 PRODUCT_PACKAGES += ufs_firmware_update.sh
+
+# Enable DeviceAsWebcam support
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.usb.uvc.enabled=true
