@@ -123,7 +123,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=50
+    ro.vendor.build.svn=52
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -250,3 +250,8 @@ PRODUCT_PACKAGES += ufs_firmware_update.sh
 # Enable DeviceAsWebcam support
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
+
+# Quick Start device-specific settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=bluejay
