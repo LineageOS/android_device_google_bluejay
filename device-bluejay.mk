@@ -40,6 +40,11 @@ include device/google/gs-common/touch/stm/stm11.mk
 
 # Fingerprint HAL
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/firmware/fingerprint/24Q1
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/firmware/fingerprint/trunk
+endif
 $(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_common.mk)
 ifeq ($(filter factory%, $(TARGET_PRODUCT)),)
 $(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_shipping.mk)
@@ -106,7 +111,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	com.android.nfcservices \
 	Tag \
-	android.hardware.nfc-service.st
+	android.hardware.nfc-service.st \
+	NfcOverlayBluejay
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -127,7 +133,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=51
+    ro.vendor.build.svn=52
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -136,6 +142,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
+ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/trusty/24Q1
+else
+PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/trusty/trunk
+endif
 
 # Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
@@ -254,3 +265,8 @@ PRODUCT_PACKAGES += ufs_firmware_update.sh
 # Enable DeviceAsWebcam support
 PRODUCT_VENDOR_PROPERTIES += \
     ro.usb.uvc.enabled=true
+
+# Quick Start device-specific settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=bluejay
