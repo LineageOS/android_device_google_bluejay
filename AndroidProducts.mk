@@ -21,4 +21,4 @@ PRODUCT_MAKEFILES := \
 
 
 COMMON_LUNCH_CHOICES := \
-    aosp_bluejay-userdebug
+    aosp_bluejay-trunk_staging-userdebug
