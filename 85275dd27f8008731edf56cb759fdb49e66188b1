@@ -16,6 +16,24 @@
       "message": "maybe https://review.lineageos.org/q/I64a01e8d3766b97fd416bba1e26ba8b5d4159a42 works better?",
       "revId": "85275dd27f8008731edf56cb759fdb49e66188b1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7cb0550f_6f7fddcd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 33170
+      },
+      "writtenOn": "2023-11-06T22:41:14Z",
+      "side": 1,
+      "message": "yep, tried 20dp and that looks a lot better across all the display sizes available in the phone. uploading a patch for that.",
+      "parentUuid": "76e047e4_eeb9f29c",
+      "revId": "85275dd27f8008731edf56cb759fdb49e66188b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
