@@ -11,11 +11,14 @@
     <dimen name="lock_icon_padding">56px</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
-    <dimen name="keyguard_carrier_text_margin">0px</dimen>
+    <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
 
     <!-- The maximum offset for the under-display fingerprint sensor (UDFPS) icon in either
          direction that elements are moved to prevent burn-in on AOD-->
     <dimen name="udfps_burn_in_offset_y">16px</dimen>
+
+    <!--  Total minimum padding to enforce to ensure that the dot can always show  -->
+    <dimen name="ongoing_appops_dot_min_padding">20dp</dimen>
 
     <!-- Location on the screen of the center of the physical power button. This is a reasonable
     default that should be overridden by device-specific overlays. -->
