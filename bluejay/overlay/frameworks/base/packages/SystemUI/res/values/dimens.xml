@@ -16,8 +16,8 @@
 */
 -->
 <resources>
-    <!-- Don't need the left side padding due to being inset from the cutout -->
-    <dimen name="status_bar_padding_start">0dp</dimen>
+    <!-- increased padding here makes it symmetrical on both sides -->
+    <dimen name="status_bar_padding_start">20dp</dimen>
 
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">1px</dimen>
@@ -32,8 +32,6 @@
 
     <!-- Multi user switch has some intrinsic padding to it -->
     <dimen name="multi_user_switch_keyguard_margin">6dp</dimen>
-
-    <dimen name="keyguard_carrier_text_margin">0px</dimen>
 
     <dimen name="config_rounded_mask_size">47px</dimen>
     <dimen name="config_rounded_mask_size_top">47px</dimen>
