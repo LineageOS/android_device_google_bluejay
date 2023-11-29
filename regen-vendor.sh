@@ -1135,6 +1135,12 @@ VENDOR_SKIP_FILES=(
     "lib/libGralloc4Wrapper.so"
     "lib64/libGralloc4Wrapper.so"
 
+    # Charger
+    "etc/res/images/charger/battery_fail.png"
+    "etc/res/images/charger/battery_scale.png"
+    "etc/res/images/charger/main_font.png"
+    "etc/res/values/charger/animation.txt"
+
     # Codec2
     "lib/android.hardware.media.bufferpool2-V1-ndk.so"
     "lib/android.hardware.media.c2@1.0.so"

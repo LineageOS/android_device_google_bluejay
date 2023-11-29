@@ -206,10 +206,6 @@ vendor/etc/permissions/android.hardware.telephony.ims.xml
 vendor/etc/permissions/com.google.android.camera.experimental2021.xml
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml
 vendor/etc/public.libraries.txt
-vendor/etc/res/images/charger/battery_fail.png
-vendor/etc/res/images/charger/battery_scale.png
-vendor/etc/res/images/charger/main_font.png
-vendor/etc/res/values/charger/animation.txt
 vendor/etc/seccomp_policy/codec2.vendor.base.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext.policy
 vendor/etc/sensors/device_cal_info
