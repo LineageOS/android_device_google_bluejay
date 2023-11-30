@@ -1,0 +1,11 @@
+# All firmware images are extracted from Google factory images for each new ASB
+
+abl.img;AB
+bl1.img;AB
+bl2.img;AB
+bl31.img;AB
+gsa.img;AB
+ldfw.img;AB
+modem.img;AB
+pbl.img;AB
+tzsw.img;AB
