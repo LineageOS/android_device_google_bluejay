@@ -102,7 +102,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	NfcNci \
 	Tag \
-	android.hardware.nfc-service.st
+	android.hardware.nfc-service.st \
+	NfcOverlayBluejay
 
 # SecureElement
 PRODUCT_PACKAGES += \
