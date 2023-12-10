@@ -1,3 +1,0 @@
-# b/265886512
-dontaudit dump_gsc radio_vendor_data_file:file { read };
-dontaudit dump_gsc radio_vendor_data_file:file { write };
