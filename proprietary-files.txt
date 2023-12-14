@@ -16,6 +16,11 @@ product/etc/firmware/music_detector.sound_model_2
 product/etc/permissions/androidx.camera.extensions.impl.xml
 product/priv-app/PixelCameraServicesB3/PixelCameraServicesB3.apk;PRESIGNED
 
+# Felica
+product/etc/felica/common.cfg
+product/etc/felica/mfm.cfg
+product/etc/felica/mfs.cfg
+
 # Hardware info
 product/etc/permissions/com.google.android.hardwareinfo.xml
 product/framework/libhwinfo.jar
