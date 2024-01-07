@@ -24,8 +24,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=bluejay \
-    PRIVATE_BUILD_DESC="bluejay-user 14 UQ1A.231205.015 11084887 release-keys"
+    PRIVATE_BUILD_DESC="bluejay-user 14 UQ1A.240105.002 11129216 release-keys"
 
-BUILD_FINGERPRINT := google/bluejay/bluejay:14/UQ1A.231205.015/11084887:user/release-keys
+BUILD_FINGERPRINT := google/bluejay/bluejay:14/UQ1A.240105.002/11129216:user/release-keys
 
 $(call inherit-product, vendor/google/bluejay/bluejay-vendor.mk)
