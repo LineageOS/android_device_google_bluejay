@@ -61,6 +61,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        product/etc/felica/common.cfg)
+            [ "$2" = "" ] && return 0
+            sed -i -e '$a00000018,1' -e '/^00000014/d' -e '/^00000015/d' "${2}"
+            ;;
         vendor/etc/init/init.modem_logging_control.rc)
             [ "$2" = "" ] && return 0
             sed -i 's/ && property:ro.debuggable=0//' "${2}"
