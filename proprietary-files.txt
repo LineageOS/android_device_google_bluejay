@@ -113,9 +113,6 @@ system_ext/priv-app/ShannonIms/ShannonIms.apk;PRESIGNED
 system_ext/priv-app/ShannonQualifiedNetworksService/ShannonQualifiedNetworksService.apk;PRESIGNED
 system_ext/priv-app/ShannonRcs/ShannonRcs.apk;PRESIGNED
 
-# NFC
-system_ext/priv-app/PixelNfc/PixelNfc.apk
-
 # Permissions
 system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
