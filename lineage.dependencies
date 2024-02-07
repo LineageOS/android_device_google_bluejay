@@ -2,9 +2,5 @@
   {
     "repository": "android_device_google_gs101",
     "target_path": "device/google/gs101"
-  },
-  {
-    "repository": "android_kernel_google_gs201",
-    "target_path": "kernel/google/gs201/private/gs-google"
   }
 ]
