@@ -1,0 +1,11 @@
+[
+  {
+    "repository": "android_device_google_gs101",
+    "target_path": "device/google/gs101"
+  },
+  {
+    "repository": "device/google/bluejay-kernels/5.10",
+    "target_path": "device/google/bluejay-kernels/5.10",
+    "remote": "aosp-bluejay"
+  }
+]
