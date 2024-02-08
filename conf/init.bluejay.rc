@@ -35,15 +35,15 @@ on property:vendor.all.modules.ready=1
     chown system system /mnt/vendor/persist/haptics
     chown system system /mnt/vendor/persist/haptics/cs40l26.cal
 
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/calibration/f0_stored
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/calibration/q_stored
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/calibration/redc_stored
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/vibe_state
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/num_waves
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/f0_offset
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/owt_free_space
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/f0_comp_enable
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/redc_comp_enable
-    chown system system /sys/bus/i2c/devices/i2c-cs40l26a/default/delay_before_stop_playback_us
+    chown system system /sys/bus/i2c/devices/8-0043/calibration/f0_stored
+    chown system system /sys/bus/i2c/devices/8-0043/calibration/q_stored
+    chown system system /sys/bus/i2c/devices/8-0043/calibration/redc_stored
+    chown system system /sys/bus/i2c/devices/8-0043/default/vibe_state
+    chown system system /sys/bus/i2c/devices/8-0043/default/num_waves
+    chown system system /sys/bus/i2c/devices/8-0043/default/f0_offset
+    chown system system /sys/bus/i2c/devices/8-0043/default/owt_free_space
+    chown system system /sys/bus/i2c/devices/8-0043/default/f0_comp_enable
+    chown system system /sys/bus/i2c/devices/8-0043/default/redc_comp_enable
+    chown system system /sys/bus/i2c/devices/8-0043/default/delay_before_stop_playback_us
 
     enable vendor.vibrator.cs40l26
