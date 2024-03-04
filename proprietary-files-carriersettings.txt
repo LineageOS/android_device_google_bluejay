@@ -9,6 +9,7 @@ product/etc/CarrierSettings/airtel_in.pb
 product/etc/CarrierSettings/ais_th.pb
 product/etc/CarrierSettings/altice_us.pb
 product/etc/CarrierSettings/andorratelecom_ad.pb
+product/etc/CarrierSettings/antel_uy.pb
 product/etc/CarrierSettings/apt_tw.pb
 product/etc/CarrierSettings/asda_gb.pb
 product/etc/CarrierSettings/assurance_us.pb
@@ -56,11 +57,13 @@ product/etc/CarrierSettings/default.pb
 product/etc/CarrierSettings/digi_hu.pb
 product/etc/CarrierSettings/digi_my.pb
 product/etc/CarrierSettings/digi_ro.pb
+product/etc/CarrierSettings/digimobil_es.pb
 product/etc/CarrierSettings/dishatt_us.pb
 product/etc/CarrierSettings/dito_ph.pb
 product/etc/CarrierSettings/dna_fi.pb
 product/etc/CarrierSettings/docomo_jp.pb
 product/etc/CarrierSettings/docomomvno_jp.pb
+product/etc/CarrierSettings/dtac_th.pb
 product/etc/CarrierSettings/du_ae.pb
 product/etc/CarrierSettings/eastlink_ca.pb
 product/etc/CarrierSettings/ee_gb.pb
@@ -70,6 +73,7 @@ product/etc/CarrierSettings/elisa2_fi.pb
 product/etc/CarrierSettings/elisa_ee.pb
 product/etc/CarrierSettings/enreach_nl.pb
 product/etc/CarrierSettings/eplus_de.pb
+product/etc/CarrierSettings/erate_no.pb
 product/etc/CarrierSettings/esn_gb.pb
 product/etc/CarrierSettings/etisalat_ae.pb
 product/etc/CarrierSettings/euskaltel_es.pb
@@ -89,6 +93,7 @@ product/etc/CarrierSettings/freedommobile_ca.pb
 product/etc/CarrierSettings/gamma_gb.pb
 product/etc/CarrierSettings/gci_us.pb
 product/etc/CarrierSettings/gibtel_gi.pb
+product/etc/CarrierSettings/giffgaff_gb.pb
 product/etc/CarrierSettings/giga_sg.pb
 product/etc/CarrierSettings/globe_ph.pb
 product/etc/CarrierSettings/h3_at.pb
@@ -109,13 +114,17 @@ product/etc/CarrierSettings/kddimvno_jp.pb
 product/etc/CarrierSettings/kena_it.pb
 product/etc/CarrierSettings/koodo_ca.pb
 product/etc/CarrierSettings/kpn_nl.pb
+product/etc/CarrierSettings/lebara_gb.pb
 product/etc/CarrierSettings/liberty_pr.pb
 product/etc/CarrierSettings/linemo_jp.pb
 product/etc/CarrierSettings/lmt_lv.pb
+product/etc/CarrierSettings/lowi_es.pb
 product/etc/CarrierSettings/luckymobile_ca.pb
+product/etc/CarrierSettings/lum_ca.pb
 product/etc/CarrierSettings/m1_sg.pb
 product/etc/CarrierSettings/manxcontract_im.pb
 product/etc/CarrierSettings/manxprepaid_im.pb
+product/etc/CarrierSettings/masmovil_es.pb
 product/etc/CarrierSettings/maxis_my.pb
 product/etc/CarrierSettings/meo_pt.pb
 product/etc/CarrierSettings/metropcs_us.pb
@@ -123,6 +132,7 @@ product/etc/CarrierSettings/mobily_sa.pb
 product/etc/CarrierSettings/movistar_es.pb
 product/etc/CarrierSettings/nextech_us.pb
 product/etc/CarrierSettings/nos_pt.pb
+product/etc/CarrierSettings/nova_gr.pb
 product/etc/CarrierSettings/o2_cz.pb
 product/etc/CarrierSettings/o2_de.pb
 product/etc/CarrierSettings/o2_sk.pb
@@ -170,10 +180,12 @@ product/etc/CarrierSettings/shaw_ca.pb
 product/etc/CarrierSettings/simba_sg.pb
 product/etc/CarrierSettings/siminn_is.pb
 product/etc/CarrierSettings/simple_us.pb
+product/etc/CarrierSettings/simyo_es.pb
 product/etc/CarrierSettings/singtel_sg.pb
 product/etc/CarrierSettings/skinny_nz.pb
 product/etc/CarrierSettings/skt_kr.pb
 product/etc/CarrierSettings/sky_gb.pb
+product/etc/CarrierSettings/skylo_zz.pb
 product/etc/CarrierSettings/smartone_hk.pb
 product/etc/CarrierSettings/smarty_gb.pb
 product/etc/CarrierSettings/softbank_jp.pb
@@ -193,10 +205,12 @@ product/etc/CarrierSettings/sunrise_ch.pb
 product/etc/CarrierSettings/swisscom_ch.pb
 product/etc/CarrierSettings/swisscom_li.pb
 product/etc/CarrierSettings/talkmobile_gb.pb
+product/etc/CarrierSettings/tango_lu.pb
 product/etc/CarrierSettings/tango_us.pb
 product/etc/CarrierSettings/tbaytel_ca.pb
 product/etc/CarrierSettings/tchibo_de.pb
 product/etc/CarrierSettings/tdc_dk.pb
+product/etc/CarrierSettings/telcel_mx.pb
 product/etc/CarrierSettings/tele2_ee.pb
 product/etc/CarrierSettings/tele2_lt.pb
 product/etc/CarrierSettings/tele2_lv.pb
@@ -239,6 +253,7 @@ product/etc/CarrierSettings/tstar_tw.pb
 product/etc/CarrierSettings/twm_tw.pb
 product/etc/CarrierSettings/u264a_ca.pb
 product/etc/CarrierSettings/u264a_us.pb
+product/etc/CarrierSettings/u264ab_ca.pb
 product/etc/CarrierSettings/u264ao_at.pb
 product/etc/CarrierSettings/u264ap_at.pb
 product/etc/CarrierSettings/ultra_us.pb
@@ -275,7 +290,9 @@ product/etc/CarrierSettings/vodafone_pt.pb
 product/etc/CarrierSettings/vodafone_qa.pb
 product/etc/CarrierSettings/vodafone_ro.pb
 product/etc/CarrierSettings/vodafone_tr.pb
+product/etc/CarrierSettings/webbing_hk.pb
 product/etc/CarrierSettings/windtre_it.pb
+product/etc/CarrierSettings/xfinity2_us.pb
 product/etc/CarrierSettings/xfinity_us.pb
 product/etc/CarrierSettings/yes_my.pb
 product/etc/CarrierSettings/yettel_hu.pb

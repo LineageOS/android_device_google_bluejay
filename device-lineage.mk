@@ -57,6 +57,10 @@ PRODUCT_PACKAGES += \
     android.hardware.confirmationui@1.0.vendor:64 \
     libteeui_hal_support.vendor:64
 
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
 # Graphics
 PRODUCT_PACKAGES += \
     libEGL_angle \
@@ -92,8 +96,17 @@ PRODUCT_PACKAGES += \
     nos_app_avb:64 \
     nos_app_identity:64 \
     nos_app_keymaster:64 \
+    nos_app_keymaster_ctdl:64 \
     nos_app_weaver:64 \
     pixelpowerstats_provider_aidl_interface-cpp.vendor:64
+
+# Radio
+PRODUCT_PACKAGES += \
+    modem_android_property_manager.vendor:32 \
+    modem_android_property_manager_impl.vendor:32 \
+    modem_clock_manager.vendor \
+    modem_clock_manager_impl.vendor \
+    modem_log_constants.vendor:32
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -147,7 +160,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor:32 \
     android.hardware.weaver-V2-ndk.vendor:64 \
     android.hardware.wifi-V1-ndk.vendor:64 \
-    com.google.hardware.pixel.display-V4-ndk.vendor:64
+    com.google.hardware.pixel.display-V4-ndk.vendor:64 \
+    com.google.hardware.pixel.display-V9-ndk.vendor
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop

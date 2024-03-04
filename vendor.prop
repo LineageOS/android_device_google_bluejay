@@ -2,6 +2,9 @@
 drm.service.enabled=true
 media.mediadrmservice.enable=true
 
+# Fingerprint
+ro.vendor.fingerprint.ta.name=g7.app
+
 # Graphics
 ro.gfx.angle.supported=true
 
