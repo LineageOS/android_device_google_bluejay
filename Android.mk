@@ -26,8 +26,6 @@ LOCAL_PATH := $(call my-dir)
 # their rules should be written here.
 
 ifeq ($(USES_DEVICE_GOOGLE_BLUEJAY),true)
-  include $(call first-makefiles-under,$(LOCAL_PATH))
-
 DM_LIBS := libdmengine.so libdmjavaplugin.so
 DM_32_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT)/priv-app/DMService/lib/arm/,$(notdir $(DM_LIBS)))
 $(DM_32_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
