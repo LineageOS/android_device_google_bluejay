@@ -16,6 +16,11 @@ product/etc/firmware/music_detector.sound_model_2
 product/etc/permissions/androidx.camera.extensions.impl.xml
 product/priv-app/PixelCameraServicesB3/PixelCameraServicesB3.apk;PRESIGNED
 
+# Camera services
+product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml
+product/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml
+product/etc/permissions/com.google.pixel.camera.services.lyricconfigprovider.impl.xml
+
 # Felica
 product/etc/felica/common.cfg
 product/etc/felica/mfm.cfg
@@ -84,6 +89,13 @@ system_ext/etc/permissions/com.google.android.camerax.extensions.xml
 system_ext/framework/com.google.android.camera.experimental2022_system.jar
 system_ext/framework/com.google.android.camera.extensions.jar
 system_ext/framework/com.google.android.camerax.extensions.jar
+
+# Camera services
+system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServices.apk
+system_ext/etc/vintf/manifest/com.google.pixel.camera.services@1.0-service-google.xml
+system_ext/framework/com.google.pixel.camera.connectivity.jar
+system_ext/framework/com.google.pixel.camera.services.cameraidremapper.jar
+system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar
 
 # Edge TPU
 system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
