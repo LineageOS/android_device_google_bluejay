@@ -21,15 +21,9 @@ else
 endif
 
 RELEASE_GOOGLE_PRODUCT_RADIO_DIR := $(RELEASE_GOOGLE_BLUEJAY_RADIO_DIR)
-ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
-RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/24Q1
-else ifneq (,$(filter AP2%,$(RELEASE_PLATFORM_VERSION)))
-RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/24Q2
-else ifneq (,$(filter AP3%,$(RELEASE_PLATFORM_VERSION)))
-RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/24Q3
-else
-RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/trunk
-endif
+RELEASE_GOOGLE_BOOTLOADER_BLUEJAY_DIR ?= trunk # Keep this for pdk TODO: b/327119000
+RELEASE_GOOGLE_PRODUCT_BOOTLOADER_DIR := bootloader/$(RELEASE_GOOGLE_BOOTLOADER_BLUEJAY_DIR)
+$(call soong_config_set,bootloader,prebuilt_dir,$(RELEASE_GOOGLE_BOOTLOADER_BLUEJAY_DIR))
 
 # Enable load module in parallel
 BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
