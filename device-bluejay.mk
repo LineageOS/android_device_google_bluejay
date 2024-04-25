@@ -188,7 +188,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
     persist.bluetooth.firmware.selection=BCM.hcd \
-    bluetooth.server.automatic_turn_on=false
+    bluetooth.server.automatic_turn_on=true
 
 # Set zram size
 PRODUCT_VENDOR_PROPERTIES += \
