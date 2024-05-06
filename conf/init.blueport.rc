@@ -6,11 +6,8 @@ on init && property:ro.vendor.factory=1
     import /vendor/etc/init/hw/init.factory.rc
 
 on init
-    # logbuffer
-    chown system system /dev/logbuffer_2-0057
-    chown system system /dev/logbuffer_6-0057
     # register/nvmem dump
-    chown system system /sys/bus/nvmem/devices/5-00500/nvmem
+    chown system system /sys/bus/nvmem/devices/8-00500/nvmem
     # NFC streset tool name
     setprop persist.vendor.nfc.streset libstreset21
     setprop persist.vendor.se.streset libstreset21

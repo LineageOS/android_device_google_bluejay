@@ -59,7 +59,7 @@
        CpLppeCancelDbhOnAgnssProvideLoc="true"
        CpLppeUseAgnssLocForEmptyDbh="true"
        ReAidingOnHotStart="false"
-       ReAidingIntervalSec="1200"
+       ReAidingIntervalSec="3600"
        PpsDevice="/sys/class/pps/pps0/assert_elapsed"
        SensorsMask="0x244"
        MaxThreadNum="13"
@@ -89,6 +89,8 @@
        MinGpsWeekNumber="2216"
        OnChipAccMask="50"
        EnableB1C="false"
+
+       RTICacheTimeoutSec="3600"
   />
 
   <gll_features
