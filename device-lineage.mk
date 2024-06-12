@@ -41,14 +41,20 @@ PRODUCT_PACKAGES += \
 # Codec2
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.2.vendor:64 \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.2.vendor:64 \
     libcodec2_vndk.vendor \
     libexynosutils \
     libexynosv4l2 \
     libmedia_ecoservice.vendor \
+    libmedia_omx.vendor:64 \
     libsfplugin_ccodec_utils.vendor \
-    libstagefright_bufferpool@2.0.1.vendor
+    libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_omx.vendor:64 \
+    libstagefright_omx_utils.vendor:64 \
+    libstagefright_xmlparser.vendor:64
 
 # Confirmation UI
 PRODUCT_PACKAGES += \
@@ -57,9 +63,21 @@ PRODUCT_PACKAGES += \
     android.hardware.confirmationui@1.0.vendor:64 \
     libteeui_hal_support.vendor:64
 
+# Contexthub
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub-V3-ndk.vendor:64 \
+    chre_atoms_log:64 \
+    chre_metrics_reporter:64 \
+    chremetrics-cpp:64
+
 # Fingerprint
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+# GPS
+PRODUCT_PACKAGES += \
+    liblzma.vendor:64 \
+    libunwindstack.vendor:64
 
 # Graphics
 PRODUCT_PACKAGES += \
@@ -80,7 +98,8 @@ PRODUCT_PACKAGES += \
 
 # Json
 PRODUCT_PACKAGES += \
-    libjson:64
+    libjson:64 \
+    libjsoncpp.vendor:32
 
 # Nos
 PRODUCT_PACKAGES += \
@@ -102,6 +121,9 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    libnetutils.vendor \
+    libsqlite.vendor \
+    libziparchive.vendor \
     modem_android_property_manager.vendor:32 \
     modem_android_property_manager_impl.vendor:32 \
     modem_clock_manager.vendor \
@@ -162,6 +184,10 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-V1-ndk.vendor:64 \
     com.google.hardware.pixel.display-V4-ndk.vendor:64 \
     com.google.hardware.pixel.display-V9-ndk.vendor
+
+# Misc
+PRODUCT_PACKAGES += \
+    libevent.vendor
 
 # Properties
 TARGET_VENDOR_PROP := $(LOCAL_PATH)/vendor.prop

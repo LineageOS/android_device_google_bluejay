@@ -5,9 +5,6 @@ media.mediadrmservice.enable=true
 # Fingerprint
 ro.vendor.fingerprint.ta.name=g7.app
 
-# Graphics
-ro.gfx.angle.supported=true
-
 # Radio
 persist.vendor.ril.ecc.use.xml=1
 persist.vendor.ril.support_nr_ds=0
