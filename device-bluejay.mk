@@ -20,6 +20,15 @@ $(call inherit-product-if-exists, vendor/google/products/sources_pixel.mk)
 TARGET_KERNEL_DIR ?= device/google/bluejay-kernel
 TARGET_BOARD_KERNEL_HEADERS := device/google/bluejay-kernel/kernel-headers
 
+ifdef RELEASE_GOOGLE_BLUEJAY_KERNEL_VERSION
+TARGET_LINUX_KERNEL_VERSION := $(RELEASE_GOOGLE_BLUEJAY_KERNEL_VERSION)
+endif
+
+ifdef RELEASE_GOOGLE_BLUEJAY_KERNEL_DIR
+TARGET_KERNEL_DIR := $(RELEASE_GOOGLE_BLUEJAY_KERNEL_DIR)
+TARGET_BOARD_KERNEL_HEADERS := $(RELEASE_GOOGLE_BLUEJAY_KERNEL_DIR)/kernel-headers
+endif
+
 $(call inherit-product-if-exists, vendor/google_devices/bluejay/prebuilts/device-vendor-bluejay.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
@@ -42,7 +51,7 @@ include device/google/gs-common/touch/stm/stm11.mk
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/firmware/fingerprint/24Q1
-else ifneq (,$(filter AP2%,$(RELEASE_PLATFORM_VERSION)))
+else ifneq (,$(filter AP2% AP3%,$(RELEASE_PLATFORM_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/firmware/fingerprint/24Q2
 else
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/firmware/fingerprint/trunk
@@ -135,7 +144,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=59
+    ro.vendor.build.svn=61
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -146,7 +155,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 ifneq (,$(filter AP1%,$(RELEASE_PLATFORM_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/trusty/24Q1
-else ifneq (,$(filter AP2%,$(RELEASE_PLATFORM_VERSION)))
+else ifneq (,$(filter AP2% AP3%,$(RELEASE_PLATFORM_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/trusty/24Q2
 else
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts/trusty/trunk
