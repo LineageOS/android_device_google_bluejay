@@ -97,7 +97,7 @@ system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
 system_ext/lib64/libedgetpu_dba.google.so
 
 # HBM
-system_ext/lib64/libhbmsvmanager_jni.so
+system_ext/lib64/libhbmsvmanager_jni.so;SYMLINK=system_ext/priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so
 system_ext/priv-app/HbmSVManager/HbmSVManager.apk
 
 # Hotword
