@@ -147,7 +147,7 @@ ifdef RELEASE_SVN_BLUEJAY
 TARGET_SVN ?= $(RELEASE_SVN_BLUEJAY)
 else
 # Set this for older releases that don't use build flag
-TARGET_SVN ?= 63
+TARGET_SVN ?= 64
 endif
 
 PRODUCT_VENDOR_PROPERTIES += \
