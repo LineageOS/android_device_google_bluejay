@@ -129,8 +129,15 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
 
 # Increment the SVN for any official public releases
+ifdef RELEASE_SVN_BLUEJAY
+TARGET_SVN ?= $(RELEASE_SVN_BLUEJAY)
+else
+# Set this for older releases that don't use build flag
+TARGET_SVN ?= 64
+endif
+
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=62
+    ro.vendor.build.svn=$(TARGET_SVN)
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
