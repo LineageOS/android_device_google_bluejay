@@ -129,8 +129,34 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
 
 # Increment the SVN for any official public releases
+ifdef RELEASE_SVN_BLUEJAY
+TARGET_SVN ?= $(RELEASE_SVN_BLUEJAY)
+else
+# Set this for older releases that don't use build flag
+TARGET_SVN ?= 65
+endif
+
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=63
+    ro.vendor.build.svn=$(TARGET_SVN)
+
+# Set device family property for SMR
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.device_family=O6R4B9
+
+# Set build properties for SMR builds
+ifeq ($(RELEASE_IS_SMR), true)
+    ifneq (,$(RELEASE_BASE_OS_BLUEJAY))
+        PRODUCT_BASE_OS := $(RELEASE_BASE_OS_BLUEJAY)
+    endif
+endif
+
+# Set build properties for EMR builds
+ifeq ($(RELEASE_IS_EMR), true)
+    ifneq (,$(RELEASE_BASE_OS_BLUEJAY))
+        PRODUCT_PROPERTY_OVERRIDES += \
+        ro.build.version.emergency_base_os=$(RELEASE_BASE_OS_BLUEJAY)
+    endif
+endif
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -219,11 +245,21 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # GPS xml
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-	PRODUCT_COPY_FILES += \
-		device/google/bluejay/gps.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
+        PRODUCT_COPY_FILES += \
+            device/google/bluejay/gps.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/bluejay/gps.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 else
-	PRODUCT_COPY_FILES += \
-		device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
+        PRODUCT_COPY_FILES += \
+            device/google/bluejay/gps_user.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    else
+        PRODUCT_COPY_FILES += \
+            device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
+    endif
 endif
 
 # This device is shipped with 32 (Android S V2)
@@ -241,6 +277,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 	persist.vendor.vibrator.hal.context.fade=true \
 	persist.vendor.vibrator.hal.context.cooldowntime=1600 \
 	persist.vendor.vibrator.hal.context.settlingtime=5000
+
+# Override Output Distortion Gain
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.hapticgenerator.distortion.output.gain=0.29
 
 # Device features
 PRODUCT_COPY_FILES += \
@@ -267,3 +307,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Disable AVF Remote Attestation
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
+
+# Bluetooth device id
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.device_id.product_id=20488
