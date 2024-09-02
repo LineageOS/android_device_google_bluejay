@@ -141,10 +141,6 @@ system_ext/app/OemRilHookService/OemRilHookService.apk
 system_ext/etc/permissions/com.samsung.slsi.telephony.oemril.xml
 system_ext/etc/permissions/oemrilhook.xml
 system_ext/framework/oemrilhook.jar
-system_ext/lib/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-system_ext/lib/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
-system_ext/lib64/vendor.samsung_slsi.telephony.hardware.oemservice@1.0.so
-system_ext/lib64/vendor.samsung_slsi.telephony.hardware.radioExternal@1.0.so
 system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
 
 # VZW
