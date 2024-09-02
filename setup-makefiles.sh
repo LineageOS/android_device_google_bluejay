@@ -46,6 +46,9 @@ function lib_to_package_fixup_vendor_variants() {
             com.google.edgetpu_vendor_service-V2-ndk)
             echo "$1-vendor"
             ;;
+        libprotobuf-cpp-lite-21.12)
+            echo "libprotobuf-cpp-lite"
+            ;;
         *)
             return 1
             ;;
