@@ -1163,7 +1163,7 @@ vendor/lib/audio_spk_35l41.so
 vendor/lib/audio_tunnel_aoc.so
 vendor/lib/audio_usb_aoc.so
 vendor/lib/audio_waves_aoc.so
-vendor/lib/com.google.edgetpu_app_service-V3-ndk.so
+vendor/lib/com.google.edgetpu_app_service-V3-ndk.so;MODULE=com.google.edgetpu_app_service-V3-ndk-vendor
 vendor/lib/com.google.pixel.modem.logmasklibrary-V1-ndk.so
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/hw/audio.platform.aoc.so
@@ -1260,8 +1260,8 @@ vendor/lib64/audio_waves_aoc.so
 vendor/lib64/biometricsuez.so
 vendor/lib64/com.google.edgetpu.dba-V1-ndk.so
 vendor/lib64/com.google.edgetpu.tachyon-V1-ndk.so
-vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so
-vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
+vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so;MODULE=com.google.edgetpu_app_service-V3-ndk-vendor
+vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so;MODULE=com.google.edgetpu_vendor_service-V2-ndk-vendor
 vendor/lib64/com.google.hardware.biometrics.fingerprint.fingerprint-ext-V1-ndk.so
 vendor/lib64/com.google.input-V2-ndk.so
 vendor/lib64/com.google.input-V3-ndk.so

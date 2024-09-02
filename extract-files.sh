@@ -109,6 +109,10 @@ if [ -z "${ONLY_FIRMWARE}" ]; then
     set_as_module "vendor/lib/libOpenCL.so" "${VENDOR_TXT}"
     set_as_module "vendor/lib64/libOpenCL.so" "${VENDOR_TXT}"
 
+    set_module "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
+    set_module "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
+    set_module "vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" "com.google.edgetpu_vendor_service-V2-ndk-vendor" "${VENDOR_TXT}"
+
     extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
