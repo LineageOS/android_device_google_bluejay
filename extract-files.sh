@@ -135,9 +135,9 @@ if [ -z "${ONLY_FIRMWARE}" ]; then
     set_disable_checkelf "vendor/lib64/libExynosC2Vp9Dec.so" "${VENDOR_TXT}"
     set_disable_checkelf "vendor/lib64/libExynosC2Vp9Enc.so" "${VENDOR_TXT}"
 
-    set_module "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
-    set_module "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" "com.google.edgetpu_app_service-V3-ndk-vendor" "${VENDOR_TXT}"
-    set_module "vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" "com.google.edgetpu_vendor_service-V2-ndk-vendor" "${VENDOR_TXT}"
+    set_module_suffix "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" "-vendor" "${VENDOR_TXT}"
+    set_module_suffix "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" "-vendor" "${VENDOR_TXT}"
+    set_module_suffix "vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so" "-vendor" "${VENDOR_TXT}"
 
     extract "${MY_DIR}/proprietary-files-vendor.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
