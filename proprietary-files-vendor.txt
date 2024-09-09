@@ -1199,7 +1199,6 @@ vendor/lib/libbo_av1.so
 vendor/lib/libc2filterplugin.so
 vendor/lib/libdisplaycolor.so
 vendor/lib/libedgetpu_client.google.so
-vendor/lib/libedgetpu_util.so
 vendor/lib/libfvsam_prm_parser.so
 vendor/lib/libgc2_av1_dec.so
 vendor/lib/libgc2_base.so
