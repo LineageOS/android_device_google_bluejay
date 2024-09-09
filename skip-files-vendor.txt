@@ -1406,6 +1406,9 @@ lib64/libion.so
 
 # Completely skip files that are not required
 
+# Edge TPU
+lib/libedgetpu_util.so
+
 # Google
 etc/default-permissions/default-permissions_talkback.xml
 
