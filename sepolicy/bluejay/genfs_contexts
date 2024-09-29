@@ -1,0 +1,4 @@
+# Storage
+genfscon sysfs /devices/platform/14700000.ufs/vendor                    u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/14700000.ufs/model                     u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/14700000.ufs/rev                       u:object_r:sysfs_scsi_devices_0000:s0
