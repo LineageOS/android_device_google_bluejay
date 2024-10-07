@@ -36,7 +36,6 @@ include device/google/bluejay-sepolicy/bluejay-sepolicy.mk
 include device/google/bluejay/audio/bluejay/audio-tables.mk
 include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
-include hardware/google/pixel/vibrator/cs40l26/device.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
@@ -309,5 +308,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 
 # Bluetooth device id
+# Bluejay: 0x4108
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=20488
+    bluetooth.device_id.product_id=16648

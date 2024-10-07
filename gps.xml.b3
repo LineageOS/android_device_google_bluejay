@@ -18,7 +18,7 @@
        SuplLogFullName="/data/vendor/gps/suplflow.txt"
        tlsEnable="true"
 
-       SuplSslMethod="SSLv23_NO_TLSv1_2"
+       SuplSslMethod="SSLv23"
        SuplEnable="true"
        SuplUseApn="false"
        SuplUseApnNI="true"
@@ -49,6 +49,7 @@
        LtoSyncThresholdDays="1"
 
        GnssYearOfHardware="2020"
+       CpEarlyFixGuardTimeSec="1"
        CpGuardTimeSec="1"
        CpLppGuardTimeSec="1"
        IgnoreInjectedSystemTime="true"
@@ -56,6 +57,7 @@
        AttributionAppPkgName="com.google.android.carrierlocation"
 
        AssertEnabled="true"
+       ExitOnComFailure="true"
        CpLppeCancelDbhOnAgnssProvideLoc="true"
        CpLppeUseAgnssLocForEmptyDbh="true"
        ReAidingOnHotStart="false"
@@ -94,7 +96,10 @@
   />
 
   <gll_features
+       EnableQzsAutoSwitch="false"
+       EnableGloAutoSwitch="false"
        EnableNicAutoSwitch="true"
+       ConstellationAutoSwitchOffNavOnly="true"
   />
 
 </glgps>
