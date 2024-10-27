@@ -1404,6 +1404,12 @@ lib/libion.so
 lib64/libevent.so
 lib64/libion.so
 
+# Odex
+framework/oat/arm/com.google.android.camera.experimental2021.odex
+framework/oat/arm/com.google.android.camera.experimental2021.vdex
+framework/oat/arm64/com.google.android.camera.experimental2021.odex
+framework/oat/arm64/com.google.android.camera.experimental2021.vdex
+
 # Completely skip files that are not required
 
 # Edge TPU

@@ -1,0 +1,24 @@
+From aab255f2807cfc460c0dce40decd5554d49c0076 Mon Sep 17 00:00:00 2001
+From: jabashque <jabashque@gmail.com>
+Date: Mon, 5 Feb 2024 21:36:03 +0000
+Subject: [PATCH 1/1] Enable Osaifu-Keitai on non-Japanese SKUs
+
+---
+ common.cfg | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/common.cfg b/common.cfg
+index 3b78765..00f53cb 100644
+--- a/common.cfg
++++ b/common.cfg
+@@ -11,6 +11,5 @@
+ 02030001,0
+ 02030002,0
+ 02030003,intent:#Intent;action=android.settings.NFC_SETTINGS;end
+-00000014,content://com.google.android.pixelnfc.provider.DeviceInfoContentProvider/isJapanSku
+-00000015,is_japan_sku
+ 00000016,0001
++00000018,1
+-- 
+2.47.0
+
