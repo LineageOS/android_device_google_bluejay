@@ -101,33 +101,8 @@ if [ -z "${ONLY_FIRMWARE}" ]; then
     generate_prop_list_from_image "vendor.img" "${VENDOR_TXT}" VENDOR_SKIP_FILES
 
     # flp.default & gps.default have incorrect SONAME
-    # libExynosC2*Dec & libExynosC2*Enc depend on libacryl & libexynosv4l2, which are gnu makefile targets
-    set_disable_checkelf "vendor/lib/libExynosC2H263Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2H263Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2H264Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2H264Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2HevcDec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2HevcEnc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Mpeg4Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Mpeg4Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Vp8Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Vp8Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Vp9Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib/libExynosC2Vp9Enc.so" "${VENDOR_TXT}"
     set_disable_checkelf "vendor/lib64/hw/flp.default.so" "${VENDOR_TXT}"
     set_disable_checkelf "vendor/lib64/hw/gps.default.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2H263Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2H263Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2H264Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2H264Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2HevcDec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2HevcEnc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Mpeg4Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Mpeg4Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Vp8Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Vp8Enc.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Vp9Dec.so" "${VENDOR_TXT}"
-    set_disable_checkelf "vendor/lib64/libExynosC2Vp9Enc.so" "${VENDOR_TXT}"
 
     set_module_suffix "vendor/lib/com.google.edgetpu_app_service-V3-ndk.so" "-vendor" "${VENDOR_TXT}"
     set_module_suffix "vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so" "-vendor" "${VENDOR_TXT}"
