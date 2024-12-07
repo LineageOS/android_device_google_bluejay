@@ -51,8 +51,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
-    persist.bluetooth.firmware.selection=BCM.hcd \
-    bluetooth.server.automatic_turn_on=true
+    persist.bluetooth.firmware.selection=BCM.hcd
 
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
