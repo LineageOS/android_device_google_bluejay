@@ -21,7 +21,6 @@
                 0.0,
                 0.0
             ],
-            "TempPath":"/dev/thermal/tz-by-name/neutral_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "PollingDelay":60000,
@@ -39,7 +38,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/skin_therm1/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -55,7 +53,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/skin_therm2/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -71,7 +68,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/disp_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -87,7 +83,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/gnss_tcxo_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -112,7 +107,6 @@
                 "0.0",
                 "0.0"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/usb_pwr_therm2/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -128,7 +122,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/charger_skin_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
@@ -144,7 +137,6 @@
                 "NAN",
                 "NAN"
             ],
-            "TempPath":"/dev/thermal/tz-by-name/quiet_therm/adc_channel/channel_temp",
             "VrThreshold":"NAN",
             "Multiplier":0.001
         },
