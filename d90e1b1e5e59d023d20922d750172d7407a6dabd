@@ -50,6 +50,23 @@
       "message": "recovery.mode.apply.update.",
       "revId": "d90e1b1e5e59d023d20922d750172d7407a6dabd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cd0b5d67_1dc344ce",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34799
+      },
+      "writtenOn": "2025-01-24T12:03:48Z",
+      "side": 1,
+      "message": "LineageOS/android_device_google_bluejay",
+      "revId": "d90e1b1e5e59d023d20922d750172d7407a6dabd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
