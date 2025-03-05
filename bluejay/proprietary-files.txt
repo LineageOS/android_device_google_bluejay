@@ -62,7 +62,7 @@ product/lib/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm/libdmengin
 product/lib/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm/libdmjavaplugin.so
 product/lib64/libdmengine.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmengine.so
 product/lib64/libdmjavaplugin.so;SYMLINK=product/priv-app/DMService/lib/arm64/libdmjavaplugin.so
-product/priv-app/CarrierSettings_signed_49.0.645958608/CarrierSettings_signed_49.0.645958608.apk;PRESIGNED
+product/priv-app/CarrierSettings_signed_51.0.707712815/CarrierSettings_signed_51.0.707712815.apk;PRESIGNED
 product/priv-app/CarrierWifi/CarrierWifi.apk;PRESIGNED
 product/priv-app/ConnMO/ConnMO.apk
 product/priv-app/DCMO/DCMO.apk
@@ -113,10 +113,8 @@ system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service
 system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc
 system_ext/etc/public.libraries-google.txt
 system_ext/etc/vintf/manifest/vendor.google.edgetpu_app_service@1.0-service.xml
-system_ext/lib/libedgetpu_dba.google.so
 system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so
 system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so
-system_ext/lib64/libedgetpu_dba.google.so
 
 # HBM
 system_ext/lib64/libhbmsvmanager_jni.so;SYMLINK=system_ext/priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so

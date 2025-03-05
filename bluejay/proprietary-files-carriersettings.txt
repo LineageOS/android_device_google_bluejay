@@ -14,6 +14,7 @@ product/etc/CarrierSettings/airbus_de.pb
 product/etc/CarrierSettings/airbus_fr.pb
 product/etc/CarrierSettings/airtel_in.pb
 product/etc/CarrierSettings/ais_th.pb
+product/etc/CarrierSettings/alcom_fi.pb
 product/etc/CarrierSettings/altice_us.pb
 product/etc/CarrierSettings/alticeroaming_us.pb
 product/etc/CarrierSettings/andorratelecom_ad.pb
@@ -57,7 +58,10 @@ product/etc/CarrierSettings/chinamobile_hk.pb
 product/etc/CarrierSettings/cht_tw.pb
 product/etc/CarrierSettings/cityfone_ca.pb
 product/etc/CarrierSettings/claro_br.pb
+product/etc/CarrierSettings/claro_cl.pb
+product/etc/CarrierSettings/claro_co.pb
 product/etc/CarrierSettings/claro_pr.pb
+product/etc/CarrierSettings/commonmvnxatt_us.pb
 product/etc/CarrierSettings/congstar_de.pb
 product/etc/CarrierSettings/consumercellularatt_us.pb
 product/etc/CarrierSettings/consumercellulartmo_us.pb
@@ -72,6 +76,7 @@ product/etc/CarrierSettings/cspire_us.pb
 product/etc/CarrierSettings/default.pb
 product/etc/CarrierSettings/digi_hu.pb
 product/etc/CarrierSettings/digi_my.pb
+product/etc/CarrierSettings/digi_pt.pb
 product/etc/CarrierSettings/digi_ro.pb
 product/etc/CarrierSettings/digimobil_es.pb
 product/etc/CarrierSettings/dish5gsa_us.pb
@@ -90,7 +95,10 @@ product/etc/CarrierSettings/eir_ie.pb
 product/etc/CarrierSettings/elisa1_fi.pb
 product/etc/CarrierSettings/elisa2_fi.pb
 product/etc/CarrierSettings/elisa_ee.pb
+product/etc/CarrierSettings/enetworks_gy.pb
 product/etc/CarrierSettings/enreach_nl.pb
+product/etc/CarrierSettings/entel_cl.pb
+product/etc/CarrierSettings/epic_mt.pb
 product/etc/CarrierSettings/eplus_de.pb
 product/etc/CarrierSettings/erate_no.pb
 product/etc/CarrierSettings/esn_gb.pb
@@ -108,6 +116,7 @@ product/etc/CarrierSettings/firstnetpacific2_us.pb
 product/etc/CarrierSettings/firstnetpacific_us.pb
 product/etc/CarrierSettings/fizz_ca.pb
 product/etc/CarrierSettings/fl1_li.pb
+product/etc/CarrierSettings/foroyatele_fo.pb
 product/etc/CarrierSettings/free_fr.pb
 product/etc/CarrierSettings/free_gp.pb
 product/etc/CarrierSettings/free_mq.pb
@@ -119,6 +128,8 @@ product/etc/CarrierSettings/gibtel_gi.pb
 product/etc/CarrierSettings/giffgaff_gb.pb
 product/etc/CarrierSettings/giga_sg.pb
 product/etc/CarrierSettings/globe_ph.pb
+product/etc/CarrierSettings/gomobile_mt.pb
+product/etc/CarrierSettings/grameenphone_bd.pb
 product/etc/CarrierSettings/guuk_es.pb
 product/etc/CarrierSettings/h3_at.pb
 product/etc/CarrierSettings/h3_gb.pb
@@ -134,8 +145,10 @@ product/etc/CarrierSettings/ice_no.pb
 product/etc/CarrierSettings/idea_in.pb
 product/etc/CarrierSettings/idmobile_gb.pb
 product/etc/CarrierSettings/iliad_it.pb
+product/etc/CarrierSettings/indosat_id.pb
 product/etc/CarrierSettings/inland_us.pb
 product/etc/CarrierSettings/iwireless_us.pb
+product/etc/CarrierSettings/jazz_pk.pb
 product/etc/CarrierSettings/jazztel_es.pb
 product/etc/CarrierSettings/jcommobile_jp.pb
 product/etc/CarrierSettings/kddi5gsa_jp.pb
@@ -159,9 +172,11 @@ product/etc/CarrierSettings/luckymobile_ca.pb
 product/etc/CarrierSettings/lum_ca.pb
 product/etc/CarrierSettings/lyca_es.pb
 product/etc/CarrierSettings/lyca_us.pb
+product/etc/CarrierSettings/lycamobile_gb.pb
 product/etc/CarrierSettings/lycamobile_pt.pb
 product/etc/CarrierSettings/lycamobile_se.pb
 product/etc/CarrierSettings/m1_sg.pb
+product/etc/CarrierSettings/magticom_ge.pb
 product/etc/CarrierSettings/manxcontract_im.pb
 product/etc/CarrierSettings/manxprepaid_im.pb
 product/etc/CarrierSettings/masmovil_es.pb
@@ -173,10 +188,12 @@ product/etc/CarrierSettings/metropcs_us.pb
 product/etc/CarrierSettings/mobifone_vn.pb
 product/etc/CarrierSettings/mobily_sa.pb
 product/etc/CarrierSettings/monacotelecom_mc.pb
+product/etc/CarrierSettings/movistar_co.pb
 product/etc/CarrierSettings/movistar_es.pb
 product/etc/CarrierSettings/movistar_mx.pb
 product/etc/CarrierSettings/mucho_ch.pb
 product/etc/CarrierSettings/mvnoconnect_us.pb
+product/etc/CarrierSettings/nema_fo.pb
 product/etc/CarrierSettings/netcomgroup_fr.pb
 product/etc/CarrierSettings/nexphone_ch.pb
 product/etc/CarrierSettings/nextech_us.pb
@@ -193,6 +210,7 @@ product/etc/CarrierSettings/o2prepaid_gb.pb
 product/etc/CarrierSettings/omantel_om.pb
 product/etc/CarrierSettings/one_me.pb
 product/etc/CarrierSettings/onecall_no.pb
+product/etc/CarrierSettings/only_yt.pb
 product/etc/CarrierSettings/ooredoo_kw.pb
 product/etc/CarrierSettings/ooredoo_qa.pb
 product/etc/CarrierSettings/optimera_us.pb
@@ -226,11 +244,11 @@ product/etc/CarrierSettings/qlink_us.pb
 product/etc/CarrierSettings/r_es.pb
 product/etc/CarrierSettings/racc_es.pb
 product/etc/CarrierSettings/rakuten_jp.pb
-product/etc/CarrierSettings/reachmobileatt_us.pb
 product/etc/CarrierSettings/redpocketatt_us.pb
 product/etc/CarrierSettings/redpockettmo_us.pb
 product/etc/CarrierSettings/republicwireless_us.pb
 product/etc/CarrierSettings/rjio_in.pb
+product/etc/CarrierSettings/robi_bd.pb
 product/etc/CarrierSettings/rogers5g_ca.pb
 product/etc/CarrierSettings/rogers_ca.pb
 product/etc/CarrierSettings/rogerswpn_ca.pb
@@ -247,6 +265,7 @@ product/etc/CarrierSettings/singtel_sg.pb
 product/etc/CarrierSettings/skinny_nz.pb
 product/etc/CarrierSettings/skt_kr.pb
 product/etc/CarrierSettings/sky_gb.pb
+product/etc/CarrierSettings/sky_ie.pb
 product/etc/CarrierSettings/skylo_zz.pb
 product/etc/CarrierSettings/smart_ph.pb
 product/etc/CarrierSettings/smartfren_id.pb
@@ -263,6 +282,9 @@ product/etc/CarrierSettings/sprint_us.pb
 product/etc/CarrierSettings/sprintprepaid_us.pb
 product/etc/CarrierSettings/sprintwholesale_us.pb
 product/etc/CarrierSettings/spusu_at.pb
+product/etc/CarrierSettings/spusu_ch.pb
+product/etc/CarrierSettings/spusu_gb.pb
+product/etc/CarrierSettings/spusu_it.pb
 product/etc/CarrierSettings/ssimobile_ca.pb
 product/etc/CarrierSettings/starhub_sg.pb
 product/etc/CarrierSettings/stc_bh.pb
@@ -274,6 +296,7 @@ product/etc/CarrierSettings/superdrug_gb.pb
 product/etc/CarrierSettings/sweno_es.pb
 product/etc/CarrierSettings/swisscom_ch.pb
 product/etc/CarrierSettings/swisscom_li.pb
+product/etc/CarrierSettings/swisscommvno_ch.pb
 product/etc/CarrierSettings/talkmobile_gb.pb
 product/etc/CarrierSettings/tango_lu.pb
 product/etc/CarrierSettings/tango_us.pb
@@ -281,6 +304,7 @@ product/etc/CarrierSettings/tbaytel_ca.pb
 product/etc/CarrierSettings/tchibo_at.pb
 product/etc/CarrierSettings/tchibo_de.pb
 product/etc/CarrierSettings/tdc_dk.pb
+product/etc/CarrierSettings/telavox_be.pb
 product/etc/CarrierSettings/telavox_se.pb
 product/etc/CarrierSettings/telcel_mx.pb
 product/etc/CarrierSettings/telco_re.pb
@@ -304,6 +328,7 @@ product/etc/CarrierSettings/telemach_si.pb
 product/etc/CarrierSettings/telenet_be.pb
 product/etc/CarrierSettings/telenor_dk.pb
 product/etc/CarrierSettings/telenor_no.pb
+product/etc/CarrierSettings/telenor_pk.pb
 product/etc/CarrierSettings/telenor_se.pb
 product/etc/CarrierSettings/telia_dk.pb
 product/etc/CarrierSettings/telia_ee.pb
@@ -318,12 +343,14 @@ product/etc/CarrierSettings/telus_ca.pb
 product/etc/CarrierSettings/tesco_gb.pb
 product/etc/CarrierSettings/test001_zz.pb
 product/etc/CarrierSettings/three_dk.pb
+product/etc/CarrierSettings/tigo_co.pb
 product/etc/CarrierSettings/tim_br.pb
 product/etc/CarrierSettings/tim_it.pb
 product/etc/CarrierSettings/tmobile_at.pb
 product/etc/CarrierSettings/tmobile_cz.pb
 product/etc/CarrierSettings/tmobile_nl.pb
 product/etc/CarrierSettings/tmobile_us.pb
+product/etc/CarrierSettings/tmobileprivate_us.pb
 product/etc/CarrierSettings/tmomvno_nl.pb
 product/etc/CarrierSettings/tmomvno_us.pb
 product/etc/CarrierSettings/tracfoneatt_us.pb
@@ -374,6 +401,7 @@ product/etc/CarrierSettings/vodafone_gr.pb
 product/etc/CarrierSettings/vodafone_hu.pb
 product/etc/CarrierSettings/vodafone_ie.pb
 product/etc/CarrierSettings/vodafone_in.pb
+product/etc/CarrierSettings/vodafone_is.pb
 product/etc/CarrierSettings/vodafone_it.pb
 product/etc/CarrierSettings/vodafone_nl.pb
 product/etc/CarrierSettings/vodafone_nz.pb
