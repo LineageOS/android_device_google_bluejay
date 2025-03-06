@@ -27,7 +27,7 @@ vendor/bin/hw/citadel_updater
 vendor/bin/hw/citadeld
 vendor/bin/hw/com.google.edgetpu.tachyon-service
 vendor/bin/hw/google.hardware.media.c2@1.0-service
-vendor/bin/hw/gpsd
+vendor/bin/hw/gpsd;DISABLE_CHECKELF
 vendor/bin/hw/init_citadel
 vendor/bin/hw/lhd
 vendor/bin/hw/rild_exynos
