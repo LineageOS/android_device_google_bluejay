@@ -4,8 +4,8 @@
     "target_path": "device/google/gs101"
   },
   {
-    "repository": "device/google/bluejay-kernels/5.10",
-    "target_path": "device/google/bluejay-kernels/5.10",
+    "repository": "device/google/bluejay-kernels/6.1",
+    "target_path": "device/google/bluejay-kernels/6.1",
     "remote": "aosp-bluejay"
   }
 ]
