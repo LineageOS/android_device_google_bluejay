@@ -58,6 +58,7 @@
        AssertEnabled="false"
        CpLppeCancelDbhOnAgnssProvideLoc="true"
        CpLppeUseAgnssLocForEmptyDbh="true"
+       CpLppGalileoCapable="true"
        ReAidingOnHotStart="false"
        ReAidingIntervalSec="3600"
        PpsDevice="/sys/devices/platform/bbd_pps/pps_assert"
