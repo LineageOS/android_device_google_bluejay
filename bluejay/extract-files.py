@@ -29,8 +29,6 @@ from extract_utils.main import (
 namespace_imports = [
     'device/google/bluejay',
     'hardware/google/av',
-    'hardware/google/gchips',
-    'hardware/google/graphics/common',
     'hardware/google/interfaces',
     'hardware/google/pixel',
 ]
