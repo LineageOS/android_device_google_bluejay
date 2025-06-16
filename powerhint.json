@@ -191,6 +191,53 @@
       "ResetOnInit": true
     },
     {
+      "Name": "TAUclampMinOnNiceEnable",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_enable",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceHighValue",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_high_value",
+      "Values": [
+        "765",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceMidValue",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_value",
+      "Values": [
+        "390",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceHighPrio",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_high_prio",
+      "Values": [
+        "110",
+        "119",
+        "120"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUclampMinOnNiceMidPrio",
+      "Path": "/proc/vendor_sched/groups/ta/uclamp_min_on_nice_mid_prio",
+      "Values": [
+        "128",
+        "139",
+        "130"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "TAUClampBoost",
       "Path": "/proc/vendor_sched/groups/ta/uclamp_min",
       "Values": [
@@ -251,8 +298,7 @@
       "Path": "/dev/cpuset/camera-daemon-high-group/cpus",
       "Values": [
         "0-3",
-        "6-7",
-        "0-7"
+        "6-7"
       ],
       "ResetOnInit": true
     },
@@ -261,8 +307,7 @@
       "Path": "/dev/cpuset/camera-daemon-mid-group/cpus",
       "Values": [
         "0-3",
-        "4-5",
-        "0-7"
+        "4-5"
       ],
       "ResetOnInit": true
     },
@@ -271,8 +316,7 @@
       "Path": "/dev/cpuset/camera-daemon-mid-high-group/cpus",
       "Values": [
         "0-3",
-        "4-7",
-        "0-7"
+        "4-7"
       ],
       "ResetOnInit": true
     },
@@ -291,6 +335,35 @@
       "Values": [
         "0",
         "1"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAAutoPreferFit",
+      "Path": "/proc/vendor_sched/groups/ta/auto_prefer_fit",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAPreferredIdleMaskMid",
+      "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_mid",
+      "Values": [
+        "0x3f",
+        "0xf0",
+        "0xff"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAPreferredIdleMaskLow",
+      "Path": "/proc/vendor_sched/groups/ta/preferred_idle_mask_low",
+      "Values": [
+        "0x3f",
+        "0xf0",
+        "0xff"
       ],
       "ResetOnInit": true
     },
@@ -551,6 +624,16 @@
       ],
       "ResetOnInit": true,
       "Type": "Property"
+    },
+    {
+      "Name": "SYSTEM_UI_ADPF_PROFILES",
+      "Path": "<AdpfConfig>:SYSTEM_UI",
+      "Values": [
+        "SYSTEM_UI_PROFILE"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true,
+      "Type": "Event"
     }
   ],
   "Actions": [
@@ -667,6 +750,54 @@
       "Node": "NPITaskPacking",
       "Duration": 5000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAAutoPreferFit",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskMid",
+      "Duration": 5000,
+      "Value": "0x3f"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAPreferredIdleMaskLow",
+      "Duration": 5000,
+      "Value": "0x3f"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceEnable",
+      "Duration": 5000,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceHighValue",
+       "Duration": 5000,
+       "Value": "765"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceHighPrio",
+      "Duration": 5000,
+      "Value": "110"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceMidValue",
+       "Duration": 5000,
+       "Value": "390"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUclampMinOnNiceMidPrio",
+      "Duration": 5000,
+      "Value": "139"
     },
     {
       "PowerHint": "LAUNCH",
@@ -1077,24 +1208,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "CDHighCpusetCpus",
-      "Duration": 0,
-      "Value": "6-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "CDMidCpusetCpus",
-      "Duration": 0,
-      "Value": "4-5"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "CDMidHighCpusetCpus",
-      "Duration": 0,
-      "Value": "4-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
       "Node": "NPITaskPacking",
       "Duration": 0,
       "Value": "0"
@@ -1173,24 +1286,6 @@
     },
     {
       "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "CDHighCpusetCpus",
-      "Duration": 0,
-      "Value": "6-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "CDMidCpusetCpus",
-      "Duration": 0,
-      "Value": "4-5"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "CDMidHighCpusetCpus",
-      "Duration": 0,
-      "Value": "4-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "NPITaskPacking",
       "Duration": 0,
       "Value": "0"
@@ -1248,24 +1343,6 @@
       "Node": "MIFTargetLoad",
       "Duration": 0,
       "Value": "20 10 80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "CDHighCpusetCpus",
-      "Duration": 0,
-      "Value": "6-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "CDMidCpusetCpus",
-      "Duration": 0,
-      "Value": "4-5"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "CDMidHighCpusetCpus",
-      "Duration": 0,
-      "Value": "4-7"
     },
     {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
@@ -1350,24 +1427,6 @@
       "Node": "MIFTargetLoad",
       "Duration": 0,
       "Value": "20 10 80"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "CDHighCpusetCpus",
-      "Duration": 0,
-      "Value": "6-7"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "CDMidCpusetCpus",
-      "Duration": 0,
-      "Value": "4-5"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "CDMidHighCpusetCpus",
-      "Duration": 0,
-      "Value": "4-7"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
@@ -1931,76 +1990,40 @@
       "MaxRecordsNum": 300
     },
     {
-      "Name": "UiHighBoostWithoutPid",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
-      "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
-      "SamplingWindow_D": 1,
+      "Name": "SYSTEM_UI_PROFILE",
+      "PID_On": true,
+      "PID_Po": 2.0,
+      "PID_Pu": 1.0,
+      "PID_I": 0.0,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -30,
+      "PID_Do": 500.0,
+      "PID_Du": 0.0,
       "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 197,
-      "UclampMin_Low": 197,
+      "UclampMin_Init": 162,
+      "UclampMin_LoadUp": 730,
+      "UclampMin_LoadReset": 730,
+      "UclampMin_High": 480,
+      "UclampMin_Low": 2,
       "UclampMax_EfficientBase": 400,
       "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
-      "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
-    },
-    {
-      "Name": "UiLowBoostWithoutPid",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
       "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
+      "SamplingWindow_I": 0,
       "SamplingWindow_D": 1,
-      "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 53,
-      "UclampMin_Low": 53,
-      "UclampMax_EfficientBase": 400,
-      "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
+      "ReportingRateLimitNs": 166666660,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
-    },
-    {
-      "Name": "UiLowNoneBoost",
-      "PID_On": false,
-      "PID_Po": 0,
-      "PID_Pu": 0,
-      "PID_I": 0,
-      "PID_I_Init": 0,
-      "PID_I_High": 0,
-      "PID_I_Low": 0,
-      "PID_Do": 0,
-      "PID_Du": 0,
-      "SamplingWindow_P": 1,
-      "SamplingWindow_I": 1,
-      "SamplingWindow_D": 1,
-      "UclampMin_On": true,
-      "UclampMin_Init": 250,
-      "UclampMin_High": 0,
-      "UclampMin_Low": 0,
-      "UclampMax_EfficientBase": 400,
-      "UclampMax_EfficientOffset": 200,
-      "ReportingRateLimitNs": 1,
-      "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
+      "StaleTimeFactor": 15.0,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 4.0,
+      "HBoostSevereJankPidPu": 0.5,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [480, 722],
+      "HBoostUclampMinFloorRange": [230, 410],
+      "JankCheckTimeFactor": 1.2,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 300
     }
    ]
 }
