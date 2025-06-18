@@ -174,11 +174,6 @@ PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
 
-# Bluetooth Hal Extension test tools
-PRODUCT_PACKAGES_ENG += \
-    sar_test \
-    hci_inject
-
 # Config of primary display frames to reach LHBM peak brightness
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
 
@@ -248,22 +243,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # GPS xml
-ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
-    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
-        PRODUCT_COPY_FILES += \
-            device/google/bluejay/gps.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-    else
-        PRODUCT_COPY_FILES += \
-            device/google/bluejay/gps.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-    endif
+ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
+    PRODUCT_COPY_FILES += \
+        device/google/bluejay/gps_user.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 else
-    ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
-        PRODUCT_COPY_FILES += \
-            device/google/bluejay/gps_user.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-    else
-        PRODUCT_COPY_FILES += \
-            device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-    endif
+    PRODUCT_COPY_FILES += \
+        device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 endif
 
 # This device is shipped with 32 (Android S V2)
