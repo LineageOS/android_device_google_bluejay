@@ -14,20 +14,10 @@
 # limitations under the License.
 #
 
-# Restrict the visibility of Android.bp files to improve build analysis time
-$(call inherit-product-if-exists, vendor/google/products/sources_pixel.mk)
-
 TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_BLUEJAY_VERSION)
 # Keeps flexibility for kasan and ufs builds
 TARGET_KERNEL_DIR ?= $(RELEASE_KERNEL_BLUEJAY_DIR)
 TARGET_BOARD_KERNEL_HEADERS ?= $(RELEASE_KERNEL_BLUEJAY_DIR)/kernel-headers
-
-$(call inherit-product-if-exists, vendor/google_devices/bluejay/prebuilts/device-vendor-bluejay.mk)
-$(call inherit-product-if-exists, vendor/google_devices/gs101/prebuilts/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/gs101/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/bluejay/device-vendor-bluejay.mk)
-$(call inherit-product-if-exists, vendor/google_devices/bluejay/proprietary/WallpapersBluejay.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
 
@@ -37,11 +27,6 @@ include device/google/gs101/device-shipping-common.mk
 include device/google/gs101/telephony/pktrouter.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
-
-# Fingerprint HAL
-GOODIX_CONFIG_BUILD_VERSION := g7_trusty
-$(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_common.mk)
-$(call inherit-product-if-exists, vendor/goodix/udfps/configuration/udfps_shipping.mk)
 
 # go/lyric-soong-variables
 $(call soong_config_set,lyric,camera_hardware,bluejay)
@@ -166,9 +151,6 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.gms.dck.eligible_wcc=2 \
     ro.gms.dck.se_capability=1
-
-# Trusty liboemcrypto.so
-PRODUCT_SOONG_NAMESPACES += vendor/google_devices/bluejay/prebuilts
 
 # Display
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
