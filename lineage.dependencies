@@ -2,5 +2,9 @@
   {
     "repository": "android_device_google_gs101",
     "target_path": "device/google/gs101"
+  },
+  {
+    "repository": "android_device_google_bluejay-kernels",
+    "target_path": "device/google/bluejay-kernels"
   }
 ]
