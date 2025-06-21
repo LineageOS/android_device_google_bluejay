@@ -1457,6 +1457,11 @@ framework/oat/arm64/com.google.android.camera.experimental2021.vdex
 # Edge TPU
 lib/libedgetpu_util.so
 
+# Flood control
+bin/flood.control.hal
+etc/init/init.flood.control.rc
+etc/vintf/manifest/flood_control.xml
+
 # Google
 etc/default-permissions/default-permissions_talkback.xml
 
