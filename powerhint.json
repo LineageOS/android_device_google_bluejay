@@ -323,14 +323,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "NewlyIdleBalancer",
-      "Path": "/proc/vendor_sched/idle_balancer",
-      "Values": [
-        "0",
-        "1"
-      ]
-    },
-    {
       "Name": "LimitFlashCurrent",
       "Path": "vendor.camera.max_flash_current",
       "Values": [
@@ -549,6 +541,16 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
+    },
+    {
+      "Name": "AAModeProperty",
+      "Path": "vendor.powerhal.mode.aa",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "ResetOnInit": true,
+      "Type": "Property"
     }
   ],
   "Actions": [
@@ -1098,12 +1100,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_EXTREME",
-      "Node": "NewlyIdleBalancer",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_HIGH",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1200,12 +1196,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_HIGH",
-      "Node": "NewlyIdleBalancer",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_STANDARD",
       "Node": "PowerHALCameraRunning",
       "Duration": 0,
@@ -1284,10 +1274,22 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_STREAMING_STANDARD",
-      "Node": "NewlyIdleBalancer",
-      "Duration": 0,
-      "Value": "0"
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 100,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "CPUMidClusterMaxFreq",
+      "Duration": 100,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "CAMERA_MULTICAM_BOOST",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 100,
+      "Value": "9999999"
     },
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
@@ -1370,12 +1372,6 @@
     {
       "PowerHint": "CAMERA_STREAMING_LOW",
       "Node": "NPITaskPacking",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_LOW",
-      "Node": "NewlyIdleBalancer",
       "Duration": 0,
       "Value": "0"
     },
@@ -1562,6 +1558,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "AUTOMOTIVE_PROJECTION",
+      "Node": "AAModeProperty",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
       "PowerHint": "DISPLAY_IDLE",
       "Node": "FGPreferIdle",
       "Duration": 0,
@@ -1577,6 +1579,18 @@
       "PowerHint": "DISPLAY_IDLE",
       "Type": "EndHint",
       "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Type": "MaskHint",
+      "Value":"DISPLAY_UPDATE_IMMINENT",
+      "EnableProperty": "vendor.powerhal.mode.aa"
+    },
+    {
+      "PowerHint": "DISPLAY_IDLE",
+      "Type": "MaskHint",
+      "Value":"CPU_LOAD_RESET",
+      "EnableProperty": "vendor.powerhal.mode.aa"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
