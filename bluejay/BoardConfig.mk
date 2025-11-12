@@ -14,12 +14,6 @@
 # limitations under the License.
 #
 
-ifdef PHONE_CAR_BOARD_PRODUCT
-    include device/google_car/$(PHONE_CAR_BOARD_PRODUCT)/BoardConfig.mk
-else
-    TARGET_SCREEN_DENSITY := 420
-endif
-
 # Enable load module in parallel
 BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
 
@@ -32,14 +26,12 @@ BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
 
 TARGET_BOARD_INFO_FILE := device/google/bluejay/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := bluejay
-USES_DEVICE_GOOGLE_BLUEJAY := true
+TARGET_SCREEN_DENSITY := 420
+
 BOARD_KERNEL_CMDLINE += disable_dma32=on
 
 include device/google/gs101/BoardConfig-common.mk
 include device/google/gs101/wifi/BoardConfig-wifi.mk
-include device/google/gs-common/check_current_prebuilt/check_current_prebuilt.mk
-
-$(call soong_config_set,google3a_config,target_device,bluejay)
 
 DEVICE_PATH := device/google/bluejay
 VENDOR_PATH := vendor/google/bluejay

@@ -27,11 +27,6 @@ include device/google/gs101/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
 include device/google/gs-common/touch/stm/stm11.mk
 
-# go/lyric-soong-variables
-$(call soong_config_set,lyric,camera_hardware,bluejay)
-$(call soong_config_set,lyric,tuning_product,bluejay)
-$(call soong_config_set,google3a_config,target_device,bluejay)
-
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/bluejay/conf/init.blueport.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.blueport.rc \
@@ -83,9 +78,6 @@ PRODUCT_PACKAGES += \
 	Tag \
 	android.hardware.nfc-service.st \
 	NfcOverlayBluejay
-
-# Shared Modem Platform
-SHARED_MODEM_PLATFORM_VENDOR := lassen
 
 # Shared Modem Platform
 include device/google/gs-common/modem/modem_svc_sit/shared_modem_platform.mk
@@ -194,21 +186,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
 # GPS xml
-ifneq (,$(filter 6.1, $(TARGET_LINUX_KERNEL_VERSION)))
-    PRODUCT_COPY_FILES += \
-        device/google/bluejay/gps_user.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-else
-    PRODUCT_COPY_FILES += \
-        device/google/bluejay/gps_user.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
-endif
+PRODUCT_COPY_FILES += \
+    device/google/bluejay/gps_user.6.1.xml.b3:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml
 
 # This device is shipped with 32 (Android S V2)
 PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Vibrator HAL
-$(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
-ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
-ACTUATOR_MODEL := legacy_zlra_actuator
 PRODUCT_VENDOR_PROPERTIES += \
 	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
 	ro.vendor.vibrator.hal.redc.comp.enabled=0 \
