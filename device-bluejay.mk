@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-TARGET_LINUX_KERNEL_VERSION := $(RELEASE_KERNEL_BLUEJAY_VERSION)
+TARGET_LINUX_KERNEL_VERSION := 6.1
 TARGET_KERNEL_DEVICE := bluejay
 TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINUX_KERNEL_VERSION)
 TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
 	device/google/bluejay/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
-	$(RELEASE_PACKAGE_NFC_STACK) \
 	Tag \
 	android.hardware.nfc-service.st \
 	NfcOverlayBluejay
@@ -109,34 +108,12 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
 
 # Increment the SVN for any official public releases
-ifdef RELEASE_SVN_BLUEJAY
-TARGET_SVN ?= $(RELEASE_SVN_BLUEJAY)
-else
-# Set this for older releases that don't use build flag
-TARGET_SVN ?= 65
-endif
-
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=$(TARGET_SVN)
+    ro.vendor.build.svn=83
 
 # Set device family property for SMR
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.device_family=O6R4B9
-
-# Set build properties for SMR builds
-ifeq ($(RELEASE_IS_SMR), true)
-    ifneq (,$(RELEASE_BASE_OS_BLUEJAY))
-        PRODUCT_BASE_OS := $(RELEASE_BASE_OS_BLUEJAY)
-    endif
-endif
-
-# Set build properties for EMR builds
-ifeq ($(RELEASE_IS_EMR), true)
-    ifneq (,$(RELEASE_BASE_OS_BLUEJAY))
-        PRODUCT_PROPERTY_OVERRIDES += \
-        ro.build.version.emergency_base_os=$(RELEASE_BASE_OS_BLUEJAY)
-    endif
-endif
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
