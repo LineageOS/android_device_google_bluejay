@@ -26,8 +26,8 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="bluejay-user 16 BP2A.250705.008.A1 13673213 release-keys" \
-    BuildFingerprint=google/bluejay/bluejay:16/BP2A.250705.008.A1/13673213:user/release-keys \
+    BuildDesc="bluejay-user 16 BP3A.250905.014 13873947 release-keys" \
+    BuildFingerprint=google/bluejay/bluejay:16/BP3A.250905.014/13873947:user/release-keys \
     DeviceProduct=$(DEVICE_CODENAME)
 
 $(call inherit-product, $(VENDOR_PATH)/$(DEVICE_CODENAME)-vendor.mk)
