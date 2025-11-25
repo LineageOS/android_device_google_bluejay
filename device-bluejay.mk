@@ -1,5 +1,7 @@
 #
 # SPDX-FileCopyrightText: 2021 The Android Open-Source Project
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: The Calyx Institute
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -9,6 +11,7 @@ TARGET_KERNEL_DIR := device/google/$(TARGET_KERNEL_DEVICE)-kernels/$(TARGET_LINU
 TARGET_KERNEL_PLATFORM_SOURCE := google/gs-$(TARGET_LINUX_KERNEL_VERSION)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/bluejay/overlay
+DEVICE_PACKAGE_OVERLAYS += device/google/bluejay/overlay-lineage
 
 include device/google/bluejay/sepolicy/bluejay-sepolicy.mk
 include device/google/gs101/device-shipping-common.mk
@@ -180,3 +183,41 @@ PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
 # Bluejay: 0x4108
 PRODUCT_PRODUCT_PROPERTIES += \
     bluetooth.device_id.product_id=16648
+
+# ANGLE - Almost Native Graphics Layer Engine
+PRODUCT_PACKAGES += \
+    ANGLE \
+    libEGL_angle \
+    libGLESv1_CM_angle \
+    libGLESv2_angle
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    dump_gsc.sh
+
+# EUICC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
+
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-V2-ndk.vendor:64
+
+# HBM
+PRODUCT_PACKAGES += \
+    HbmSVManagerOverlay
+
+# Init
+PRODUCT_PACKAGES += \
+    init.recovery.bluejay.touch.rc
+
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
+
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal
