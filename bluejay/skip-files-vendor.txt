@@ -35,21 +35,7 @@ bin/dirname
 bin/dmesg
 bin/dos2unix
 bin/du
-bin/dump/dump_aoc
-bin/dump/dump_devfreq
-bin/dump/dump_exynos_display
-bin/dump/dump_fingerprint
 bin/dump/dump_modem
-bin/dump/dump_modemlog
-bin/dump/dump_perf
-bin/dump/dump_pixel_metrics
-bin/dump/dump_power
-bin/dump/dump_sensors
-bin/dump/dump_soc
-bin/dump/dump_stm.sh
-bin/dump/dump_storage
-bin/dump/dump_thermal.sh
-bin/dump/dump_trusty.sh
 bin/dumpsys
 bin/echo
 bin/egrep
@@ -87,7 +73,6 @@ bin/hw/android.hardware.audio.service
 bin/hw/android.hardware.boot-service.default-pixel
 bin/hw/android.hardware.cas@1.2-service
 bin/hw/android.hardware.drm-service.clearkey
-bin/hw/android.hardware.dumpstate-service
 bin/hw/android.hardware.gatekeeper-service.trusty
 bin/hw/android.hardware.graphics.composer@2.4-service
 bin/hw/android.hardware.health-service.gs101
@@ -95,7 +80,6 @@ bin/hw/android.hardware.health.storage-service.default
 bin/hw/android.hardware.media.omx@1.0-service
 bin/hw/android.hardware.nfc-service.st
 bin/hw/android.hardware.power-service.pixel-libperfmgr
-bin/hw/android.hardware.power.stats-service.pixel
 bin/hw/android.hardware.secure_element@1.2-service-gto
 bin/hw/android.hardware.security.keymint-service.trusty
 bin/hw/android.hardware.sensors-service.multihal
@@ -116,7 +100,6 @@ bin/id
 bin/ifconfig
 bin/inotifyd
 bin/insmod
-bin/insmod.sh
 bin/install
 bin/ionice
 bin/iorenice
@@ -289,18 +272,15 @@ etc/fstab.zram.60p
 etc/fstab.zram.6g
 etc/group
 etc/hearing_aid_audio_policy_configuration_7_0.xml
-etc/init.common.cfg
 etc/init/android.hardware.audio.service.rc
 etc/init/android.hardware.boot-service.default-pixel.rc
 etc/init/android.hardware.cas@1.2-service.rc
 etc/init/android.hardware.drm-service.clearkey.rc
-etc/init/android.hardware.dumpstate-service.rc
 etc/init/android.hardware.gatekeeper-service.trusty.rc
 etc/init/android.hardware.graphics.composer@2.4-service.rc
 etc/init/android.hardware.health-service.gs101.rc
 etc/init/android.hardware.media.omx@1.0-service.rc
 etc/init/android.hardware.power-service.pixel-libperfmgr.rc
-etc/init/android.hardware.power.stats-service.pixel.rc
 etc/init/android.hardware.secure_element@1.2-service-gto.rc
 etc/init/android.hardware.security.keymint-service.trusty.rc
 etc/init/android.hardware.sensors-service-multihal.rc
@@ -315,25 +295,12 @@ etc/init/dump_power.rc
 etc/init/gpu_probe.rc
 etc/init/health-storage-default.rc
 etc/init/hostapd.android.rc
-etc/init/init.aoc.rc
-etc/init/init.fingerprint.dump.rc
-etc/init/init.module.rc
-etc/init/init.pixel-mm-gs.rc
-etc/init/init.pixel-perf.rc
 etc/init/init.pixel.rc
-etc/init/init.power-gs.rc
-etc/init/init.storage.rc
-etc/init/libg3a_gabc.rc
-etc/init/libg3a_gaf.rc
-etc/init/libg3a_ghawb.rc
 etc/init/nfc-service-default.rc
 etc/init/pixel-mm-gki.rc
 etc/init/pixel-thermal-symlinks.rc
 etc/init/rebalance_interrupts-vendor.gs101.rc
 etc/init/vndservicemanager.rc
-etc/libg3a_standalone_gabc_rc
-etc/libg3a_standalone_gaf_rc
-etc/libg3a_standalone_ghawb_rc
 etc/linker.config.pb
 etc/mkshrc
 etc/passwd
@@ -392,7 +359,6 @@ etc/permissions/aosp_excluded_hardware.xml
 etc/permissions/com.nxp.mifare.xml
 etc/permissions/features_com.android.virt.xml
 etc/permissions/handheld_core_hardware.xml
-etc/permissions/vendor.android.hardware.camera.preview-dis.xml
 etc/r_submix_audio_policy_configuration.xml
 etc/selinux/genfs_labels_version.txt
 etc/selinux/plat_pub_versioned.cil
@@ -418,11 +384,9 @@ etc/vintf/compatibility_matrix.xml
 etc/vintf/manifest.xml
 etc/vintf/manifest/android.hardware.cas@1.2-service.xml
 etc/vintf/manifest/android.hardware.drm-service.clearkey.xml
-etc/vintf/manifest/android.hardware.dumpstate-service.xml
 etc/vintf/manifest/android.hardware.gatekeeper-service.trusty.xml
 etc/vintf/manifest/android.hardware.health-service.gs101.xml
 etc/vintf/manifest/android.hardware.power-service.pixel.xml
-etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
 etc/vintf/manifest/android.hardware.security.keymint-service.trusty.xml
 etc/vintf/manifest/android.hardware.sensors-multihal.xml
 etc/vintf/manifest/android.hardware.thermal-service.pixel.xml
@@ -913,7 +877,6 @@ lib64/android.hardware.common-V2-ndk.so
 lib64/android.hardware.common.fmq-V1-ndk.so
 lib64/android.hardware.drm-V1-ndk.so
 lib64/android.hardware.drm.common-V1-ndk.so
-lib64/android.hardware.dumpstate-V1-ndk.so
 lib64/android.hardware.gatekeeper-V1-ndk.so
 lib64/android.hardware.graphics.allocator-V2-ndk.so
 lib64/android.hardware.graphics.allocator@2.0.so
@@ -939,8 +902,6 @@ lib64/android.hardware.nfc-V1-ndk.so
 lib64/android.hardware.power-V1-ndk.so
 lib64/android.hardware.power-V6-ndk.so
 lib64/android.hardware.power.stats-V2-ndk.so
-lib64/android.hardware.power.stats-impl.gs-common.so
-lib64/android.hardware.power.stats-impl.gs101.so
 lib64/android.hardware.power.stats-impl.pixel.so
 lib64/android.hardware.radio@1.0.so
 lib64/android.hardware.radio@1.1.so
@@ -1015,8 +976,6 @@ lib64/libcrypto.so
 lib64/libcutils.so
 lib64/libdisppower-pixel.so
 lib64/libdmabufheap.so
-lib64/libdump.so
-lib64/libdumpstateutil.so
 lib64/libeffects.so
 lib64/libeffectsconfig.so
 lib64/libenv_filter.dylib.so
@@ -1074,10 +1033,6 @@ lib64/libxml2.so
 lib64/libz.so
 lib64/mediacas/libclearkeycasplugin.so
 lib64/mediadrm/libdrmclearkeyplugin.so
-lib64/modem_android_property_manager.so
-lib64/modem_android_property_manager_impl.so
-lib64/modem_log_constants.so
-lib64/modem_log_dumper.so
 lib64/nfc_nci.st21nfc.default.so
 lib64/pixel-power-ext-V1-ndk.so
 lib64/pixel_stateresidency_provider_aidl_interface-ndk.so
@@ -1209,6 +1164,10 @@ lib64/android.hardware.contexthub-V4-ndk.so
 lib64/chre_atoms_log.so
 lib64/chremetrics-cpp.so
 
+# Dumpstate
+lib64/android.hardware.dumpstate-V1-ndk.so
+lib64/libdumpstateutil.so
+
 # Fingerprint
 etc/permissions/android.hardware.fingerprint.xml
 
@@ -1249,20 +1208,16 @@ lib64/pixelpowerstats_provider_aidl_interface-cpp.so
 lib/libpixelatoms_defs.so
 lib/pixelatoms-cpp.so
 
+# Powerstats
+etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
+
 # Radio
 lib/libnetutils.so
 lib/libsqlite.so
 lib/libziparchive.so
-lib/modem_android_property_manager.so
-lib/modem_android_property_manager_impl.so
-lib/modem_clock_manager.so
-lib/modem_clock_manager_impl.so
-lib/modem_log_constants.so
 lib64/libnetutils.so
 lib64/libsqlite.so
 lib64/libziparchive.so
-lib64/modem_clock_manager.so
-lib64/modem_clock_manager_impl.so
 
 # Sensors
 lib/android.frameworks.sensorservice-V1-ndk.so
@@ -1354,7 +1309,6 @@ lib64/com.google.hardware.pixel.display-V15-ndk.so
 lib64/com.google.hardware.pixel.display-V16-ndk.so
 
 # Misc
-bin/dump/dump_gsc.sh
 lib/libdmabufheap.so
 lib/libdrm.so
 lib/libevent.so

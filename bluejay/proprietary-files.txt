@@ -161,6 +161,10 @@ system_ext/etc/permissions/oemrilhook.xml
 system_ext/framework/oemrilhook.jar
 system_ext/priv-app/OemRilService/OemRilService.apk;PRESIGNED
 
+# Watchdog
+system_ext/bin/gs_watchdogd
+system_ext/etc/init/init.gs_watchdogd.rc
+
 # VZW
 system_ext/etc/permissions/vzw_mvs_permissions.xml
 system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED
