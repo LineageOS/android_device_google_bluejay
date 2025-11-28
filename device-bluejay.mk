@@ -24,9 +24,6 @@ DEVICE_MANIFEST_FILE += device/google/gs-common/bcmbt/manifest_bluetooth.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/bcmbt/compatibility_matrix.xml
 
 # Touch
-PRODUCT_PACKAGES += \
-    dump_stm.sh
-
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.sys=/sys/class/spi_master/spi11/spi11.0
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.proc=/proc/fts/driver_test
 
@@ -70,9 +67,7 @@ PRODUCT_COPY_FILES += \
 DEVICE_MANIFEST_FILE += \
 	device/google/bluejay/nfc/manifest_se_bluejay.xml
 
-# PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/bluejay/powerstats/bluejay \
     device/google/bluejay
 
 # Increment the SVN for any official public releases
@@ -202,10 +197,6 @@ PRODUCT_PACKAGES += \
     libEGL_angle \
     libGLESv1_CM_angle \
     libGLESv2_angle
-
-# Dumpstate
-PRODUCT_PACKAGES += \
-    dump_gsc.sh
 
 # EUICC
 PRODUCT_COPY_FILES += \
