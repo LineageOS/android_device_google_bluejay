@@ -193,10 +193,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
-    ANGLE \
-    libEGL_angle \
-    libGLESv1_CM_angle \
-    libGLESv2_angle
+    ANGLE
 
 # EUICC
 PRODUCT_COPY_FILES += \
