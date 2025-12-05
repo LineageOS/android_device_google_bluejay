@@ -52,6 +52,11 @@ blob_fixups: blob_fixups_user_type = {
         .patch_file('osaifu-keitai.patch'),
     'vendor/etc/init/init.modem_logging_control.rc': blob_fixup()
         .regex_replace(' && property:ro.debuggable=0', ''),
+    (
+        'vendor/etc/init/fingerprint-goodix.rc',
+        'vendor/etc/init/init.storage.rc',
+    ) : blob_fixup()
+        .regex_replace('ro.build.type=userdebug', 'ro.debuggable=1'),
 }  # fmt: skip
 
 extract_fns: extract_fns_user_type = {
