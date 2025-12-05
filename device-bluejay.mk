@@ -20,22 +20,9 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.prebuilt.xml \
     android.hardware.bluetooth_le.prebuilt.xml
 
-# Touch
-PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.sys=/sys/class/spi_master/spi11/spi11.0
-PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.proc=/proc/fts/driver_test
-
 # Recovery files
 PRODUCT_COPY_FILES += \
 	device/google/gs101/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.bluejay.rc
-
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.extended_launch_boost=1 \
-    persist.vendor.camera.raise_buf_allocation_priority=1 \
-    persist.vendor.camera.fixed_fps_range_boost=1
-
-# Media Performance Class 12
-PRODUCT_PROPERTY_OVERRIDES += ro.odm.build.media_performance_class=31
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -61,61 +48,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
 
-# Increment the SVN for any official public releases
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=83
-
-# Set device family property for SMR
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.device_family=O6R4B9
-
-# DCK properties based on target
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=2 \
-    ro.gms.dck.se_capability=1
-
-# Display
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=0
-
-# Config of primary display frames to reach LHBM peak brightness
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
-
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.a2dp_aac.vbr_supported=true \
     persist.bluetooth.firmware.selection=BCM.hcd \
     bluetooth.server.automatic_turn_on=true
 
-# Set zram size
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.zram.size=3g
-
-# Enable camera 1080P 60FPS binning mode
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.1080P_60fps_binning=true
-
-# Enable camera exif model/make reporting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.exif_reveal_make_model=true
-
-# Disable rear light sensor probing explicitly
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.rls_supported=false
-
 # Fingerprint antispoof property
 PRODUCT_PRODUCT_PROPERTIES +=\
     persist.vendor.fingerprint.disable.fake.override=none
-
-# Fingerprint als feed forward
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.udfps.als_feed_forward_supported=true \
-    persist.vendor.udfps.fps_touch_handler_supported=false \
-    persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
-
-# Fingerprint MAX auth latency
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.gf.debug.timer.threshold=1,400,400,400,600,600,600
 
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
@@ -140,20 +81,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # This device is shipped with 32 (Android S V2)
 PRODUCT_SHIPPING_API_LEVEL := 32
 
-# Vibrator HAL
-PRODUCT_VENDOR_PROPERTIES += \
-	ro.vendor.vibrator.hal.f0.comp.enabled=0 \
-	ro.vendor.vibrator.hal.redc.comp.enabled=0 \
-	persist.vendor.vibrator.hal.context.enable=false \
-	persist.vendor.vibrator.hal.context.scale=40 \
-	persist.vendor.vibrator.hal.context.fade=true \
-	persist.vendor.vibrator.hal.context.cooldowntime=1600 \
-	persist.vendor.vibrator.hal.context.settlingtime=5000
-
-# Override Output Distortion Gain
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.audio.hapticgenerator.distortion.output.gain=0.29
-
 # Device features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
@@ -164,10 +91,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 PRODUCT_PRODUCT_PROPERTIES ?= \
     ro.com.google.ime.height_ratio=1.05
-
-# Enable DeviceAsWebcam support
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.usb.uvc.enabled=true
 
 # Quick Start device-specific settings
 PRODUCT_PRODUCT_PROPERTIES += \
