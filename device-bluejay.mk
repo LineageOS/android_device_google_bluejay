@@ -48,15 +48,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
 
-# Bluetooth
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.bluetooth.a2dp_aac.vbr_supported=true \
-    persist.bluetooth.firmware.selection=BCM.hcd
-
-# Fingerprint antispoof property
-PRODUCT_PRODUCT_PROPERTIES +=\
-    persist.vendor.fingerprint.disable.fake.override=none
-
 # Hide cutout overlays
 PRODUCT_PACKAGES += \
     NoCutoutOverlay \
@@ -69,14 +60,6 @@ PRODUCT_PACKAGES += \
     SettingsOverlayGB62Z \
     SettingsOverlayGX7AS
 
-# Set support hide display cutout feature
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_hide_display_cutout=true
-
-# Set support one-handed mode
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode=true
-
 # This device is shipped with 32 (Android S V2)
 PRODUCT_SHIPPING_API_LEVEL := 32
 
@@ -84,25 +67,8 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Keyboard bottom padding in dp for portrait mode and height ratio
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.kb_pad_port_b=6.4 \
-
-PRODUCT_PRODUCT_PROPERTIES ?= \
-    ro.com.google.ime.height_ratio=1.05
-
-# Quick Start device-specific settings
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.quick_start.oem_id=00e0 \
-    ro.quick_start.device_id=bluejay
-
 # Disable AVF Remote Attestation
 PRODUCT_AVF_REMOTE_ATTESTATION_DISABLED := true
-
-# Bluetooth device id
-# Bluejay: 0x4108
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=16648
 
 # ANGLE - Almost Native Graphics Layer Engine
 PRODUCT_PACKAGES += \
@@ -129,6 +95,7 @@ PRODUCT_PACKAGES += \
     init.recovery.bluejay.touch.rc
 
 # Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
 
 # Sensors
