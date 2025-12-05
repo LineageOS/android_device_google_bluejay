@@ -20,9 +20,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.prebuilt.xml \
     android.hardware.bluetooth_le.prebuilt.xml
 
-DEVICE_MANIFEST_FILE += device/google/gs-common/bcmbt/manifest_bluetooth.xml
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/bcmbt/compatibility_matrix.xml
-
 # Touch
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.sys=/sys/class/spi_master/spi11/spi11.0
 PRODUCT_VENDOR_PROPERTIES += ro.vendor.touch.dump.proc=/proc/fts/driver_test
@@ -53,9 +50,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.nfc-service.st \
 	NfcOverlayBluejay
 
-# Shared Modem Platform
-DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += device/google/gs-common/modem/modem_svc_sit/compatibility_matrix.xml
-
 # SecureElement
 PRODUCT_PACKAGES += \
 	android.hardware.secure_element@1.2-service-gto
@@ -63,9 +57,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
-
-DEVICE_MANIFEST_FILE += \
-	device/google/bluejay/nfc/manifest_se_bluejay.xml
 
 PRODUCT_SOONG_NAMESPACES += \
     device/google/bluejay
@@ -221,3 +212,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
+
+# VINTF
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/vintf/manifest.xml
