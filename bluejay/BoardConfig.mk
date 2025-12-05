@@ -15,9 +15,6 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 include device/google/gs101/BoardConfig-common.mk
 
-# Kernel
-BOARD_KERNEL_CMDLINE += disable_dma32=on
-
 # Kernel modules
 BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
 
