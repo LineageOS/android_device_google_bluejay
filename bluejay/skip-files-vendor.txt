@@ -248,7 +248,6 @@ etc/aidl/le_audio/aidl_audio_set_scenarios.bfbs
 etc/aidl/le_audio/aidl_default_audio_set_configurations.json
 etc/aidl/le_audio/aidl_default_audio_set_scenarios.json
 etc/atrace/atrace_categories.txt
-etc/bluetooth_audio_policy_configuration_7_0.xml
 etc/boringssl_self_test.no_zygote.rc
 etc/boringssl_self_test.zygote32.rc
 etc/boringssl_self_test.zygote64.rc
