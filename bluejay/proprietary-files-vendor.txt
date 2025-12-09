@@ -3,6 +3,7 @@ vendor/apex/com.google.android.widevine-13130248.apex
 vendor/apex/com.google.pixel.camera.hal.apex
 vendor/apex/com.google.pixel.euicc.update.apex
 vendor/apex/com.google.pixel.wifi.ext.apex
+vendor/app/HardwareInfo/HardwareInfo.apk
 vendor/bin/aocd
 vendor/bin/aocxd
 vendor/bin/bipchmgr
@@ -96,6 +97,7 @@ vendor/etc/bluetooth_power_limits_GB62Z_EU.csv
 vendor/etc/bluetooth_power_limits_GB62Z_US.csv
 vendor/etc/bluetooth_power_limits_GX7AS_US.csv
 vendor/etc/bluetooth_power_limits_JP.csv
+vendor/etc/bm_config.json
 vendor/etc/chre/activity.napp_header
 vendor/etc/chre/activity.so
 vendor/etc/chre/ar_bridge.napp_header
@@ -319,6 +321,7 @@ vendor/etc/permissions/android.hardware.telephony.gsm.xml
 vendor/etc/permissions/android.hardware.telephony.ims.singlereg.xml
 vendor/etc/permissions/android.hardware.telephony.ims.xml
 vendor/etc/permissions/com.google.android.camera.experimental2021.xml
+vendor/etc/permissions/com.google.android.hardwareinfo.xml
 vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml
 vendor/etc/pixelstats_config.json
 vendor/etc/powerhint.json
@@ -428,7 +431,6 @@ vendor/firmware/carrierconfig/confseqs/0f7ea1d6a953f72e1ba79b6d991bc07724b0a85f
 vendor/firmware/carrierconfig/confseqs/10063b45ce232642c023eb1796e13dc1db06eb16
 vendor/firmware/carrierconfig/confseqs/105b6c5a3c863c0169af012914173ebc70b6018b
 vendor/firmware/carrierconfig/confseqs/105ee3a845ad70edcc48b72ba0a56c1b293992f6
-vendor/firmware/carrierconfig/confseqs/10f347cc990ec58dacf6435ab31858b1336fa3b7
 vendor/firmware/carrierconfig/confseqs/114fb4d974913f4bedbdbeda20b3fc656913472c
 vendor/firmware/carrierconfig/confseqs/1187c9862416c19928c696bfa16176082d1ae972
 vendor/firmware/carrierconfig/confseqs/13320c1b8ea5ec01e2b888fc8068c5c331391ea9
@@ -524,7 +526,6 @@ vendor/firmware/carrierconfig/confseqs/345be7e6d41111147a6217ab1e80ec2587a4c0c8
 vendor/firmware/carrierconfig/confseqs/345fe19d76fdd67c978305a549050fa463d0333b
 vendor/firmware/carrierconfig/confseqs/35ab784024e60329d3df46440617d36d58c6dc52
 vendor/firmware/carrierconfig/confseqs/35f22793aabf71a4aaa67e43000a972a602d7235
-vendor/firmware/carrierconfig/confseqs/35f479eadfdabe7c3574b6ba11dc9c4321700a71
 vendor/firmware/carrierconfig/confseqs/36f4d136b82418ca298a9e070518cbc3e13f56cb
 vendor/firmware/carrierconfig/confseqs/37a270e8267acfad14223162b0b97bf2ccbc762b
 vendor/firmware/carrierconfig/confseqs/38042c4180370b944a723678609d99fbfc80c3ff
@@ -583,6 +584,7 @@ vendor/firmware/carrierconfig/confseqs/47b1f6502c6d332d51e2bfd3ab7154a01e259ce3
 vendor/firmware/carrierconfig/confseqs/47d45edf349a833b0d36bb09846cc228306c467d
 vendor/firmware/carrierconfig/confseqs/47d826b0349840039be2dd2702c1025bb7268756
 vendor/firmware/carrierconfig/confseqs/480aa556d0ca46a77dd38db8f3e3177c6943dbcf
+vendor/firmware/carrierconfig/confseqs/4901f2439a87b796eda93dbef768278d9f897547
 vendor/firmware/carrierconfig/confseqs/4922772fe5e3cca24c697fa61b8b417a950ca546
 vendor/firmware/carrierconfig/confseqs/4a4358d6686aeff8b79b9736ded40e63f8195864
 vendor/firmware/carrierconfig/confseqs/4b63fc55a26a6700db98b5853f460b6782d96a5a
@@ -616,6 +618,7 @@ vendor/firmware/carrierconfig/confseqs/566b28c8abf57ba34016cd8ebaa501bc2af00447
 vendor/firmware/carrierconfig/confseqs/5670a9ee5e56646f5e2998b003bc2dae0d6d6235
 vendor/firmware/carrierconfig/confseqs/56cb10847a0e6a2a3d4e0722891e9e33c6c448f6
 vendor/firmware/carrierconfig/confseqs/574f85915cf52ed82833e5e6c8228ffd14485449
+vendor/firmware/carrierconfig/confseqs/57a2887420a4a9eeeb707a08f742e12585dda352
 vendor/firmware/carrierconfig/confseqs/57ea67d9ca7da02731edfae4ba538d29e143b38f
 vendor/firmware/carrierconfig/confseqs/582be8a74330df7d15e4942b88b21cf9a3454177
 vendor/firmware/carrierconfig/confseqs/5837e1608cc4d79354e22c7757339d0099a01535
@@ -632,7 +635,6 @@ vendor/firmware/carrierconfig/confseqs/5ca9196a719f6ebe22203ddd39a0106429d18c45
 vendor/firmware/carrierconfig/confseqs/5d8b71710e81592ec290ed5fbcd9c3b63dc082a1
 vendor/firmware/carrierconfig/confseqs/5db653304f344cc36f3567a7cf01ecaab30d5733
 vendor/firmware/carrierconfig/confseqs/5e0271cd2afbc7306ea2c9d3bb82ddc3a7658323
-vendor/firmware/carrierconfig/confseqs/5e690cfa0ce4c124eb4ea6ba23dacd926db2076f
 vendor/firmware/carrierconfig/confseqs/5e8c8018611be70a4cd63f40343d72c277c43056
 vendor/firmware/carrierconfig/confseqs/5ec2892d35aef88e5274408de6b28e82ae3dbd3c
 vendor/firmware/carrierconfig/confseqs/5ee61f51bf807f87c8188fbbf8a814d2ea070e1a
@@ -659,6 +661,7 @@ vendor/firmware/carrierconfig/confseqs/6864b7686a6a6e28a93cf352f2d9e6de1bae9550
 vendor/firmware/carrierconfig/confseqs/69ae08935d5331d57678071f8c0a8b4f91949b55
 vendor/firmware/carrierconfig/confseqs/69eab8efdc0ff9215afb62373b25e1867dabc50c
 vendor/firmware/carrierconfig/confseqs/6a5910ed6947392a4dfcfe59336805089d16253c
+vendor/firmware/carrierconfig/confseqs/6b0d9e7ff404693bc94c3d5d7b1910bf8a4ee363
 vendor/firmware/carrierconfig/confseqs/6b7cd838439444cb9f2a9b3d545035e9b01db950
 vendor/firmware/carrierconfig/confseqs/6bad9f83d012284e82c06696688584b9f28c789d
 vendor/firmware/carrierconfig/confseqs/6bdc59f897631af7811e3201cbc58e5999de2600
@@ -760,7 +763,6 @@ vendor/firmware/carrierconfig/confseqs/8757ca71943a9364d1007f004c3a05bf848a2174
 vendor/firmware/carrierconfig/confseqs/880c233f5dc7962fb8558b1576506c058743fa12
 vendor/firmware/carrierconfig/confseqs/8919cdba8c1ed1c6dfdb2bde6ae89285e7b052da
 vendor/firmware/carrierconfig/confseqs/899f52f8510b4b0d7fc4d27d9d8087b8ed900b75
-vendor/firmware/carrierconfig/confseqs/8a89100db99478f22bfdbc47ed3e0de4c33b2394
 vendor/firmware/carrierconfig/confseqs/8a92f74127bdf73eb49d77658069a68c5e098d33
 vendor/firmware/carrierconfig/confseqs/8ad16647a15c350ac6d59003cc8d8eade0baa647
 vendor/firmware/carrierconfig/confseqs/8bc1d1b3e5eb159804cd5b841f53c48abebf13d6
@@ -819,6 +821,7 @@ vendor/firmware/carrierconfig/confseqs/9d21c91cf1f081772386210012f507250129ed78
 vendor/firmware/carrierconfig/confseqs/9d2fe859c5f6133e07b3f3246439773a939c60dc
 vendor/firmware/carrierconfig/confseqs/9e2789b5de7acf4e45e65a1e2eed0e335eb6f9d2
 vendor/firmware/carrierconfig/confseqs/9e3cd79a150d7199726bd7520cad1bc5215be477
+vendor/firmware/carrierconfig/confseqs/9e4806793209ade986a591b109ea597f08b156a8
 vendor/firmware/carrierconfig/confseqs/9eae50eddd4f59e376cbc00886038ccbfb075e61
 vendor/firmware/carrierconfig/confseqs/9eba9ebfcf23c0897d95073be8b72631d549e8e8
 vendor/firmware/carrierconfig/confseqs/9eda9db2e2cb30357b588c1c12b6b5ed339c4238
@@ -877,6 +880,7 @@ vendor/firmware/carrierconfig/confseqs/b64e8a8cb9fd3b978c37bee907f8c86e967edd3c
 vendor/firmware/carrierconfig/confseqs/b65b4bee5c90ddbcdaf882e090c32d9e5ea9554c
 vendor/firmware/carrierconfig/confseqs/b697ea0d1bf991225205e28f6241a9ae9fa4a6c6
 vendor/firmware/carrierconfig/confseqs/b7c58ff29c7b963c61fd578cc21070202faf9ae3
+vendor/firmware/carrierconfig/confseqs/b7f39d16781533fc9e73b3eb207a93b5f296fc0a
 vendor/firmware/carrierconfig/confseqs/b7ff3444d2d58ea3b1af1bd129b4cbb0cb01175e
 vendor/firmware/carrierconfig/confseqs/b85c75353d98371db96edac64cd87493d9b75948
 vendor/firmware/carrierconfig/confseqs/b9a166acbb2fd59cba680deeb167e78f35f98291
@@ -951,7 +955,6 @@ vendor/firmware/carrierconfig/confseqs/d013ea1959bdcb324fa701219ddf61b28456bb68
 vendor/firmware/carrierconfig/confseqs/d01e1adfb9038a050bbd5a0f5508293f0486a716
 vendor/firmware/carrierconfig/confseqs/d04a1a88a04d33bde905bd3cc2df78c8cd1fe967
 vendor/firmware/carrierconfig/confseqs/d078d99fce7c1c9d2a81d03754b1e27754ee9b6f
-vendor/firmware/carrierconfig/confseqs/d086be659cebe7bbc44c6a29bcede6110677b5c6
 vendor/firmware/carrierconfig/confseqs/d0bc069ec5dd36a04444b7e8ac96e50f85681272
 vendor/firmware/carrierconfig/confseqs/d13fe406b9b9d53970af10e3a4e8cc8d3cc83799
 vendor/firmware/carrierconfig/confseqs/d160ef2bee7c8ce77d3776b8663af13e1515c196
@@ -1053,6 +1056,7 @@ vendor/firmware/carrierconfig/confseqs/f3ccd98ca8ac3a8d57a21b61819b563a1663cb6e
 vendor/firmware/carrierconfig/confseqs/f4a862277297e179949e3bb205bbc1391bdabe15
 vendor/firmware/carrierconfig/confseqs/f4b6c9fcb1dd55b8d50637554c1ff04cc945f136
 vendor/firmware/carrierconfig/confseqs/f4cbf0359c080d37490b598a9ba31ec61cb09b3f
+vendor/firmware/carrierconfig/confseqs/f5002a6c593091939d2a2e66a1c5e472910cd549
 vendor/firmware/carrierconfig/confseqs/f5587ae24f6868e5ca762da40e4b7b2696041f55
 vendor/firmware/carrierconfig/confseqs/f662d6cc30fa696c113f1d2eeaec62d474af0c4f
 vendor/firmware/carrierconfig/confseqs/f663b1a088937750df305dd44c3773eb63894c09
@@ -1066,7 +1070,6 @@ vendor/firmware/carrierconfig/confseqs/f8a4b5d976e1d468dab419bf635e5d6fbbad2564
 vendor/firmware/carrierconfig/confseqs/f8d2a02be1e168b25c4ce033bb3b00fdc5412c71
 vendor/firmware/carrierconfig/confseqs/f8fb5c59781db86d36cb1b90583e5fa8c4b14715
 vendor/firmware/carrierconfig/confseqs/f923558ca8adde71b653038c47bc26d6171cc702
-vendor/firmware/carrierconfig/confseqs/f92712066179cca47906c4f3b55af802d1bccc71
 vendor/firmware/carrierconfig/confseqs/f98bd5829afa9cef9e0f159fc50582f202d23fa2
 vendor/firmware/carrierconfig/confseqs/f9c30666652e70ace2de404c7f3d648d0dd5dc08
 vendor/firmware/carrierconfig/confseqs/f9d69cd3760d6672326212ea8ae6205fadbd4c00
@@ -1127,7 +1130,6 @@ vendor/firmware/carrierconfig/manifests/460ecb691a13ca7eec9d3baa783c51b6684a7d2a
 vendor/firmware/carrierconfig/manifests/475b0502bdfe6548db17bbce76fa2fe4a9203e50
 vendor/firmware/carrierconfig/manifests/47774350233dcfe5376d6ac2b71e06b60a271820
 vendor/firmware/carrierconfig/manifests/48c20e5fa720481e066d48b60e1023379ce64abd
-vendor/firmware/carrierconfig/manifests/491c9c217908b7e9973eda4c3f179486a9eb50cb
 vendor/firmware/carrierconfig/manifests/4ffb85c6ee9b84bdab29d63c3a1617cd188e0632
 vendor/firmware/carrierconfig/manifests/506abcab02579ea1180c063fe7d448b9267ccbdd
 vendor/firmware/carrierconfig/manifests/50cd39bbef58ab9908157f10c2378f2f3f4b12d3
@@ -1135,7 +1137,6 @@ vendor/firmware/carrierconfig/manifests/524064239980cb753a27a2b704a062f4e46462da
 vendor/firmware/carrierconfig/manifests/52aa88117c0283c8dcc9e6c2717a6823fbcdf655
 vendor/firmware/carrierconfig/manifests/530bb316855028aefe4012b75e43befff5a67597
 vendor/firmware/carrierconfig/manifests/564fd7c761f0802c710d1f5a6b4cfebee53c3628
-vendor/firmware/carrierconfig/manifests/5656812dc7f026adf0b86be21236c0ef7bac5a47
 vendor/firmware/carrierconfig/manifests/5b31596dc7b1d9b48a50c264f91484991ed102af
 vendor/firmware/carrierconfig/manifests/5c5a1a5aab5d75932dd125444fcb3831433d7ebd
 vendor/firmware/carrierconfig/manifests/5caa181dedcd66f5e120769dd17df03042eed4d3
@@ -1176,16 +1177,17 @@ vendor/firmware/carrierconfig/manifests/8abf5535ef18971d157dde84ed3a53ac501d1670
 vendor/firmware/carrierconfig/manifests/8ae94d189beda9049f6e36e6b0c9686fc729bce7
 vendor/firmware/carrierconfig/manifests/8f2150d849dedb0430caa7575b2cc12278ce7770
 vendor/firmware/carrierconfig/manifests/8f36f09e83fa1975f17707d11b02f8150578e50f
-vendor/firmware/carrierconfig/manifests/8f62bedf6a92ea8e038b87e08f3698455c29e080
 vendor/firmware/carrierconfig/manifests/96999a4405f1b3ff796a29fdbb3b8f372a1be77e
 vendor/firmware/carrierconfig/manifests/990695bdb477c420ed1618581ab98e3b73aad7fe
 vendor/firmware/carrierconfig/manifests/990d42bb2f45f604068f0734af5bb3141bf2293b
+vendor/firmware/carrierconfig/manifests/9923bec464107cb39d42d33bc9fbc801eab089d5
 vendor/firmware/carrierconfig/manifests/9979f77e682ba5e7c5b28db05f40dec6e7e63aba
 vendor/firmware/carrierconfig/manifests/9b972700eaec7688da0e53567a14f3eb77ef8683
 vendor/firmware/carrierconfig/manifests/9c8c3a173d41ea47d7dbb26b01fee9ea9867a221
 vendor/firmware/carrierconfig/manifests/9d0de964235f65bbe80e02b9bbdb52d74ce428e0
 vendor/firmware/carrierconfig/manifests/9ded141650aca15dba54da50c18728ee47256e16
 vendor/firmware/carrierconfig/manifests/9ec5b16c1206228c2ef98ad72bf31c863ac6690e
+vendor/firmware/carrierconfig/manifests/9f5207463838f93651dd0f0a80ba8cce248b36e7
 vendor/firmware/carrierconfig/manifests/a01192a95e064457ecceea0d35b4706dde90ace0
 vendor/firmware/carrierconfig/manifests/a0189c64358966fed6ca1d9cdc39ffc3042c5f4d
 vendor/firmware/carrierconfig/manifests/a092755decf43488442f98ac173c19b132e79976
@@ -1247,6 +1249,7 @@ vendor/firmware/carrierconfig/manifests/fbf46781fefcb13ceae337b1999402bcc880388c
 vendor/firmware/carrierconfig/manifests/fcdf38abd3aa99e014bf9de28126dd9ee8abead9
 vendor/firmware/carrierconfig/manifests/fdc64883650d0581e27a8fcc11ec8c65bd906e80
 vendor/firmware/carrierconfig/manifests/ff564f49e5579b05a48f94fa700e0f39ed87d506
+vendor/firmware/carrierconfig/manifests/ff7cc75d11be5cef7a5877b55523af556afd71b7
 vendor/firmware/carrierconfig/manifests_symbolic_link_mapping
 vendor/firmware/carrierconfig/release-label
 vendor/firmware/cs35l41-dsp1-spk-cali.bin
@@ -1381,7 +1384,7 @@ vendor/lib/vendor.google.battery_mitigation-V1-ndk.so
 vendor/lib/vendor.google.battery_mitigation.service_static.so
 vendor/lib/vendor.google.whitechapel.audio.audioext@4.0.so
 vendor/lib/vendor.google.whitechapel.audio.extension-V5-ndk.so
-vendor/lib/vendor.google.whitechapel.audio.extension-V6-ndk.so
+vendor/lib/vendor.google.whitechapel.audio.extension-V7-ndk.so
 vendor/lib/vendor.radio.base.so
 vendor/lib/vendor.radio.protocol.sit.base.so
 vendor/lib/vendor.radio.protocol.sit.json.so
@@ -1453,9 +1456,11 @@ vendor/lib64/libExynosHWCService.so
 vendor/lib64/libOpenCL-pixel.so
 vendor/lib64/lib_aion_buffer.so
 vendor/lib64/lib_reader.so
+vendor/lib64/lib_vendor_gsc_atoms.so
 vendor/lib64/libacryl.so
 vendor/lib64/libacryl_hdr_plugin.so
 vendor/lib64/libadaptedinfo.so
+vendor/lib64/libalertv3.so
 vendor/lib64/libamcsextfile.so
 vendor/lib64/libaoc.so
 vendor/lib64/libaoc_waves.so
@@ -1527,11 +1532,11 @@ vendor/lib64/vendor.google.audiometricext@1.0.so
 vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so
 vendor/lib64/vendor.google.battery_mitigation.service_static.so
 vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so
-vendor/lib64/vendor.google.bluetooth_ext-V3-ndk.so
-vendor/lib64/vendor.google.google_battery-V4-ndk.so
+vendor/lib64/vendor.google.bluetooth_ext-V4-ndk.so
+vendor/lib64/vendor.google.google_battery-V5-ndk.so
 vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so
 vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so
-vendor/lib64/vendor.google.whitechapel.audio.extension-V6-ndk.so
+vendor/lib64/vendor.google.whitechapel.audio.extension-V7-ndk.so
 vendor/lib64/vendor.radio.base.so
 vendor/lib64/vendor.radio.protocol.sit.base.so
 vendor/lib64/vendor.radio.protocol.sit.json.so

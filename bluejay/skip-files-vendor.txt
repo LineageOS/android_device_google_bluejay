@@ -496,8 +496,8 @@ lib/libmediautils_vendor.so
 lib/libmemunreachable.so
 lib/libminijail.so
 lib/libnbaio_mono.so
-lib/libprotobuf-cpp-full-21.12.so
-lib/libprotobuf-cpp-lite-21.12.so
+lib/libprotobuf-cpp-full-4.25.8.so
+lib/libprotobuf-cpp-lite-4.25.8.so
 lib/libreference-ril.so
 lib/libril.so
 lib/librilutils.so
@@ -874,6 +874,7 @@ lib64/android.hardware.boot@1.1.so
 lib64/android.hardware.common-V2-ndk.so
 lib64/android.hardware.common.fmq-V1-ndk.so
 lib64/android.hardware.drm-V1-ndk.so
+lib64/android.hardware.drm-V2-ndk.so
 lib64/android.hardware.drm.common-V1-ndk.so
 lib64/android.hardware.gatekeeper-V1-ndk.so
 lib64/android.hardware.graphics.allocator-V2-ndk.so
@@ -932,7 +933,7 @@ lib64/android.hardware.usb.gadget@1.0.so
 lib64/android.hardware.wifi-V3-ndk.so
 lib64/android.hardware.wifi.common-V2-ndk.so
 lib64/android.hardware.wifi.hostapd-V3-ndk.so
-lib64/android.hardware.wifi.supplicant-V4-ndk.so
+lib64/android.hardware.wifi.supplicant-V5-ndk.so
 lib64/android.hidl.allocator@1.0.so
 lib64/android.hidl.memory.token@1.0.so
 lib64/android.hidl.memory@1.0.so
@@ -1006,8 +1007,8 @@ lib64/libpixelhealth.so
 lib64/libpng.so
 lib64/libpower.so
 lib64/libprocessgroup.so
-lib64/libprotobuf-cpp-full-21.12.so
-lib64/libprotobuf-cpp-lite-21.12.so
+lib64/libprotobuf-cpp-full-4.25.8.so
+lib64/libprotobuf-cpp-lite-4.25.8.so
 lib64/libreference-ril.so
 lib64/libregex.dylib.so
 lib64/libregex_syntax.dylib.so
@@ -1066,6 +1067,7 @@ overlay/DMService__bluejay__auto_generated_rro_vendor.apk
 overlay/DeviceDiagnostics__bluejay__auto_generated_rro_vendor.apk
 overlay/Flipendo__bluejay__auto_generated_rro_vendor.apk
 overlay/NexusLauncherRelease__bluejay__auto_generated_rro_vendor.apk
+overlay/PixelNfcOverlayCommon.apk
 overlay/SettingsGoogle__bluejay__auto_generated_rro_vendor.apk
 overlay/StorageManagerGoogle__bluejay__auto_generated_rro_vendor.apk
 overlay/SystemUIGoogle__bluejay__auto_generated_rro_vendor.apk
@@ -1263,7 +1265,7 @@ lib/android.hardware.thermal@1.0.so
 lib/android.hardware.thermal@2.0.so
 lib/com.google.hardware.pixel.display-V9-ndk.so
 lib/com.google.hardware.pixel.display-V15-ndk.so
-lib/com.google.hardware.pixel.display-V16-ndk.so
+lib/com.google.hardware.pixel.display-V17-ndk.so
 lib/pixel-power-ext-V1-ndk.so
 lib/pixel_stateresidency_provider_aidl_interface-ndk.so
 lib64/android.frameworks.stats-V1-cpp.so
@@ -1304,7 +1306,7 @@ lib64/android.hidl.token@1.0.so
 lib64/com.google.hardware.pixel.display-V4-ndk.so
 lib64/com.google.hardware.pixel.display-V9-ndk.so
 lib64/com.google.hardware.pixel.display-V15-ndk.so
-lib64/com.google.hardware.pixel.display-V16-ndk.so
+lib64/com.google.hardware.pixel.display-V17-ndk.so
 
 # Misc
 lib/libdmabufheap.so
