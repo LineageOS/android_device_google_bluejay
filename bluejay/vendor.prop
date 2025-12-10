@@ -40,7 +40,7 @@ ro.vendor.config.build_carrier=europen
 vendor.rild.libpath=libsitril.so
 
 # SVN
-ro.vendor.build.svn=83
+ro.vendor.build.svn=84
 
 # Touch
 ro.vendor.touch.dump.proc=/proc/fts/driver_test
