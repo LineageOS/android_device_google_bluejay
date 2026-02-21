@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>आफ्नो औँला सार्नुहोस्। फेरि प्रयास गर्नुहोस्।</item>
+        <item>यो औँला फिंगरप्रिन्टका लागि दर्ता गरिसकिएको छ। अर्को औँला दर्ता गर्नुहोस्।</item>
+        <item>फोटोको गुणस्तर खराब छ। फेरि प्रयास गर्नुहोस्।</item>
+        <item/>
+        <item>फोटोको गुणस्तर खराब छ। फेरि प्रयास गर्नुहोस्।</item>
+        <item/>
+        <item/>
+        <item>स्क्रिनमा दाग लागेको छ र यो दाग हटाउन स्क्रिन सफा गर्नुहोस्। फेरि प्रयास गर्नुहोस्।</item>
+        <item>फोटो रिड गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</item>
+        <item/>
+    </string-array>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>डेटा खराब छ। फेरि प्रयास गर्नुहोस्।</item>
+        <item>यो औँला फिंगरप्रिन्टका लागि दर्ता गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</item>
+    </string-array>
+</resources>

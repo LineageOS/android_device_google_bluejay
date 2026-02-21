@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string-array name="config_calibrated_compensation_images">
+        <item>SCI_0_cal0.png</item>
+        <item>SCI_1_cal0.png</item>
+        <item>SCI_2_cal0.png</item>
+        <item>SCI_3_cal0.png</item>
+        <item>SCI_4_cal0.png</item>
+        <item>SCI_5_cal0.png</item>
+    </string-array>
+
+    <array name="config_compensation_images">
+        <item>@drawable/SCI_0_cal0</item>
+        <item>@drawable/SCI_1_cal0</item>
+        <item>@drawable/SCI_2_cal0</item>
+        <item>@drawable/SCI_3_cal0</item>
+        <item>@drawable/SCI_4_cal0</item>
+        <item>@drawable/SCI_5_cal0</item>
+    </array>
+
+    <array name="config_compensation_thresholds">
+        <item>7000.0</item>
+        <item>10000.0</item>
+        <item>35000.0</item>
+        <item>50000.0</item>
+        <item>80000.0</item>
+        <item>100000.0</item>
+    </array>
+</resources>

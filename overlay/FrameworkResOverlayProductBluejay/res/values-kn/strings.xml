@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>ನಿಮ್ಮ ಬೆರಳನ್ನು ಸರಿಸಿ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item>ಈ ಬೆರಳನ್ನು ಈಗಾಗಲೇ ನೋಂದಾಯಿಸಲಾಗಿದೆ, ಬೇರೊಂದು ಬೆರಳನ್ನು ಬಳಸಿ.</item>
+        <item>ಚಿತ್ರದ ಗುಣಮಟ್ಟ ಕಳಪೆಯಾಗಿದೆ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item/>
+        <item>ಚಿತ್ರದ ಗುಣಮಟ್ಟ ಕಳಪೆಯಾಗಿದೆ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item/>
+        <item/>
+        <item>ಸ್ಮಡ್ಜ್ ಪತ್ತೆಯಾಗಿದೆ, ಸ್ಕ್ರೀನ್ ಅನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item>ಚಿತ್ರವನ್ನು ರೀಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item/>
+    </string-array>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>ತಪ್ಪಾದ ಡೇಟಾ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+        <item>ಬೆರಳನ್ನು ನೋಂದಾಯಿಸಲು ವಿಫಲವಾಗಿದೆ. ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.</item>
+    </string-array>
+</resources>

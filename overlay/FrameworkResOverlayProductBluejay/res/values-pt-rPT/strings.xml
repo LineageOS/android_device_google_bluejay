@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Mova o dedo. Tente novamente.</item>
+        <item>Dedo já inscrito. Use um dedo diferente.</item>
+        <item>Má qualidade da imagem. Tente novamente.</item>
+        <item/>
+        <item>Má qualidade da imagem. Tente novamente.</item>
+        <item/>
+        <item/>
+        <item>Foram detetadas manchas. Limpe o ecrã. Tente novamente.</item>
+        <item>Falha ao ler a imagem. Tente novamente.</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">Não é possível usar o sensor de impressões digitais. Visite um fornecedor de serviços de reparação ou g.co/pixel/fingerprintunlock</string>
+</resources>

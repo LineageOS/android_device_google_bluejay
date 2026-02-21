@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Mișcă degetul. Reîncearcă.</item>
+        <item>Degetul a fost deja înregistrat. Folosește alt deget.</item>
+        <item>Calitate slabă a imaginii. Reîncearcă.</item>
+        <item/>
+        <item>Calitate slabă a imaginii. Reîncearcă.</item>
+        <item/>
+        <item/>
+        <item>S-a detectat o pată. Curăță ecranul. Reîncearcă.</item>
+        <item>Nu se poate citi imaginea. Reîncearcă.</item>
+        <item/>
+    </string-array>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Date greșite. Reîncearcă.</item>
+        <item>Nu s-a putut înregistra degetul. Reîncearcă.</item>
+    </string-array>
+</resources>

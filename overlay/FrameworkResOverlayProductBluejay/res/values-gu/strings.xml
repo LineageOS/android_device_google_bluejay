@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>તમારી આંગળી ખસેડો. ફરી પ્રયાસ કરો.</item>
+        <item>આંગળીની નોંધણી પહેલેથી થયેલી છે, કોઈ બીજી આંગળીનો ઉપયોગ કરો.</item>
+        <item>છબીની નબળી ક્વૉલિટી. ફરી પ્રયાસ કરો.</item>
+        <item/>
+        <item>છબીની નબળી ક્વૉલિટી. ફરી પ્રયાસ કરો.</item>
+        <item/>
+        <item/>
+        <item>ડાઘ જોવા મળ્યો, સ્ક્રીન સાફ કરો. ફરી પ્રયાસ કરો.</item>
+        <item>છબી વાંચવામાં નિષ્ફળ રહ્યાં. ફરી પ્રયાસ કરો.</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">ફિંગરપ્રિન્ટ સેન્સરનો ઉપયોગ કરી શકતા નથી. રિપૅર કરવાની સેવાના પ્રદાતાની અથવા g.co/pixel/fingerprintunlockની મુલાકાત લો</string>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>અયોગ્ય ડેટા. ફરી પ્રયાસ કરો.</item>
+        <item>આંગળીની નોંધણી કરવામાં નિષ્ફળ રહ્યાં. ફરી પ્રયાસ કરો.</item>
+    </string-array>
+</resources>
