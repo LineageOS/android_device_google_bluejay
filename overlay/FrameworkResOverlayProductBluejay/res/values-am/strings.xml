@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>ጣትዎን ያንቀሳቅሱት። እንደገና ይሞክሩ።</item>
+        <item>ጣቱ አስቀድሞ የተመዘገበ ነው፣ የተለየ ጣት ይጠቀሙ።</item>
+        <item>ደካማ የምስል ጥራት። እንደገና ይሞክሩ።</item>
+        <item/>
+        <item>ደካማ የምስል ጥራት። እንደገና ይሞክሩ።</item>
+        <item/>
+        <item/>
+        <item>ጉድፍ ተገኝቷል፣ ማያ ገጽን ያጽዱ። እንደገና ይሞክሩ።</item>
+        <item>ምስልን ማንበብ አልተሳካም። እንደገና ይሞክሩ።</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">የጣት አሻራ ዳሳሽን መጠቀም አልተቻለም። የጥገና አገልግሎት ሰጪን ወይም g.co/pixel/fingerprintunlockን ይጎብኙ</string>
+
+    <!-- Notification content shown when the system requires the user to re-calibrate their fingerprint. [CHAR LIMIT=NONE] -->
+    <string name="fingerprint_recalibrate_notification_content">የጥገና አገልግሎት ሰጪን ወይም g.co/pixel/fingerprintunlockን ይጎብኙ</string>
+</resources>

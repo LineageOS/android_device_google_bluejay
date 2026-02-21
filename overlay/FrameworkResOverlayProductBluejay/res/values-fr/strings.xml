@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Déplacez votre doigt. Réessayez.</item>
+        <item>Doigt déjà enregistré. Utilisez-en un autre.</item>
+        <item>Mauvaise qualité d\'image. Réessayez.</item>
+        <item/>
+        <item>Mauvaise qualité d\'image. Réessayez.</item>
+        <item/>
+        <item/>
+        <item>Tache détectée. Nettoyez l\'écran. Réessayez.</item>
+        <item>Échec de lecture de l\'image. Réessayez.</item>
+        <item/>
+    </string-array>
+</resources>
