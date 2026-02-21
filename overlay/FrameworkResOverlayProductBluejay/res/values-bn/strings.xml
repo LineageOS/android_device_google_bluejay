@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>আঙুল সরিয়ে রাখুন। আবার চেষ্টা করুন।</item>
+        <item>এই ফিঙ্গারপ্রিন্ট আগেই এনরোল করা হয়েছে, অন্য একটি আঙুল ব্যবহার করুন।</item>
+        <item>ছবির কোয়ালিটি ভাল নয়। আবার চেষ্টা করুন।</item>
+        <item/>
+        <item>ছবির কোয়ালিটি ভাল নয়। আবার চেষ্টা করুন।</item>
+        <item/>
+        <item/>
+        <item>দাগ দেখা যাচ্ছে, স্ক্রিন পরিষ্কার করুন। আবার চেষ্টা করুন।</item>
+        <item>ছবি বোঝা যাচ্ছে না। আবার চেষ্টা করুন।</item>
+        <item/>
+    </string-array>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>ডেটা সঠিক নয়। আবার চেষ্টা করুন।</item>
+        <item>ফিঙ্গারপ্রিন্ট এনরোল করা যায়নি। আবার চেষ্টা করুন।</item>
+    </string-array>
+</resources>

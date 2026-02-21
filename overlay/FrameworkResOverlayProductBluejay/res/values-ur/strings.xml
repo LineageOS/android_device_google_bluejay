@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>اپنی انگلی منتقل کریں۔ پھر کوشش کریں۔</item>
+        <item>پہلے سے اندراج شدہ انگلی ایک مختلف انگلی کا استعمال کرتی ہے۔</item>
+        <item>تصویر کی ناقص کوالٹی۔ پھر کوشش کریں۔</item>
+        <item/>
+        <item>تصویر کی ناقص کوالٹی۔ پھر کوشش کریں۔</item>
+        <item/>
+        <item/>
+        <item>داغ کا پتہ چلا، اسکرین صاف کریں۔ پھر کوشش کریں۔</item>
+        <item>تصویر کو پڑھنے میں ناکامی۔ پھر کوشش کریں۔</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">‏فنگر پرنٹ سینسر کو استعمال نہیں کیا جا سکتا۔ مرمت فراہم کنندہ یا g.co/pixel/fingerprintunlock کو ملاحظہ کریں</string>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>خراب ڈیٹا۔ پھر کوشش کریں۔</item>
+        <item>انگلی کے اندراج میں ناکام۔ پھر کوشش کریں۔</item>
+    </string-array>
+</resources>

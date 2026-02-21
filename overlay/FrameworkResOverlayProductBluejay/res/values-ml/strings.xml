@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>നിങ്ങളുടെ വിരൽ നീക്കുക. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item>വിരൽ ഇതിനകം തന്നെ എൻറോൾ ചെയ്‌തു, മറ്റൊരു വിരൽ ഉപയോഗിക്കുക.</item>
+        <item>ചിത്രത്തിന്റെ നിലവാരം മോശമാണ്. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item/>
+        <item>ചിത്രത്തിന്റെ നിലവാരം മോശമാണ്. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item/>
+        <item/>
+        <item>സ്ക്രീനിൽ അഴുക്കുണ്ട്, അത് വൃത്തിയാക്കുക. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item>ചിത്രം റീഡ് ചെയ്യാനാകുന്നില്ല. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">ഫിംഗർപ്രിന്റ് സെൻസർ ഉപയോഗിക്കാനാകില്ല. റിപ്പയർ കേന്ദ്രമോ g.co/pixel/fingerprintunlock എന്നതോ സന്ദർശിക്കുക</string>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>മോശം ഡാറ്റ. വീണ്ടും ശ്രമിക്കൂ.</item>
+        <item>വിരൽ എൻറോൾ ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കൂ.</item>
+    </string-array>
+</resources>
