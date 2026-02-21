@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Саусағыңызды жылжытыңыз. Қайталап көріңіз.</item>
+        <item>Саусақ тіркеліп қойған, басқа саусақты пайдаланыңыз.</item>
+        <item>Сурет сапасы нашар. Қайталап көріңіз.</item>
+        <item/>
+        <item>Сурет сапасы нашар. Қайталап көріңіз.</item>
+        <item/>
+        <item/>
+        <item>Дақ анықталды, экранды тазалаңыз. Қайталап көріңіз.</item>
+        <item>Сурет оқылмады. Қайталап көріңіз.</item>
+        <item/>
+    </string-array>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>Pomaknite prst. Pokušajte ponovo.</item>
+        <item>Prst je već prijavljen, upotrijebite drugi prst.</item>
+        <item>Loša kvaliteta slike. Pokušajte ponovo.</item>
+        <item/>
+        <item>Loša kvaliteta slike. Pokušajte ponovo.</item>
+        <item/>
+        <item/>
+        <item>Otkriveni su otisci prstiju, očistite zaslon. Pokušajte ponovo.</item>
+        <item>Očitavanje slike nije uspjelo. Pokušajte ponovo.</item>
+        <item/>
+    </string-array>
+</resources>
