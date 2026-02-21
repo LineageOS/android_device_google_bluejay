@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>เลื่อนนิ้ว ลองอีกครั้ง</item>
+        <item>ลงทะเบียนนิ้วนี้แล้ว โปรดใช้นิ้วอื่น</item>
+        <item>คุณภาพของรูปต่ำ ลองอีกครั้ง</item>
+        <item/>
+        <item>คุณภาพของรูปต่ำ ลองอีกครั้ง</item>
+        <item/>
+        <item/>
+        <item>ตรวจพบรอยเปื้อน โปรดทำความสะอาดหน้าจอ ลองอีกครั้ง</item>
+        <item>อ่านรูปภาพไม่สำเร็จ ลองอีกครั้ง</item>
+        <item/>
+    </string-array>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>ข้อมูลไม่ถูกต้อง ลองอีกครั้ง</item>
+        <item>ลงทะเบียนนิ้วไม่สำเร็จ ลองอีกครั้ง</item>
+    </string-array>
+</resources>

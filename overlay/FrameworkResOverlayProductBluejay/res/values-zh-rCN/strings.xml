@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>请移动手指，然后重试。</item>
+        <item>已注册过这根手指，请改用其他手指。</item>
+        <item>图片质量不佳，请重试。</item>
+        <item/>
+        <item>图片质量不佳，请重试。</item>
+        <item/>
+        <item/>
+        <item>检测到污迹，请清洁屏幕，然后重试。</item>
+        <item>未能读取图片，请重试。</item>
+        <item/>
+    </string-array>
+</resources>

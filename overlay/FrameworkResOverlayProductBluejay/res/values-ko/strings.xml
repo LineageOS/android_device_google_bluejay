@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Array containing custom messages shown during fingerprint acquisision from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_acquired_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>손가락을 움직이세요. 다시 시도하세요.</item>
+        <item>이미 등록된 손가락입니다. 다른 손가락을 사용하세요.</item>
+        <item>이미지 품질이 좋지 않습니다. 다시 시도하세요.</item>
+        <item/>
+        <item>이미지 품질이 좋지 않습니다. 다시 시도하세요.</item>
+        <item/>
+        <item/>
+        <item>얼룩이 감지되었습니다. 화면을 닦고 다시 시도하세요.</item>
+        <item>이미지를 판독할 수 없습니다. 다시 시도하세요.</item>
+        <item/>
+    </string-array>
+
+    <!-- Generic error message shown when fingerprint needs calibration [CHAR LIMIT=150] -->
+    <string name="fingerprint_error_bad_calibration">지문 센서를 사용할 수 없습니다. 수리업체 또는 g.co/pixel/fingerprintunlock을 방문하세요.</string>
+
+    <!-- Array containing custom error messages from vendor.  Vendor is expected to add and translate these strings -->
+    <string-array name="fingerprint_error_vendor">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item>데이터가 정확하지 않습니다. 다시 시도하세요.</item>
+        <item>손가락을 등록할 수 없습니다. 다시 시도하세요.</item>
+    </string-array>
+
+    <!-- Notification content shown when the system requires the user to re-calibrate their fingerprint. [CHAR LIMIT=NONE] -->
+    <string name="fingerprint_recalibrate_notification_content">수리업체 또는 g.co/pixel/fingerprintunlock을 방문하세요.</string>
+</resources>
