@@ -1,6 +1,5 @@
 # Camera
 persist.vendor.camera.1080P_60fps_binning=true
-persist.vendor.camera.exif_reveal_make_model=true
 persist.vendor.camera.extended_launch_boost=1
 persist.vendor.camera.fixed_fps_range_boost=1
 persist.vendor.camera.raise_buf_allocation_priority=1
@@ -8,36 +7,14 @@ persist.vendor.camera.rls_supported=false
 
 # DCK
 ro.gms.dck.eligible_wcc=2
-ro.gms.dck.se_capability=1
-
-# Device family
-ro.build.device_family=O6R4B9
 
 # Display
 ro.surface_flinger.set_idle_timer_ms=0
-vendor.display.lbe.supported=1
 vendor.primarydisplay.lhbm.frames_to_reach_peak_brightness=2
 
-# DRM
-drm.service.enabled=true
-media.mediadrmservice.enable=true
-
 # Fingerprint
-persist.vendor.udfps.als_feed_forward_supported=true
-persist.vendor.udfps.fps_touch_handler_supported=false
-persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 ro.vendor.fingerprint.ta.name=g7.app
 vendor.gf.debug.timer.threshold=1,400,400,400,600,600,600
-
-# Media
-ro.odm.build.media_performance_class=31
-
-# Radio
-persist.vendor.ril.ecc.use.xml=1
-persist.vendor.ril.support_nr_ds=0
-persist.vendor.ril.use_radio_hal=1.6
-ro.vendor.config.build_carrier=europen
-vendor.rild.libpath=libsitril.so
 
 # SVN
 ro.vendor.build.svn=84
@@ -45,9 +22,6 @@ ro.vendor.build.svn=84
 # Touch
 ro.vendor.touch.dump.proc=/proc/fts/driver_test
 ro.vendor.touch.dump.sys=/sys/class/spi_master/spi11/spi11.0
-
-# USB
-ro.usb.uvc.enabled=true
 
 # Vibrator
 persist.vendor.vibrator.hal.context.cooldowntime=1600
@@ -58,6 +32,3 @@ persist.vendor.vibrator.hal.context.settlingtime=5000
 ro.vendor.vibrator.hal.f0.comp.enabled=0
 ro.vendor.vibrator.hal.redc.comp.enabled=0
 vendor.audio.hapticgenerator.distortion.output.gain=0.29
-
-# ZRAM
-vendor.zram.size=3g
