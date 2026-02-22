@@ -1,17 +1,8 @@
 # Bluetooth
 bluetooth.device_id.product_id=16648
-persist.bluetooth.a2dp_aac.vbr_supported=true
-persist.bluetooth.firmware.selection=BCM.hcd
-
-# Cutout
-ro.support_hide_display_cutout=true
-
-# Fingerprint
-persist.vendor.fingerprint.disable.fake.override=none
 
 # Google keyboard
 ro.com.google.ime.kb_pad_port_b=6.4
 
 # Quick start
 ro.quick_start.device_id=bluejay
-ro.quick_start.oem_id=00e0
