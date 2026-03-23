@@ -16,14 +16,6 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 include device/google/gs101/BoardConfig-common.mk
 
 # Kernel modules
-BOARD_BOOTCONFIG += androidboot.load_modules_parallel=true
-
-BOARD_KERNEL_CMDLINE += fips140.load_sequential=1
-BOARD_KERNEL_CMDLINE += exynos_mfc.load_sequential=1
-BOARD_KERNEL_CMDLINE += exynos_drm.load_sequential=1
-BOARD_KERNEL_CMDLINE += pcie-exynos-core.load_sequential=1
-BOARD_KERNEL_CMDLINE += g2d.load_sequential=1
-
 BOARD_VENDOR_KERNEL_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/recovery/modules.blocklist.vendor_boot
 BOARD_VENDOR_KERNEL_RAMDISK_KERNEL_MODULES_LOAD_RAW := $(strip $(shell cat $(DEVICE_PATH)/recovery/modules.load.vendor_boot))
 BOARD_VENDOR_KERNEL_RAMDISK_KERNEL_MODULES_LOAD += $(BOARD_VENDOR_KERNEL_RAMDISK_KERNEL_MODULES_LOAD_RAW)
