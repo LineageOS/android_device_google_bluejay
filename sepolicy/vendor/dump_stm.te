@@ -1,5 +1,8 @@
 pixel_bugreport(dump_stm)
 
+type proc_touch, fs_type, proc_type;
+type sysfs_touch, fs_type, sysfs_type;
+
 get_prop(dump_stm, vendor_touch_dump_path_prop)
 
 allow dump_stm proc_touch:file rw_file_perms;
