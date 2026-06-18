@@ -1,3 +1,5 @@
+type fips_block_device, dev_type;
+
 allow ufs_firmware_update block_device:dir r_dir_perms;
 allow ufs_firmware_update fips_block_device:blk_file rw_file_perms;
 allow ufs_firmware_update sysfs:dir r_dir_perms;
