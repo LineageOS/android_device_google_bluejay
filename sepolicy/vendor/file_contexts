@@ -1,3 +1,8 @@
 /dev/block/platform/14700000\.ufs/by-name/fips u:object_r:fips_block_device:s0
+/sys/module/cl_dsp_core/version u:object_r:sysfs_vibrator:s0
+/sys/module/cs40l26_core/version u:object_r:sysfs_vibrator:s0
 /vendor/bin/dump/dump_stm\.sh u:object_r:dump_stm_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator-service\.cs40l26 u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator-service\.cs40l26-dual u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/cs40l26_vibrator_server u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/resku_rescue_kicker u:object_r:tee_exec:s0
