@@ -197,3 +197,14 @@ system_ext/priv-app/MyVerizonServices/MyVerizonServices.apk;PRESIGNED
 # Watchdog
 system_ext/bin/gs_watchdogd
 system_ext/etc/init/init.gs_watchdogd.rc
+
+# recovery partition
+
+# Boot control HAL
+recovery/system/bin/hw/android.hardware.boot-service.default_recovery-pixel
+recovery/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc
+recovery/system/etc/vintf/manifest/android.hardware.boot-service.default_recovery-pixel.xml
+
+# Health HAL
+recovery/system/bin/hw/android.hardware.health-service.gs101_recovery
+recovery/system/etc/init/android.hardware.health-service.gs101_recovery.rc
