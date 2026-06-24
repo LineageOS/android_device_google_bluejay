@@ -8,6 +8,6 @@ $(call inherit-product, device/google/bluejay/device-bluejay.mk)
 
 PRODUCT_NAME := aosp_bluejay
 PRODUCT_DEVICE := bluejay
-PRODUCT_MODEL := AOSP on Bluejay
-PRODUCT_BRAND := Android
+PRODUCT_MODEL := Pixel 6a
+PRODUCT_BRAND := google
 PRODUCT_MANUFACTURER := Google
