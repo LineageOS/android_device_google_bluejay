@@ -387,7 +387,7 @@ vendor/etc/vintf/manifest/android.hardware.vibrator-service.cs40l26.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml
 vendor/etc/vintf/manifest/dmd.xml
 vendor/etc/vintf/manifest/fingerprint-goodix.xml
-vendor/etc/vintf/manifest/manifest.xml
+vendor/etc/vintf/manifest/manifest.xml:vendor/etc/vintf/manifest/manifest_mapper_framework.xml
 vendor/etc/vintf/manifest/manifest_aocx.xml
 vendor/etc/vintf/manifest/manifest_gralloc_aidl2.xml
 vendor/etc/vintf/manifest/manifest_input.processor-service.xml
