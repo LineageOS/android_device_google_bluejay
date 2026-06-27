@@ -33,7 +33,7 @@
          Note that while rounded.xml includes the entire path (including the horizontal and vertical
          corner edges), this pulls out just the curve.
      -->
-    <string name="config_rounded_mask">M 71,0 C 33,0 22,-1 10,10 -1,22 0,33 0,71</string>
+    <string name="config_rounded_mask" translatable="false">M 71,0 C 33,0 22,-1 10,10 -1,22 0,33 0,71</string>
 
     <!-- A path similar to frameworks/base/core/res/res/values/config.xml
       config_mainBuiltInDisplayCutout that describes a path larger than the exact path of a outer
@@ -44,5 +44,5 @@
       This path will only be drawn when the front-facing camera turns on, otherwise the main
       DisplayCutout path will be rendered
        -->
-    <string name="config_frontBuiltInDisplayCutoutProtection">M 494,66 a 46,46 0 1 0 92,0 a 46,46 0 1 0 -92,0 Z</string>
+    <string name="config_frontBuiltInDisplayCutoutProtection" translatable="false">M 494,66 a 46,46 0 1 0 92,0 a 46,46 0 1 0 -92,0 Z</string>
 </resources>
