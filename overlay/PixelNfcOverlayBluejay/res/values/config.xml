@@ -5,7 +5,7 @@
 -->
 <resources>
     <!-- List of SKUs where Secure NFC functionality is supported -->
-    <string-array name="config_skuSupportsSecureNfc">
+    <string-array name="config_skuSupportsSecureNfc" translatable="false">
         <item>GB62Z</item>
         <item>G1AZG</item>
         <item>GX7AS</item>
