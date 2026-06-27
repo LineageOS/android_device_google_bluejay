@@ -6,3 +6,5 @@ genfscon sysfs /devices/platform/111d0000.spi/spi_master/spi20/spi20.0 u:object_
 genfscon sysfs /devices/platform/14700000.ufs/model u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/platform/14700000.ufs/rev u:object_r:sysfs_scsi_devices_0000:s0
 genfscon sysfs /devices/platform/14700000.ufs/vendor u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /module/cl_dsp_core/version u:object_r:sysfs_vibrator:s0
+genfscon sysfs /module/cs40l26_core/version u:object_r:sysfs_vibrator:s0

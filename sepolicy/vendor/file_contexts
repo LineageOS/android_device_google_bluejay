@@ -1,3 +1,4 @@
 /dev/block/platform/14700000\.ufs/by-name/fips u:object_r:fips_block_device:s0
 /vendor/bin/dump/dump_stm\.sh u:object_r:dump_stm_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator-service\.cs40l26-rust u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/resku_rescue_kicker u:object_r:tee_exec:s0
