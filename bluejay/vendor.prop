@@ -17,7 +17,7 @@ ro.vendor.fingerprint.ta.name=g7.app
 vendor.gf.debug.timer.threshold=1,400,400,400,600,600,600
 
 # SVN
-ro.vendor.build.svn=93
+ro.vendor.build.svn=96
 
 # Touch
 ro.vendor.touch.dump.proc=/proc/fts/driver_test
