@@ -45,7 +45,7 @@ product/etc/sysconfig/preinstalled-packages-com.shannon.rcsservice.xml
 product/etc/libnfc-nci.conf
 
 # Now Playing
-product/app/NowPlayingPrebuilt/NowPlayingPrebuilt.apk
+product/app/NowPlayingPrebuilt/NowPlayingPrebuilt.apk;PRESIGNED
 product/etc/default-permissions/default-permissions_nowplaying.xml
 product/etc/sysconfig/nowplaying_app_26q1.xml
 
