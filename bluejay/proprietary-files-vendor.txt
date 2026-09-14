@@ -45,8 +45,6 @@ vendor/bin/hw/android.hardware.power.stats-service.pixel
 vendor/bin/hw/android.hardware.secure_element@1.2-uicc-service
 vendor/bin/hw/android.hardware.security.keymint-service.citadel
 vendor/bin/hw/android.hardware.thermal-service.pixel
-vendor/bin/hw/android.hardware.usb-service.gs101
-vendor/bin/hw/android.hardware.usb.gadget-service.gs101
 vendor/bin/hw/android.hardware.vibrator-service.cs40l26
 vendor/bin/hw/android.hardware.weaver-service.citadel
 vendor/bin/hw/battery_mitigation
@@ -83,7 +81,6 @@ vendor/bin/thermal_symlinks
 vendor/bin/trusty_metricsd
 vendor/bin/twoshay
 vendor/bin/ufs_firmware_update.sh
-vendor/bin/usb_accessory_utils
 vendor/bin/usf_stats
 vendor/bin/wfc-pkt-router
 vendor/etc/Khronos/OpenCL/vendors/ARM.icd
@@ -250,8 +247,6 @@ vendor/etc/init/android.hardware.rlsservice-service-google-apex.rc
 vendor/etc/init/android.hardware.secure_element@1.2-uicc-service.rc
 vendor/etc/init/android.hardware.security.keymint-service.citadel.rc
 vendor/etc/init/android.hardware.thermal-service.pixel.rc
-vendor/etc/init/android.hardware.usb-service.rc
-vendor/etc/init/android.hardware.usb.gadget-service.rc
 vendor/etc/init/android.hardware.vibrator-service.cs40l26.rc
 vendor/etc/init/android.hardware.weaver-service.citadel.rc
 vendor/etc/init/aocd.rc
@@ -381,8 +376,6 @@ vendor/etc/vintf/manifest/android.hardware.power.stats-service.pixel.xml
 vendor/etc/vintf/manifest/android.hardware.security.keymint-service-v3.citadel.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharesecret-service.citadel.xml
 vendor/etc/vintf/manifest/android.hardware.thermal-service.pixel.xml
-vendor/etc/vintf/manifest/android.hardware.usb-service.xml
-vendor/etc/vintf/manifest/android.hardware.usb.gadget-service.xml
 vendor/etc/vintf/manifest/android.hardware.vibrator-service.cs40l26.xml
 vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml
 vendor/etc/vintf/manifest/dmd.xml
@@ -1395,7 +1388,6 @@ vendor/lib/libion_google.so
 vendor/lib/libmahalcontroller.so
 vendor/lib/libmetrics_logger.so
 vendor/lib/liboemservice.so
-vendor/lib/libpixelatoms_defs.so
 vendor/lib/libril_gfeature.so
 vendor/lib/libril_sitril.so
 vendor/lib/libsensorsuez.so
@@ -1414,7 +1406,6 @@ vendor/lib/modem_clock_manager.so
 vendor/lib/modem_clock_manager_impl.so
 vendor/lib/modem_log_constants.so
 vendor/lib/pixel_stateresidency_provider_aidl_interface-ndk.so
-vendor/lib/pixelatoms-cpp.so
 vendor/lib/sensors.usf.so
 vendor/lib/soundfx/liboffloadeffect.so
 vendor/lib/vendor.google.battery_mitigation-V1-ndk.so
@@ -1544,10 +1535,7 @@ vendor/lib64/libnos_citadeld_proxy.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/liboemservice.so
 vendor/lib64/libperfmgr.so
-vendor/lib64/libpixelatoms_defs.so
 vendor/lib64/libpixelhealth.so
-vendor/lib64/libpixelstats.so
-vendor/lib64/libpixelstatsflags.so
 vendor/lib64/libril_gfeature.so
 vendor/lib64/libril_sitril.so
 vendor/lib64/libsensorsuez.so
@@ -1573,7 +1561,6 @@ vendor/lib64/modem_clock_manager_impl.so
 vendor/lib64/modem_log_constants.so
 vendor/lib64/modem_log_dumper.so
 vendor/lib64/pixel_stateresidency_provider_aidl_interface-ndk.so
-vendor/lib64/pixelatoms-cpp.so
 vendor/lib64/pixelstats_flags_c_lib.so
 vendor/lib64/sensors.usf.so
 vendor/lib64/soundfx/liboffloadeffect.so
