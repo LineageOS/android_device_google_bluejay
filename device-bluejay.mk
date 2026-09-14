@@ -51,6 +51,10 @@ PRODUCT_SHIPPING_API_LEVEL := 32
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+# USB
+PRODUCT_PACKAGES += \
+    usb_accessory_utils
+
 # VINTF
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/vintf/manifest.xml
