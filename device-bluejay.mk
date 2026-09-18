@@ -16,6 +16,7 @@ include device/google/gs101/common.mk
 
 # Overlays
 PRODUCT_PACKAGES += \
+    BluejayFrameworkOverlay \
     DMServiceOverlayVendorBluejay \
     FrameworkResOverlayProductBluejay \
     FrameworkResOverlayVendorBluejay \
