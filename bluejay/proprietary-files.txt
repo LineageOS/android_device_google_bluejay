@@ -171,10 +171,16 @@ system_ext/framework/google-ril.jar
 system_ext/priv-app/CarrierSetup/CarrierSetup.apk;PRESIGNED
 system_ext/priv-app/ConnectivityThermalPowerManager/ConnectivityThermalPowerManager.apk
 system_ext/priv-app/EuiccGoogleOverlay/EuiccGoogleOverlay.apk
+system_ext/priv-app/EuiccSupportPixel/DKA_0105_DVT.in
+system_ext/priv-app/EuiccSupportPixel/DKA_0105_DVT.up
+system_ext/priv-app/EuiccSupportPixel/DKA_0105_EVT.up
+system_ext/priv-app/EuiccSupportPixel/DKA_0109_DVT.up
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.in
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_DVT.up
 system_ext/priv-app/EuiccSupportPixel/DKA_RC7_EVT.up
 system_ext/priv-app/EuiccSupportPixel/EuiccSupportPixel.apk;PRESIGNED
+system_ext/priv-app/EuiccSupportPixel/esim-full-v1-security.img
+system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img
 system_ext/priv-app/EuiccSupportPixelPermissions/EuiccSupportPixelPermissions.apk;PRESIGNED
 system_ext/priv-app/grilservice/grilservice.apk;PRESIGNED
 
