@@ -503,6 +503,7 @@ lib/soundfx/libreverbwrapper.so
 lib/soundfx/libvisualizer.so
 lib64/android.frameworks.stats-V1-ndk.so
 lib64/android.frameworks.stats-V2-ndk.so
+lib64/android.frameworks.stats-V3-ndk.so
 lib64/android.hardware.audio.common-V5-ndk.so
 lib64/android.hardware.audio.common-util.so
 lib64/android.hardware.audio.common@2.0.so
@@ -871,7 +872,7 @@ lib/android.hardware.thermal-V1-ndk.so
 lib/android.hardware.thermal@1.0.so
 lib/android.hardware.thermal@2.0.so
 lib/com.google.hardware.pixel.display-V15-ndk.so
-lib/com.google.hardware.pixel.display-V21-ndk.so
+lib/com.google.hardware.pixel.display-V23-ndk.so
 lib/pixel-power-ext-V1-ndk.so
 lib64/android.frameworks.stats-V1-cpp.so
 lib64/android.hardware.authsecret-V1-ndk.so
@@ -915,7 +916,7 @@ lib64/android.hidl.token@1.0-utils.so
 lib64/android.hidl.token@1.0.so
 lib64/com.google.hardware.pixel.display-V4-ndk.so
 lib64/com.google.hardware.pixel.display-V15-ndk.so
-lib64/com.google.hardware.pixel.display-V21-ndk.so
+lib64/com.google.hardware.pixel.display-V23-ndk.so
 lib64/pixel-power-ext-V2-ndk.so
 
 # Misc
@@ -950,6 +951,7 @@ lib64/libbytes.dylib.so
 lib64/libclap.dylib.so
 lib64/libclap_builder.dylib.so
 lib64/libclap_lex.dylib.so
+lib64/libcommand_fds.dylib.so
 lib64/libcutils_bindgen.dylib.so
 lib64/libcxx.dylib.so
 lib64/libenv_logger.dylib.so
