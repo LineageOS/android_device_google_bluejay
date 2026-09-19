@@ -49,6 +49,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'product/etc/felica/common.cfg': blob_fixup()
         .patch_file('osaifu-keitai.patch'),
+    'vendor/bin/hw/android.hardware.usb-service.gs101': blob_fixup()
+        .add_needed('libusb_policy_bridge.so'),
     'vendor/etc/init/init.modem_logging_control.rc': blob_fixup()
         .regex_replace(' && property:ro.debuggable=0', ''),
     (
