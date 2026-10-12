@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <install-in-user-type package="com.google.android.apps.camera.services">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="android.os.usertype.profile.MANAGED" />
+        <install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.pixel.camera.services">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="android.os.usertype.profile.MANAGED" />
+        <install-in user-type="android.os.usertype.profile.PRIVATE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.samsung.slsi.telephony.oem.oemrilhookservice">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.samsung.slsi.telephony.oemril">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.shannon.imsservice">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.shannon.rcsservice">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.verizon.services">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.vzw.apnlib">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.as">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.as.oss">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.tetheringentitlement">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.carriersetup">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.apps.carrier.carrierwifi">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.wfcactivation">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.android.omadm.service">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.omadm.trigger">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.android.sdm.plugins.connmo">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.android.sdm.plugins.dcmo">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.android.sdm.plugins.diagmon">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.euicc">
+        <install-in user-type="SYSTEM" />
+        <install-in user-type="FULL" />
+        <install-in user-type="PROFILE" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.euiccpixel">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.euiccpixel.permissions">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.carrier">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.hardwareinfo">
+        <install-in user-type="SYSTEM" />
+    </install-in-user-type>
+    <install-in-user-type package="com.google.android.apps.pixel.nowplaying">
+        <install-in user-type="FULL" />
+    </install-in-user-type>
+</config>
