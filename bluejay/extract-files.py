@@ -49,6 +49,10 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'product/etc/felica/common.cfg': blob_fixup()
         .patch_file('osaifu-keitai.patch'),
+    (
+        'vendor/bin/dump/dump_modem',
+        'vendor/bin/gpuflag',
+    ) : blob_fixup().fix_rust_symbols(),
     'vendor/etc/init/init.modem_logging_control.rc': blob_fixup()
         .regex_replace(' && property:ro.debuggable=0', ''),
     (
