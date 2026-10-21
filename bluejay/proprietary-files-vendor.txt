@@ -14,7 +14,6 @@ vendor/bin/dump/dump_devfreq
 vendor/bin/dump/dump_exynos_display
 vendor/bin/dump/dump_fingerprint
 vendor/bin/dump/dump_gsc.sh
-vendor/bin/dump/dump_modem
 vendor/bin/dump/dump_modemlog
 vendor/bin/dump/dump_perf
 vendor/bin/dump/dump_pixel_metrics
@@ -25,7 +24,6 @@ vendor/bin/dump/dump_stm.sh
 vendor/bin/dump/dump_storage
 vendor/bin/dump/dump_thermal.sh
 vendor/bin/dump/dump_trusty.sh
-vendor/bin/gpuflag
 vendor/bin/hw/android.hardware.authsecret-service.citadel
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service.goodix
 vendor/bin/hw/android.hardware.bluetooth-service.bcmbtlinux

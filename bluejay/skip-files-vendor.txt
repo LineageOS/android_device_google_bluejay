@@ -940,6 +940,8 @@ framework/oat/arm64/com.google.android.camera.experimental2021.odex
 framework/oat/arm64/com.google.android.camera.experimental2021.vdex
 
 # Rust
+bin/dump/dump_modem
+bin/gpuflag
 lib64/libaconfig_storage_file.dylib.so
 lib64/libaconfig_storage_protos.dylib.so
 lib64/libaconfig_storage_read_api.dylib.so
